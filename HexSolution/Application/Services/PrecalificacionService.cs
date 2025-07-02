@@ -5,6 +5,8 @@ using System.Web;
 using System.Data;
 using System.Threading.Tasks;//ADD HDR(EHC) 20220330 - REQ22205 Paralelo
 using Bend.Common.Utils.Utils;
+using DotNetEnv;
+using System.IO;
 
 public class PrecalificacionService : IPrecalificacionService
 {
@@ -32,6 +34,13 @@ public class PrecalificacionService : IPrecalificacionService
     public Service()
     {
         loggerService = LoggerService.Instance;
+        // Cargar variables de entorno desde el archivo .env para
+        // permitir configurar la aplicación sin web.config
+        var envPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "HexSolution", ".env");
+        if (File.Exists(envPath))
+        {
+            Env.Load(envPath);
+        }
     }
     #region "Metodos"
     public RespuestaEvaluacion EvaluarPwcPrecalificacion(Cotizacion toDatosPrecalificador, int idOpcion)
