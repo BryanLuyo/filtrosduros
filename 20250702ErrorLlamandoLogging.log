@@ -1,0 +1,1284 @@
+{
+	Class:EndpointNotFoundException
+	ToString:System.ServiceModel.EndpointNotFoundException: No había ningún extremo escuchando en http://172.21.30.10/WS_Logging/LoggerService.svc que pudiera aceptar el mensaje. La causa suele ser una dirección o una acción SOAP incorrecta. Consulte InnerException, si está presente, para obtener más información. ---> System.Net.WebException: Error en el servidor remoto: (404) No se encontró.
+   en System.Net.HttpWebRequest.GetResponse()
+   en System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+   --- Fin del seguimiento de la pila de la excepción interna ---
+
+Server stack trace: 
+   en System.ServiceModel.Channels.HttpChannelUtilities.ProcessGetResponseWebException(WebException webException, HttpWebRequest request, HttpAbortReason abortReason)
+   en System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+   en System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   en System.ServiceModel.Dispatcher.RequestChannelBinder.Send(Message message, TimeSpan timeout)
+   en System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   en System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   en System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   en System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   en System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   en Bend.Common.Logging.Interface.ILoggerService.SaveLogAsync(RequestLog request)
+   en Bend.Common.Logging.Interface.LoggerInstance.<>c__DisplayClass0_0.<SaveLogAsync>b__0(ILoggerService c) en C:\SVN\NewCore2\Main\Code\1_FMAF\Bend.Common.Logging.Interface\LoggerInstance.cs:línea 18
+   en Bend.Common.Utils.Framework.ServiceClientFactory.InvokeMethod[TChannel](Action`1 invocation) en C:\SVN\NewCore2\Main\Code\1_FMAF\Bend.Common.Utils\Framework\ServiceClientFactory.cs:línea 157
+   en Bend.Common.Logging.Interface.LoggerInstance.SaveLogAsync(RequestLog request) en C:\SVN\NewCore2\Main\Code\1_FMAF\Bend.Common.Logging.Interface\LoggerInstance.cs:línea 15
+	Message:No había ningún extremo escuchando en http://172.21.30.10/WS_Logging/LoggerService.svc que pudiera aceptar el mensaje. La causa suele ser una dirección o una acción SOAP incorrecta. Consulte InnerException, si está presente, para obtener más información.
+	InnerException:System.Exception
+	InnerException.[Status]:ProtocolError
+	InnerException.[Response]:System.Net.WebResponse
+	InnerException.[Response].[IsMutuallyAuthenticated]:False
+	InnerException.[Response].[Headers]:Connection: close
+Content-Length: 315
+Content-Type: text/html; charset=us-ascii
+Date: Wed, 02 Jul 2025 16:57:21 GMT
+Server: Microsoft-HTTPAPI/2.0
+
+
+	InnerException.[Response].[Headers].[0]:Connection
+	InnerException.[Response].[Headers].[1]:Content-Length
+	InnerException.[Response].[Headers].[2]:Content-Type
+	InnerException.[Response].[Headers].[3]:Date
+	InnerException.[Response].[Headers].[4]:Server
+	InnerException.[Response].[SupportsHeaders]:True
+	InnerException.[Response].[ContentLength]:315
+	InnerException.[Response].[ContentEncoding]:
+	InnerException.[Response].[ContentType]:text/html; charset=us-ascii
+	InnerException.[Response].[CharacterSet]:us-ascii
+	InnerException.[Response].[Server]:Microsoft-HTTPAPI/2.0
+	InnerException.[Response].[LastModified]:2/07/2025 11:57:22
+	InnerException.[Response].[StatusCode]:NotFound
+	InnerException.[Response].[StatusDescription]:Not Found
+	InnerException.[Response].[ProtocolVersion]:System.Version
+	InnerException.[Response].[ProtocolVersion].[Major]:1
+	InnerException.[Response].[ProtocolVersion].[Minor]:1
+	InnerException.[Response].[ProtocolVersion].[Build]:-1
+	InnerException.[Response].[ProtocolVersion].[Revision]:-1
+	InnerException.[Response].[ProtocolVersion].[MajorRevision]:-1
+	InnerException.[Response].[ProtocolVersion].[MinorRevision]:-1
+	InnerException.[Response].[ResponseUri]:System.Uri
+	InnerException.[Response].[ResponseUri].[AbsolutePath]:/WS_Logging/LoggerService.svc
+	InnerException.[Response].[ResponseUri].[AbsoluteUri]:http://172.21.30.10/WS_Logging/LoggerService.svc
+	InnerException.[Response].[ResponseUri].[LocalPath]:/WS_Logging/LoggerService.svc
+	InnerException.[Response].[ResponseUri].[Authority]:172.21.30.10
+	InnerException.[Response].[ResponseUri].[HostNameType]:IPv4
+	InnerException.[Response].[ResponseUri].[IsDefaultPort]:True
+	InnerException.[Response].[ResponseUri].[IsFile]:False
+	InnerException.[Response].[ResponseUri].[IsLoopback]:False
+	InnerException.[Response].[ResponseUri].[PathAndQuery]:/WS_Logging/LoggerService.svc
+	InnerException.[Response].[ResponseUri].[Segments]:System.String[]
+	InnerException.[Response].[ResponseUri].[IsUnc]:False
+	InnerException.[Response].[ResponseUri].[Host]:172.21.30.10
+	InnerException.[Response].[ResponseUri].[Port]:80
+	InnerException.[Response].[ResponseUri].[Query]:
+	InnerException.[Response].[ResponseUri].[Fragment]:
+	InnerException.[Response].[ResponseUri].[Scheme]:http
+	InnerException.[Response].[ResponseUri].[OriginalString]:http://172.21.30.10/WS_Logging/LoggerService.svc
+	InnerException.[Response].[ResponseUri].[DnsSafeHost]:172.21.30.10
+	InnerException.[Response].[ResponseUri].[IdnHost]:172.21.30.10
+	InnerException.[Response].[ResponseUri].[IsAbsoluteUri]:True
+	InnerException.[Response].[ResponseUri].[UserEscaped]:False
+	InnerException.[Response].[ResponseUri].[UserInfo]:
+	InnerException.[Response].[Method]:POST
+	InnerException.[Response].[IsFromCache]:False
+	InnerException.[Message]:Error en el servidor remoto: (404) No se encontró.
+	InnerException.[StackTrace]:   en System.Net.HttpWebRequest.GetResponse()
+   en System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+	InnerException.[Source]:System
+	InnerException.[HResult]:-2146233079
+	StackTrace:
+Server stack trace: 
+   en System.ServiceModel.Channels.HttpChannelUtilities.ProcessGetResponseWebException(WebException webException, HttpWebRequest request, HttpAbortReason abortReason)
+   en System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+   en System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   en System.ServiceModel.Dispatcher.RequestChannelBinder.Send(Message message, TimeSpan timeout)
+   en System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   en System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   en System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   en System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   en System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   en Bend.Common.Logging.Interface.ILoggerService.SaveLogAsync(RequestLog request)
+   en Bend.Common.Logging.Interface.LoggerInstance.<>c__DisplayClass0_0.<SaveLogAsync>b__0(ILoggerService c) en C:\SVN\NewCore2\Main\Code\1_FMAF\Bend.Common.Logging.Interface\LoggerInstance.cs:línea 18
+   en Bend.Common.Utils.Framework.ServiceClientFactory.InvokeMethod[TChannel](Action`1 invocation) en C:\SVN\NewCore2\Main\Code\1_FMAF\Bend.Common.Utils\Framework\ServiceClientFactory.cs:línea 157
+   en Bend.Common.Logging.Interface.LoggerInstance.SaveLogAsync(RequestLog request) en C:\SVN\NewCore2\Main\Code\1_FMAF\Bend.Common.Logging.Interface\LoggerInstance.cs:línea 15
+	Source:mscorlib
+	HResult:-2146233087
+}
+
+{
+	Class:EndpointNotFoundException
+	ToString:System.ServiceModel.EndpointNotFoundException: No había ningún extremo escuchando en http://172.21.30.10/WS_Logging/LoggerService.svc que pudiera aceptar el mensaje. La causa suele ser una dirección o una acción SOAP incorrecta. Consulte InnerException, si está presente, para obtener más información. ---> System.Net.WebException: Error en el servidor remoto: (404) No se encontró.
+   en System.Net.HttpWebRequest.GetResponse()
+   en System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+   --- Fin del seguimiento de la pila de la excepción interna ---
+
+Server stack trace: 
+   en System.ServiceModel.Channels.HttpChannelUtilities.ProcessGetResponseWebException(WebException webException, HttpWebRequest request, HttpAbortReason abortReason)
+   en System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+   en System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   en System.ServiceModel.Dispatcher.RequestChannelBinder.Send(Message message, TimeSpan timeout)
+   en System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   en System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   en System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   en System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   en System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   en Bend.Common.Logging.Interface.ILoggerService.SaveLogAsync(RequestLog request)
+   en Bend.Common.Logging.Interface.LoggerInstance.<>c__DisplayClass0_0.<SaveLogAsync>b__0(ILoggerService c) en C:\SVN\NewCore2\Main\Code\1_FMAF\Bend.Common.Logging.Interface\LoggerInstance.cs:línea 18
+   en Bend.Common.Utils.Framework.ServiceClientFactory.InvokeMethod[TChannel](Action`1 invocation) en C:\SVN\NewCore2\Main\Code\1_FMAF\Bend.Common.Utils\Framework\ServiceClientFactory.cs:línea 157
+   en Bend.Common.Logging.Interface.LoggerInstance.SaveLogAsync(RequestLog request) en C:\SVN\NewCore2\Main\Code\1_FMAF\Bend.Common.Logging.Interface\LoggerInstance.cs:línea 15
+	Message:No había ningún extremo escuchando en http://172.21.30.10/WS_Logging/LoggerService.svc que pudiera aceptar el mensaje. La causa suele ser una dirección o una acción SOAP incorrecta. Consulte InnerException, si está presente, para obtener más información.
+	InnerException:System.Exception
+	InnerException.[Status]:ProtocolError
+	InnerException.[Response]:System.Net.WebResponse
+	InnerException.[Response].[IsMutuallyAuthenticated]:False
+	InnerException.[Response].[Headers]:Connection: close
+Content-Length: 315
+Content-Type: text/html; charset=us-ascii
+Date: Wed, 02 Jul 2025 16:57:40 GMT
+Server: Microsoft-HTTPAPI/2.0
+
+
+	InnerException.[Response].[Headers].[0]:Connection
+	InnerException.[Response].[Headers].[1]:Content-Length
+	InnerException.[Response].[Headers].[2]:Content-Type
+	InnerException.[Response].[Headers].[3]:Date
+	InnerException.[Response].[Headers].[4]:Server
+	InnerException.[Response].[SupportsHeaders]:True
+	InnerException.[Response].[ContentLength]:315
+	InnerException.[Response].[ContentEncoding]:
+	InnerException.[Response].[ContentType]:text/html; charset=us-ascii
+	InnerException.[Response].[CharacterSet]:us-ascii
+	InnerException.[Response].[Server]:Microsoft-HTTPAPI/2.0
+	InnerException.[Response].[LastModified]:2/07/2025 11:57:41
+	InnerException.[Response].[StatusCode]:NotFound
+	InnerException.[Response].[StatusDescription]:Not Found
+	InnerException.[Response].[ProtocolVersion]:System.Version
+	InnerException.[Response].[ProtocolVersion].[Major]:1
+	InnerException.[Response].[ProtocolVersion].[Minor]:1
+	InnerException.[Response].[ProtocolVersion].[Build]:-1
+	InnerException.[Response].[ProtocolVersion].[Revision]:-1
+	InnerException.[Response].[ProtocolVersion].[MajorRevision]:-1
+	InnerException.[Response].[ProtocolVersion].[MinorRevision]:-1
+	InnerException.[Response].[ResponseUri]:System.Uri
+	InnerException.[Response].[ResponseUri].[AbsolutePath]:/WS_Logging/LoggerService.svc
+	InnerException.[Response].[ResponseUri].[AbsoluteUri]:http://172.21.30.10/WS_Logging/LoggerService.svc
+	InnerException.[Response].[ResponseUri].[LocalPath]:/WS_Logging/LoggerService.svc
+	InnerException.[Response].[ResponseUri].[Authority]:172.21.30.10
+	InnerException.[Response].[ResponseUri].[HostNameType]:IPv4
+	InnerException.[Response].[ResponseUri].[IsDefaultPort]:True
+	InnerException.[Response].[ResponseUri].[IsFile]:False
+	InnerException.[Response].[ResponseUri].[IsLoopback]:False
+	InnerException.[Response].[ResponseUri].[PathAndQuery]:/WS_Logging/LoggerService.svc
+	InnerException.[Response].[ResponseUri].[Segments]:System.String[]
+	InnerException.[Response].[ResponseUri].[IsUnc]:False
+	InnerException.[Response].[ResponseUri].[Host]:172.21.30.10
+	InnerException.[Response].[ResponseUri].[Port]:80
+	InnerException.[Response].[ResponseUri].[Query]:
+	InnerException.[Response].[ResponseUri].[Fragment]:
+	InnerException.[Response].[ResponseUri].[Scheme]:http
+	InnerException.[Response].[ResponseUri].[OriginalString]:http://172.21.30.10/WS_Logging/LoggerService.svc
+	InnerException.[Response].[ResponseUri].[DnsSafeHost]:172.21.30.10
+	InnerException.[Response].[ResponseUri].[IdnHost]:172.21.30.10
+	InnerException.[Response].[ResponseUri].[IsAbsoluteUri]:True
+	InnerException.[Response].[ResponseUri].[UserEscaped]:False
+	InnerException.[Response].[ResponseUri].[UserInfo]:
+	InnerException.[Response].[Method]:POST
+	InnerException.[Response].[IsFromCache]:False
+	InnerException.[Message]:Error en el servidor remoto: (404) No se encontró.
+	InnerException.[StackTrace]:   en System.Net.HttpWebRequest.GetResponse()
+   en System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+	InnerException.[Source]:System
+	InnerException.[HResult]:-2146233079
+	StackTrace:
+Server stack trace: 
+   en System.ServiceModel.Channels.HttpChannelUtilities.ProcessGetResponseWebException(WebException webException, HttpWebRequest request, HttpAbortReason abortReason)
+   en System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+   en System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   en System.ServiceModel.Dispatcher.RequestChannelBinder.Send(Message message, TimeSpan timeout)
+   en System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   en System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   en System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   en System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   en System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   en Bend.Common.Logging.Interface.ILoggerService.SaveLogAsync(RequestLog request)
+   en Bend.Common.Logging.Interface.LoggerInstance.<>c__DisplayClass0_0.<SaveLogAsync>b__0(ILoggerService c) en C:\SVN\NewCore2\Main\Code\1_FMAF\Bend.Common.Logging.Interface\LoggerInstance.cs:línea 18
+   en Bend.Common.Utils.Framework.ServiceClientFactory.InvokeMethod[TChannel](Action`1 invocation) en C:\SVN\NewCore2\Main\Code\1_FMAF\Bend.Common.Utils\Framework\ServiceClientFactory.cs:línea 157
+   en Bend.Common.Logging.Interface.LoggerInstance.SaveLogAsync(RequestLog request) en C:\SVN\NewCore2\Main\Code\1_FMAF\Bend.Common.Logging.Interface\LoggerInstance.cs:línea 15
+	Source:mscorlib
+	HResult:-2146233087
+}
+
+{
+	Class:EndpointNotFoundException
+	ToString:System.ServiceModel.EndpointNotFoundException: No había ningún extremo escuchando en http://172.21.30.10/WS_Logging/LoggerService.svc que pudiera aceptar el mensaje. La causa suele ser una dirección o una acción SOAP incorrecta. Consulte InnerException, si está presente, para obtener más información. ---> System.Net.WebException: Error en el servidor remoto: (404) No se encontró.
+   en System.Net.HttpWebRequest.GetResponse()
+   en System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+   --- Fin del seguimiento de la pila de la excepción interna ---
+
+Server stack trace: 
+   en System.ServiceModel.Channels.HttpChannelUtilities.ProcessGetResponseWebException(WebException webException, HttpWebRequest request, HttpAbortReason abortReason)
+   en System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+   en System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   en System.ServiceModel.Dispatcher.RequestChannelBinder.Send(Message message, TimeSpan timeout)
+   en System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   en System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   en System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   en System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   en System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   en Bend.Common.Logging.Interface.ILoggerService.SaveLogAsync(RequestLog request)
+   en Bend.Common.Logging.Interface.LoggerInstance.<>c__DisplayClass0_0.<SaveLogAsync>b__0(ILoggerService c) en C:\SVN\NewCore2\Main\Code\1_FMAF\Bend.Common.Logging.Interface\LoggerInstance.cs:línea 18
+   en Bend.Common.Utils.Framework.ServiceClientFactory.InvokeMethod[TChannel](Action`1 invocation) en C:\SVN\NewCore2\Main\Code\1_FMAF\Bend.Common.Utils\Framework\ServiceClientFactory.cs:línea 157
+   en Bend.Common.Logging.Interface.LoggerInstance.SaveLogAsync(RequestLog request) en C:\SVN\NewCore2\Main\Code\1_FMAF\Bend.Common.Logging.Interface\LoggerInstance.cs:línea 15
+	Message:No había ningún extremo escuchando en http://172.21.30.10/WS_Logging/LoggerService.svc que pudiera aceptar el mensaje. La causa suele ser una dirección o una acción SOAP incorrecta. Consulte InnerException, si está presente, para obtener más información.
+	InnerException:System.Exception
+	InnerException.[Status]:ProtocolError
+	InnerException.[Response]:System.Net.WebResponse
+	InnerException.[Response].[IsMutuallyAuthenticated]:False
+	InnerException.[Response].[Headers]:Connection: close
+Content-Length: 315
+Content-Type: text/html; charset=us-ascii
+Date: Wed, 02 Jul 2025 16:57:46 GMT
+Server: Microsoft-HTTPAPI/2.0
+
+
+	InnerException.[Response].[Headers].[0]:Connection
+	InnerException.[Response].[Headers].[1]:Content-Length
+	InnerException.[Response].[Headers].[2]:Content-Type
+	InnerException.[Response].[Headers].[3]:Date
+	InnerException.[Response].[Headers].[4]:Server
+	InnerException.[Response].[SupportsHeaders]:True
+	InnerException.[Response].[ContentLength]:315
+	InnerException.[Response].[ContentEncoding]:
+	InnerException.[Response].[ContentType]:text/html; charset=us-ascii
+	InnerException.[Response].[CharacterSet]:us-ascii
+	InnerException.[Response].[Server]:Microsoft-HTTPAPI/2.0
+	InnerException.[Response].[LastModified]:2/07/2025 11:57:46
+	InnerException.[Response].[StatusCode]:NotFound
+	InnerException.[Response].[StatusDescription]:Not Found
+	InnerException.[Response].[ProtocolVersion]:System.Version
+	InnerException.[Response].[ProtocolVersion].[Major]:1
+	InnerException.[Response].[ProtocolVersion].[Minor]:1
+	InnerException.[Response].[ProtocolVersion].[Build]:-1
+	InnerException.[Response].[ProtocolVersion].[Revision]:-1
+	InnerException.[Response].[ProtocolVersion].[MajorRevision]:-1
+	InnerException.[Response].[ProtocolVersion].[MinorRevision]:-1
+	InnerException.[Response].[ResponseUri]:System.Uri
+	InnerException.[Response].[ResponseUri].[AbsolutePath]:/WS_Logging/LoggerService.svc
+	InnerException.[Response].[ResponseUri].[AbsoluteUri]:http://172.21.30.10/WS_Logging/LoggerService.svc
+	InnerException.[Response].[ResponseUri].[LocalPath]:/WS_Logging/LoggerService.svc
+	InnerException.[Response].[ResponseUri].[Authority]:172.21.30.10
+	InnerException.[Response].[ResponseUri].[HostNameType]:IPv4
+	InnerException.[Response].[ResponseUri].[IsDefaultPort]:True
+	InnerException.[Response].[ResponseUri].[IsFile]:False
+	InnerException.[Response].[ResponseUri].[IsLoopback]:False
+	InnerException.[Response].[ResponseUri].[PathAndQuery]:/WS_Logging/LoggerService.svc
+	InnerException.[Response].[ResponseUri].[Segments]:System.String[]
+	InnerException.[Response].[ResponseUri].[IsUnc]:False
+	InnerException.[Response].[ResponseUri].[Host]:172.21.30.10
+	InnerException.[Response].[ResponseUri].[Port]:80
+	InnerException.[Response].[ResponseUri].[Query]:
+	InnerException.[Response].[ResponseUri].[Fragment]:
+	InnerException.[Response].[ResponseUri].[Scheme]:http
+	InnerException.[Response].[ResponseUri].[OriginalString]:http://172.21.30.10/WS_Logging/LoggerService.svc
+	InnerException.[Response].[ResponseUri].[DnsSafeHost]:172.21.30.10
+	InnerException.[Response].[ResponseUri].[IdnHost]:172.21.30.10
+	InnerException.[Response].[ResponseUri].[IsAbsoluteUri]:True
+	InnerException.[Response].[ResponseUri].[UserEscaped]:False
+	InnerException.[Response].[ResponseUri].[UserInfo]:
+	InnerException.[Response].[Method]:POST
+	InnerException.[Response].[IsFromCache]:False
+	InnerException.[Message]:Error en el servidor remoto: (404) No se encontró.
+	InnerException.[StackTrace]:   en System.Net.HttpWebRequest.GetResponse()
+   en System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+	InnerException.[Source]:System
+	InnerException.[HResult]:-2146233079
+	StackTrace:
+Server stack trace: 
+   en System.ServiceModel.Channels.HttpChannelUtilities.ProcessGetResponseWebException(WebException webException, HttpWebRequest request, HttpAbortReason abortReason)
+   en System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+   en System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   en System.ServiceModel.Dispatcher.RequestChannelBinder.Send(Message message, TimeSpan timeout)
+   en System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   en System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   en System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   en System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   en System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   en Bend.Common.Logging.Interface.ILoggerService.SaveLogAsync(RequestLog request)
+   en Bend.Common.Logging.Interface.LoggerInstance.<>c__DisplayClass0_0.<SaveLogAsync>b__0(ILoggerService c) en C:\SVN\NewCore2\Main\Code\1_FMAF\Bend.Common.Logging.Interface\LoggerInstance.cs:línea 18
+   en Bend.Common.Utils.Framework.ServiceClientFactory.InvokeMethod[TChannel](Action`1 invocation) en C:\SVN\NewCore2\Main\Code\1_FMAF\Bend.Common.Utils\Framework\ServiceClientFactory.cs:línea 157
+   en Bend.Common.Logging.Interface.LoggerInstance.SaveLogAsync(RequestLog request) en C:\SVN\NewCore2\Main\Code\1_FMAF\Bend.Common.Logging.Interface\LoggerInstance.cs:línea 15
+	Source:mscorlib
+	HResult:-2146233087
+}
+
+{
+	Class:EndpointNotFoundException
+	ToString:System.ServiceModel.EndpointNotFoundException: No había ningún extremo escuchando en http://172.21.30.10/WS_Logging/LoggerService.svc que pudiera aceptar el mensaje. La causa suele ser una dirección o una acción SOAP incorrecta. Consulte InnerException, si está presente, para obtener más información. ---> System.Net.WebException: Error en el servidor remoto: (404) No se encontró.
+   en System.Net.HttpWebRequest.GetResponse()
+   en System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+   --- Fin del seguimiento de la pila de la excepción interna ---
+
+Server stack trace: 
+   en System.ServiceModel.Channels.HttpChannelUtilities.ProcessGetResponseWebException(WebException webException, HttpWebRequest request, HttpAbortReason abortReason)
+   en System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+   en System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   en System.ServiceModel.Dispatcher.RequestChannelBinder.Send(Message message, TimeSpan timeout)
+   en System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   en System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   en System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   en System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   en System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   en Bend.Common.Logging.Interface.ILoggerService.SaveLogAsync(RequestLog request)
+   en Bend.Common.Logging.Interface.LoggerInstance.<>c__DisplayClass0_0.<SaveLogAsync>b__0(ILoggerService c) en C:\SVN\NewCore2\Main\Code\1_FMAF\Bend.Common.Logging.Interface\LoggerInstance.cs:línea 18
+   en Bend.Common.Utils.Framework.ServiceClientFactory.InvokeMethod[TChannel](Action`1 invocation) en C:\SVN\NewCore2\Main\Code\1_FMAF\Bend.Common.Utils\Framework\ServiceClientFactory.cs:línea 157
+   en Bend.Common.Logging.Interface.LoggerInstance.SaveLogAsync(RequestLog request) en C:\SVN\NewCore2\Main\Code\1_FMAF\Bend.Common.Logging.Interface\LoggerInstance.cs:línea 15
+	Message:No había ningún extremo escuchando en http://172.21.30.10/WS_Logging/LoggerService.svc que pudiera aceptar el mensaje. La causa suele ser una dirección o una acción SOAP incorrecta. Consulte InnerException, si está presente, para obtener más información.
+	InnerException:System.Exception
+	InnerException.[Status]:ProtocolError
+	InnerException.[Response]:System.Net.WebResponse
+	InnerException.[Response].[IsMutuallyAuthenticated]:False
+	InnerException.[Response].[Headers]:Connection: close
+Content-Length: 315
+Content-Type: text/html; charset=us-ascii
+Date: Wed, 02 Jul 2025 16:57:54 GMT
+Server: Microsoft-HTTPAPI/2.0
+
+
+	InnerException.[Response].[Headers].[0]:Connection
+	InnerException.[Response].[Headers].[1]:Content-Length
+	InnerException.[Response].[Headers].[2]:Content-Type
+	InnerException.[Response].[Headers].[3]:Date
+	InnerException.[Response].[Headers].[4]:Server
+	InnerException.[Response].[SupportsHeaders]:True
+	InnerException.[Response].[ContentLength]:315
+	InnerException.[Response].[ContentEncoding]:
+	InnerException.[Response].[ContentType]:text/html; charset=us-ascii
+	InnerException.[Response].[CharacterSet]:us-ascii
+	InnerException.[Response].[Server]:Microsoft-HTTPAPI/2.0
+	InnerException.[Response].[LastModified]:2/07/2025 11:57:54
+	InnerException.[Response].[StatusCode]:NotFound
+	InnerException.[Response].[StatusDescription]:Not Found
+	InnerException.[Response].[ProtocolVersion]:System.Version
+	InnerException.[Response].[ProtocolVersion].[Major]:1
+	InnerException.[Response].[ProtocolVersion].[Minor]:1
+	InnerException.[Response].[ProtocolVersion].[Build]:-1
+	InnerException.[Response].[ProtocolVersion].[Revision]:-1
+	InnerException.[Response].[ProtocolVersion].[MajorRevision]:-1
+	InnerException.[Response].[ProtocolVersion].[MinorRevision]:-1
+	InnerException.[Response].[ResponseUri]:System.Uri
+	InnerException.[Response].[ResponseUri].[AbsolutePath]:/WS_Logging/LoggerService.svc
+	InnerException.[Response].[ResponseUri].[AbsoluteUri]:http://172.21.30.10/WS_Logging/LoggerService.svc
+	InnerException.[Response].[ResponseUri].[LocalPath]:/WS_Logging/LoggerService.svc
+	InnerException.[Response].[ResponseUri].[Authority]:172.21.30.10
+	InnerException.[Response].[ResponseUri].[HostNameType]:IPv4
+	InnerException.[Response].[ResponseUri].[IsDefaultPort]:True
+	InnerException.[Response].[ResponseUri].[IsFile]:False
+	InnerException.[Response].[ResponseUri].[IsLoopback]:False
+	InnerException.[Response].[ResponseUri].[PathAndQuery]:/WS_Logging/LoggerService.svc
+	InnerException.[Response].[ResponseUri].[Segments]:System.String[]
+	InnerException.[Response].[ResponseUri].[IsUnc]:False
+	InnerException.[Response].[ResponseUri].[Host]:172.21.30.10
+	InnerException.[Response].[ResponseUri].[Port]:80
+	InnerException.[Response].[ResponseUri].[Query]:
+	InnerException.[Response].[ResponseUri].[Fragment]:
+	InnerException.[Response].[ResponseUri].[Scheme]:http
+	InnerException.[Response].[ResponseUri].[OriginalString]:http://172.21.30.10/WS_Logging/LoggerService.svc
+	InnerException.[Response].[ResponseUri].[DnsSafeHost]:172.21.30.10
+	InnerException.[Response].[ResponseUri].[IdnHost]:172.21.30.10
+	InnerException.[Response].[ResponseUri].[IsAbsoluteUri]:True
+	InnerException.[Response].[ResponseUri].[UserEscaped]:False
+	InnerException.[Response].[ResponseUri].[UserInfo]:
+	InnerException.[Response].[Method]:POST
+	InnerException.[Response].[IsFromCache]:False
+	InnerException.[Message]:Error en el servidor remoto: (404) No se encontró.
+	InnerException.[StackTrace]:   en System.Net.HttpWebRequest.GetResponse()
+   en System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+	InnerException.[Source]:System
+	InnerException.[HResult]:-2146233079
+	StackTrace:
+Server stack trace: 
+   en System.ServiceModel.Channels.HttpChannelUtilities.ProcessGetResponseWebException(WebException webException, HttpWebRequest request, HttpAbortReason abortReason)
+   en System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+   en System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   en System.ServiceModel.Dispatcher.RequestChannelBinder.Send(Message message, TimeSpan timeout)
+   en System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   en System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   en System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   en System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   en System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   en Bend.Common.Logging.Interface.ILoggerService.SaveLogAsync(RequestLog request)
+   en Bend.Common.Logging.Interface.LoggerInstance.<>c__DisplayClass0_0.<SaveLogAsync>b__0(ILoggerService c) en C:\SVN\NewCore2\Main\Code\1_FMAF\Bend.Common.Logging.Interface\LoggerInstance.cs:línea 18
+   en Bend.Common.Utils.Framework.ServiceClientFactory.InvokeMethod[TChannel](Action`1 invocation) en C:\SVN\NewCore2\Main\Code\1_FMAF\Bend.Common.Utils\Framework\ServiceClientFactory.cs:línea 157
+   en Bend.Common.Logging.Interface.LoggerInstance.SaveLogAsync(RequestLog request) en C:\SVN\NewCore2\Main\Code\1_FMAF\Bend.Common.Logging.Interface\LoggerInstance.cs:línea 15
+	Source:mscorlib
+	HResult:-2146233087
+}
+
+{
+	Class:EndpointNotFoundException
+	ToString:System.ServiceModel.EndpointNotFoundException: No había ningún extremo escuchando en http://172.21.30.10/WS_Logging/LoggerService.svc que pudiera aceptar el mensaje. La causa suele ser una dirección o una acción SOAP incorrecta. Consulte InnerException, si está presente, para obtener más información. ---> System.Net.WebException: Error en el servidor remoto: (404) No se encontró.
+   en System.Net.HttpWebRequest.GetResponse()
+   en System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+   --- Fin del seguimiento de la pila de la excepción interna ---
+
+Server stack trace: 
+   en System.ServiceModel.Channels.HttpChannelUtilities.ProcessGetResponseWebException(WebException webException, HttpWebRequest request, HttpAbortReason abortReason)
+   en System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+   en System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   en System.ServiceModel.Dispatcher.RequestChannelBinder.Send(Message message, TimeSpan timeout)
+   en System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   en System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   en System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   en System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   en System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   en Bend.Common.Logging.Interface.ILoggerService.SaveLogAsync(RequestLog request)
+   en Bend.Common.Logging.Interface.LoggerInstance.<>c__DisplayClass0_0.<SaveLogAsync>b__0(ILoggerService c) en C:\SVN\NewCore2\Main\Code\1_FMAF\Bend.Common.Logging.Interface\LoggerInstance.cs:línea 18
+   en Bend.Common.Utils.Framework.ServiceClientFactory.InvokeMethod[TChannel](Action`1 invocation) en C:\SVN\NewCore2\Main\Code\1_FMAF\Bend.Common.Utils\Framework\ServiceClientFactory.cs:línea 157
+   en Bend.Common.Logging.Interface.LoggerInstance.SaveLogAsync(RequestLog request) en C:\SVN\NewCore2\Main\Code\1_FMAF\Bend.Common.Logging.Interface\LoggerInstance.cs:línea 15
+	Message:No había ningún extremo escuchando en http://172.21.30.10/WS_Logging/LoggerService.svc que pudiera aceptar el mensaje. La causa suele ser una dirección o una acción SOAP incorrecta. Consulte InnerException, si está presente, para obtener más información.
+	InnerException:System.Exception
+	InnerException.[Status]:ProtocolError
+	InnerException.[Response]:System.Net.WebResponse
+	InnerException.[Response].[IsMutuallyAuthenticated]:False
+	InnerException.[Response].[Headers]:Connection: close
+Content-Length: 315
+Content-Type: text/html; charset=us-ascii
+Date: Wed, 02 Jul 2025 16:57:57 GMT
+Server: Microsoft-HTTPAPI/2.0
+
+
+	InnerException.[Response].[Headers].[0]:Connection
+	InnerException.[Response].[Headers].[1]:Content-Length
+	InnerException.[Response].[Headers].[2]:Content-Type
+	InnerException.[Response].[Headers].[3]:Date
+	InnerException.[Response].[Headers].[4]:Server
+	InnerException.[Response].[SupportsHeaders]:True
+	InnerException.[Response].[ContentLength]:315
+	InnerException.[Response].[ContentEncoding]:
+	InnerException.[Response].[ContentType]:text/html; charset=us-ascii
+	InnerException.[Response].[CharacterSet]:us-ascii
+	InnerException.[Response].[Server]:Microsoft-HTTPAPI/2.0
+	InnerException.[Response].[LastModified]:2/07/2025 11:57:58
+	InnerException.[Response].[StatusCode]:NotFound
+	InnerException.[Response].[StatusDescription]:Not Found
+	InnerException.[Response].[ProtocolVersion]:System.Version
+	InnerException.[Response].[ProtocolVersion].[Major]:1
+	InnerException.[Response].[ProtocolVersion].[Minor]:1
+	InnerException.[Response].[ProtocolVersion].[Build]:-1
+	InnerException.[Response].[ProtocolVersion].[Revision]:-1
+	InnerException.[Response].[ProtocolVersion].[MajorRevision]:-1
+	InnerException.[Response].[ProtocolVersion].[MinorRevision]:-1
+	InnerException.[Response].[ResponseUri]:System.Uri
+	InnerException.[Response].[ResponseUri].[AbsolutePath]:/WS_Logging/LoggerService.svc
+	InnerException.[Response].[ResponseUri].[AbsoluteUri]:http://172.21.30.10/WS_Logging/LoggerService.svc
+	InnerException.[Response].[ResponseUri].[LocalPath]:/WS_Logging/LoggerService.svc
+	InnerException.[Response].[ResponseUri].[Authority]:172.21.30.10
+	InnerException.[Response].[ResponseUri].[HostNameType]:IPv4
+	InnerException.[Response].[ResponseUri].[IsDefaultPort]:True
+	InnerException.[Response].[ResponseUri].[IsFile]:False
+	InnerException.[Response].[ResponseUri].[IsLoopback]:False
+	InnerException.[Response].[ResponseUri].[PathAndQuery]:/WS_Logging/LoggerService.svc
+	InnerException.[Response].[ResponseUri].[Segments]:System.String[]
+	InnerException.[Response].[ResponseUri].[IsUnc]:False
+	InnerException.[Response].[ResponseUri].[Host]:172.21.30.10
+	InnerException.[Response].[ResponseUri].[Port]:80
+	InnerException.[Response].[ResponseUri].[Query]:
+	InnerException.[Response].[ResponseUri].[Fragment]:
+	InnerException.[Response].[ResponseUri].[Scheme]:http
+	InnerException.[Response].[ResponseUri].[OriginalString]:http://172.21.30.10/WS_Logging/LoggerService.svc
+	InnerException.[Response].[ResponseUri].[DnsSafeHost]:172.21.30.10
+	InnerException.[Response].[ResponseUri].[IdnHost]:172.21.30.10
+	InnerException.[Response].[ResponseUri].[IsAbsoluteUri]:True
+	InnerException.[Response].[ResponseUri].[UserEscaped]:False
+	InnerException.[Response].[ResponseUri].[UserInfo]:
+	InnerException.[Response].[Method]:POST
+	InnerException.[Response].[IsFromCache]:False
+	InnerException.[Message]:Error en el servidor remoto: (404) No se encontró.
+	InnerException.[StackTrace]:   en System.Net.HttpWebRequest.GetResponse()
+   en System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+	InnerException.[Source]:System
+	InnerException.[HResult]:-2146233079
+	StackTrace:
+Server stack trace: 
+   en System.ServiceModel.Channels.HttpChannelUtilities.ProcessGetResponseWebException(WebException webException, HttpWebRequest request, HttpAbortReason abortReason)
+   en System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+   en System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   en System.ServiceModel.Dispatcher.RequestChannelBinder.Send(Message message, TimeSpan timeout)
+   en System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   en System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   en System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   en System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   en System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   en Bend.Common.Logging.Interface.ILoggerService.SaveLogAsync(RequestLog request)
+   en Bend.Common.Logging.Interface.LoggerInstance.<>c__DisplayClass0_0.<SaveLogAsync>b__0(ILoggerService c) en C:\SVN\NewCore2\Main\Code\1_FMAF\Bend.Common.Logging.Interface\LoggerInstance.cs:línea 18
+   en Bend.Common.Utils.Framework.ServiceClientFactory.InvokeMethod[TChannel](Action`1 invocation) en C:\SVN\NewCore2\Main\Code\1_FMAF\Bend.Common.Utils\Framework\ServiceClientFactory.cs:línea 157
+   en Bend.Common.Logging.Interface.LoggerInstance.SaveLogAsync(RequestLog request) en C:\SVN\NewCore2\Main\Code\1_FMAF\Bend.Common.Logging.Interface\LoggerInstance.cs:línea 15
+	Source:mscorlib
+	HResult:-2146233087
+}
+
+{
+	Class:EndpointNotFoundException
+	ToString:System.ServiceModel.EndpointNotFoundException: No había ningún extremo escuchando en http://172.21.30.10/WS_Logging/LoggerService.svc que pudiera aceptar el mensaje. La causa suele ser una dirección o una acción SOAP incorrecta. Consulte InnerException, si está presente, para obtener más información. ---> System.Net.WebException: Error en el servidor remoto: (404) No se encontró.
+   en System.Net.HttpWebRequest.GetResponse()
+   en System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+   --- Fin del seguimiento de la pila de la excepción interna ---
+
+Server stack trace: 
+   en System.ServiceModel.Channels.HttpChannelUtilities.ProcessGetResponseWebException(WebException webException, HttpWebRequest request, HttpAbortReason abortReason)
+   en System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+   en System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   en System.ServiceModel.Dispatcher.RequestChannelBinder.Send(Message message, TimeSpan timeout)
+   en System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   en System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   en System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   en System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   en System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   en Bend.Common.Logging.Interface.ILoggerService.SaveLogAsync(RequestLog request)
+   en Bend.Common.Logging.Interface.LoggerInstance.<>c__DisplayClass0_0.<SaveLogAsync>b__0(ILoggerService c) en C:\SVN\NewCore2\Main\Code\1_FMAF\Bend.Common.Logging.Interface\LoggerInstance.cs:línea 18
+   en Bend.Common.Utils.Framework.ServiceClientFactory.InvokeMethod[TChannel](Action`1 invocation) en C:\SVN\NewCore2\Main\Code\1_FMAF\Bend.Common.Utils\Framework\ServiceClientFactory.cs:línea 157
+   en Bend.Common.Logging.Interface.LoggerInstance.SaveLogAsync(RequestLog request) en C:\SVN\NewCore2\Main\Code\1_FMAF\Bend.Common.Logging.Interface\LoggerInstance.cs:línea 15
+	Message:No había ningún extremo escuchando en http://172.21.30.10/WS_Logging/LoggerService.svc que pudiera aceptar el mensaje. La causa suele ser una dirección o una acción SOAP incorrecta. Consulte InnerException, si está presente, para obtener más información.
+	InnerException:System.Exception
+	InnerException.[Status]:ProtocolError
+	InnerException.[Response]:System.Net.WebResponse
+	InnerException.[Response].[IsMutuallyAuthenticated]:False
+	InnerException.[Response].[Headers]:Connection: close
+Content-Length: 315
+Content-Type: text/html; charset=us-ascii
+Date: Wed, 02 Jul 2025 16:57:57 GMT
+Server: Microsoft-HTTPAPI/2.0
+
+
+	InnerException.[Response].[Headers].[0]:Connection
+	InnerException.[Response].[Headers].[1]:Content-Length
+	InnerException.[Response].[Headers].[2]:Content-Type
+	InnerException.[Response].[Headers].[3]:Date
+	InnerException.[Response].[Headers].[4]:Server
+	InnerException.[Response].[SupportsHeaders]:True
+	InnerException.[Response].[ContentLength]:315
+	InnerException.[Response].[ContentEncoding]:
+	InnerException.[Response].[ContentType]:text/html; charset=us-ascii
+	InnerException.[Response].[CharacterSet]:us-ascii
+	InnerException.[Response].[Server]:Microsoft-HTTPAPI/2.0
+	InnerException.[Response].[LastModified]:2/07/2025 11:57:58
+	InnerException.[Response].[StatusCode]:NotFound
+	InnerException.[Response].[StatusDescription]:Not Found
+	InnerException.[Response].[ProtocolVersion]:System.Version
+	InnerException.[Response].[ProtocolVersion].[Major]:1
+	InnerException.[Response].[ProtocolVersion].[Minor]:1
+	InnerException.[Response].[ProtocolVersion].[Build]:-1
+	InnerException.[Response].[ProtocolVersion].[Revision]:-1
+	InnerException.[Response].[ProtocolVersion].[MajorRevision]:-1
+	InnerException.[Response].[ProtocolVersion].[MinorRevision]:-1
+	InnerException.[Response].[ResponseUri]:System.Uri
+	InnerException.[Response].[ResponseUri].[AbsolutePath]:/WS_Logging/LoggerService.svc
+	InnerException.[Response].[ResponseUri].[AbsoluteUri]:http://172.21.30.10/WS_Logging/LoggerService.svc
+	InnerException.[Response].[ResponseUri].[LocalPath]:/WS_Logging/LoggerService.svc
+	InnerException.[Response].[ResponseUri].[Authority]:172.21.30.10
+	InnerException.[Response].[ResponseUri].[HostNameType]:IPv4
+	InnerException.[Response].[ResponseUri].[IsDefaultPort]:True
+	InnerException.[Response].[ResponseUri].[IsFile]:False
+	InnerException.[Response].[ResponseUri].[IsLoopback]:False
+	InnerException.[Response].[ResponseUri].[PathAndQuery]:/WS_Logging/LoggerService.svc
+	InnerException.[Response].[ResponseUri].[Segments]:System.String[]
+	InnerException.[Response].[ResponseUri].[IsUnc]:False
+	InnerException.[Response].[ResponseUri].[Host]:172.21.30.10
+	InnerException.[Response].[ResponseUri].[Port]:80
+	InnerException.[Response].[ResponseUri].[Query]:
+	InnerException.[Response].[ResponseUri].[Fragment]:
+	InnerException.[Response].[ResponseUri].[Scheme]:http
+	InnerException.[Response].[ResponseUri].[OriginalString]:http://172.21.30.10/WS_Logging/LoggerService.svc
+	InnerException.[Response].[ResponseUri].[DnsSafeHost]:172.21.30.10
+	InnerException.[Response].[ResponseUri].[IdnHost]:172.21.30.10
+	InnerException.[Response].[ResponseUri].[IsAbsoluteUri]:True
+	InnerException.[Response].[ResponseUri].[UserEscaped]:False
+	InnerException.[Response].[ResponseUri].[UserInfo]:
+	InnerException.[Response].[Method]:POST
+	InnerException.[Response].[IsFromCache]:False
+	InnerException.[Message]:Error en el servidor remoto: (404) No se encontró.
+	InnerException.[StackTrace]:   en System.Net.HttpWebRequest.GetResponse()
+   en System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+	InnerException.[Source]:System
+	InnerException.[HResult]:-2146233079
+	StackTrace:
+Server stack trace: 
+   en System.ServiceModel.Channels.HttpChannelUtilities.ProcessGetResponseWebException(WebException webException, HttpWebRequest request, HttpAbortReason abortReason)
+   en System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+   en System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   en System.ServiceModel.Dispatcher.RequestChannelBinder.Send(Message message, TimeSpan timeout)
+   en System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   en System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   en System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   en System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   en System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   en Bend.Common.Logging.Interface.ILoggerService.SaveLogAsync(RequestLog request)
+   en Bend.Common.Logging.Interface.LoggerInstance.<>c__DisplayClass0_0.<SaveLogAsync>b__0(ILoggerService c) en C:\SVN\NewCore2\Main\Code\1_FMAF\Bend.Common.Logging.Interface\LoggerInstance.cs:línea 18
+   en Bend.Common.Utils.Framework.ServiceClientFactory.InvokeMethod[TChannel](Action`1 invocation) en C:\SVN\NewCore2\Main\Code\1_FMAF\Bend.Common.Utils\Framework\ServiceClientFactory.cs:línea 157
+   en Bend.Common.Logging.Interface.LoggerInstance.SaveLogAsync(RequestLog request) en C:\SVN\NewCore2\Main\Code\1_FMAF\Bend.Common.Logging.Interface\LoggerInstance.cs:línea 15
+	Source:mscorlib
+	HResult:-2146233087
+}
+
+{
+	Class:EndpointNotFoundException
+	ToString:System.ServiceModel.EndpointNotFoundException: No había ningún extremo escuchando en http://172.21.30.10/WS_Logging/LoggerService.svc que pudiera aceptar el mensaje. La causa suele ser una dirección o una acción SOAP incorrecta. Consulte InnerException, si está presente, para obtener más información. ---> System.Net.WebException: Error en el servidor remoto: (404) No se encontró.
+   en System.Net.HttpWebRequest.GetResponse()
+   en System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+   --- Fin del seguimiento de la pila de la excepción interna ---
+
+Server stack trace: 
+   en System.ServiceModel.Channels.HttpChannelUtilities.ProcessGetResponseWebException(WebException webException, HttpWebRequest request, HttpAbortReason abortReason)
+   en System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+   en System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   en System.ServiceModel.Dispatcher.RequestChannelBinder.Send(Message message, TimeSpan timeout)
+   en System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   en System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   en System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   en System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   en System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   en Bend.Common.Logging.Interface.ILoggerService.SaveLogAsync(RequestLog request)
+   en Bend.Common.Logging.Interface.LoggerInstance.<>c__DisplayClass0_0.<SaveLogAsync>b__0(ILoggerService c) en C:\SVN\NewCore2\Main\Code\1_FMAF\Bend.Common.Logging.Interface\LoggerInstance.cs:línea 18
+   en Bend.Common.Utils.Framework.ServiceClientFactory.InvokeMethod[TChannel](Action`1 invocation) en C:\SVN\NewCore2\Main\Code\1_FMAF\Bend.Common.Utils\Framework\ServiceClientFactory.cs:línea 157
+   en Bend.Common.Logging.Interface.LoggerInstance.SaveLogAsync(RequestLog request) en C:\SVN\NewCore2\Main\Code\1_FMAF\Bend.Common.Logging.Interface\LoggerInstance.cs:línea 15
+	Message:No había ningún extremo escuchando en http://172.21.30.10/WS_Logging/LoggerService.svc que pudiera aceptar el mensaje. La causa suele ser una dirección o una acción SOAP incorrecta. Consulte InnerException, si está presente, para obtener más información.
+	InnerException:System.Exception
+	InnerException.[Status]:ProtocolError
+	InnerException.[Response]:System.Net.WebResponse
+	InnerException.[Response].[IsMutuallyAuthenticated]:False
+	InnerException.[Response].[Headers]:Connection: close
+Content-Length: 315
+Content-Type: text/html; charset=us-ascii
+Date: Wed, 02 Jul 2025 16:58:11 GMT
+Server: Microsoft-HTTPAPI/2.0
+
+
+	InnerException.[Response].[Headers].[0]:Connection
+	InnerException.[Response].[Headers].[1]:Content-Length
+	InnerException.[Response].[Headers].[2]:Content-Type
+	InnerException.[Response].[Headers].[3]:Date
+	InnerException.[Response].[Headers].[4]:Server
+	InnerException.[Response].[SupportsHeaders]:True
+	InnerException.[Response].[ContentLength]:315
+	InnerException.[Response].[ContentEncoding]:
+	InnerException.[Response].[ContentType]:text/html; charset=us-ascii
+	InnerException.[Response].[CharacterSet]:us-ascii
+	InnerException.[Response].[Server]:Microsoft-HTTPAPI/2.0
+	InnerException.[Response].[LastModified]:2/07/2025 11:58:11
+	InnerException.[Response].[StatusCode]:NotFound
+	InnerException.[Response].[StatusDescription]:Not Found
+	InnerException.[Response].[ProtocolVersion]:System.Version
+	InnerException.[Response].[ProtocolVersion].[Major]:1
+	InnerException.[Response].[ProtocolVersion].[Minor]:1
+	InnerException.[Response].[ProtocolVersion].[Build]:-1
+	InnerException.[Response].[ProtocolVersion].[Revision]:-1
+	InnerException.[Response].[ProtocolVersion].[MajorRevision]:-1
+	InnerException.[Response].[ProtocolVersion].[MinorRevision]:-1
+	InnerException.[Response].[ResponseUri]:System.Uri
+	InnerException.[Response].[ResponseUri].[AbsolutePath]:/WS_Logging/LoggerService.svc
+	InnerException.[Response].[ResponseUri].[AbsoluteUri]:http://172.21.30.10/WS_Logging/LoggerService.svc
+	InnerException.[Response].[ResponseUri].[LocalPath]:/WS_Logging/LoggerService.svc
+	InnerException.[Response].[ResponseUri].[Authority]:172.21.30.10
+	InnerException.[Response].[ResponseUri].[HostNameType]:IPv4
+	InnerException.[Response].[ResponseUri].[IsDefaultPort]:True
+	InnerException.[Response].[ResponseUri].[IsFile]:False
+	InnerException.[Response].[ResponseUri].[IsLoopback]:False
+	InnerException.[Response].[ResponseUri].[PathAndQuery]:/WS_Logging/LoggerService.svc
+	InnerException.[Response].[ResponseUri].[Segments]:System.String[]
+	InnerException.[Response].[ResponseUri].[IsUnc]:False
+	InnerException.[Response].[ResponseUri].[Host]:172.21.30.10
+	InnerException.[Response].[ResponseUri].[Port]:80
+	InnerException.[Response].[ResponseUri].[Query]:
+	InnerException.[Response].[ResponseUri].[Fragment]:
+	InnerException.[Response].[ResponseUri].[Scheme]:http
+	InnerException.[Response].[ResponseUri].[OriginalString]:http://172.21.30.10/WS_Logging/LoggerService.svc
+	InnerException.[Response].[ResponseUri].[DnsSafeHost]:172.21.30.10
+	InnerException.[Response].[ResponseUri].[IdnHost]:172.21.30.10
+	InnerException.[Response].[ResponseUri].[IsAbsoluteUri]:True
+	InnerException.[Response].[ResponseUri].[UserEscaped]:False
+	InnerException.[Response].[ResponseUri].[UserInfo]:
+	InnerException.[Response].[Method]:POST
+	InnerException.[Response].[IsFromCache]:False
+	InnerException.[Message]:Error en el servidor remoto: (404) No se encontró.
+	InnerException.[StackTrace]:   en System.Net.HttpWebRequest.GetResponse()
+   en System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+	InnerException.[Source]:System
+	InnerException.[HResult]:-2146233079
+	StackTrace:
+Server stack trace: 
+   en System.ServiceModel.Channels.HttpChannelUtilities.ProcessGetResponseWebException(WebException webException, HttpWebRequest request, HttpAbortReason abortReason)
+   en System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+   en System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   en System.ServiceModel.Dispatcher.RequestChannelBinder.Send(Message message, TimeSpan timeout)
+   en System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   en System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   en System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   en System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   en System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   en Bend.Common.Logging.Interface.ILoggerService.SaveLogAsync(RequestLog request)
+   en Bend.Common.Logging.Interface.LoggerInstance.<>c__DisplayClass0_0.<SaveLogAsync>b__0(ILoggerService c) en C:\SVN\NewCore2\Main\Code\1_FMAF\Bend.Common.Logging.Interface\LoggerInstance.cs:línea 18
+   en Bend.Common.Utils.Framework.ServiceClientFactory.InvokeMethod[TChannel](Action`1 invocation) en C:\SVN\NewCore2\Main\Code\1_FMAF\Bend.Common.Utils\Framework\ServiceClientFactory.cs:línea 157
+   en Bend.Common.Logging.Interface.LoggerInstance.SaveLogAsync(RequestLog request) en C:\SVN\NewCore2\Main\Code\1_FMAF\Bend.Common.Logging.Interface\LoggerInstance.cs:línea 15
+	Source:mscorlib
+	HResult:-2146233087
+}
+
+{
+	Class:EndpointNotFoundException
+	ToString:System.ServiceModel.EndpointNotFoundException: No había ningún extremo escuchando en http://172.21.30.10/WS_Logging/LoggerService.svc que pudiera aceptar el mensaje. La causa suele ser una dirección o una acción SOAP incorrecta. Consulte InnerException, si está presente, para obtener más información. ---> System.Net.WebException: Error en el servidor remoto: (404) No se encontró.
+   en System.Net.HttpWebRequest.GetResponse()
+   en System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+   --- Fin del seguimiento de la pila de la excepción interna ---
+
+Server stack trace: 
+   en System.ServiceModel.Channels.HttpChannelUtilities.ProcessGetResponseWebException(WebException webException, HttpWebRequest request, HttpAbortReason abortReason)
+   en System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+   en System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   en System.ServiceModel.Dispatcher.RequestChannelBinder.Send(Message message, TimeSpan timeout)
+   en System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   en System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   en System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   en System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   en System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   en Bend.Common.Logging.Interface.ILoggerService.SaveLogAsync(RequestLog request)
+   en Bend.Common.Logging.Interface.LoggerInstance.<>c__DisplayClass0_0.<SaveLogAsync>b__0(ILoggerService c) en C:\SVN\NewCore2\Main\Code\1_FMAF\Bend.Common.Logging.Interface\LoggerInstance.cs:línea 18
+   en Bend.Common.Utils.Framework.ServiceClientFactory.InvokeMethod[TChannel](Action`1 invocation) en C:\SVN\NewCore2\Main\Code\1_FMAF\Bend.Common.Utils\Framework\ServiceClientFactory.cs:línea 157
+   en Bend.Common.Logging.Interface.LoggerInstance.SaveLogAsync(RequestLog request) en C:\SVN\NewCore2\Main\Code\1_FMAF\Bend.Common.Logging.Interface\LoggerInstance.cs:línea 15
+	Message:No había ningún extremo escuchando en http://172.21.30.10/WS_Logging/LoggerService.svc que pudiera aceptar el mensaje. La causa suele ser una dirección o una acción SOAP incorrecta. Consulte InnerException, si está presente, para obtener más información.
+	InnerException:System.Exception
+	InnerException.[Status]:ProtocolError
+	InnerException.[Response]:System.Net.WebResponse
+	InnerException.[Response].[IsMutuallyAuthenticated]:False
+	InnerException.[Response].[Headers]:Connection: close
+Content-Length: 315
+Content-Type: text/html; charset=us-ascii
+Date: Wed, 02 Jul 2025 16:58:17 GMT
+Server: Microsoft-HTTPAPI/2.0
+
+
+	InnerException.[Response].[Headers].[0]:Connection
+	InnerException.[Response].[Headers].[1]:Content-Length
+	InnerException.[Response].[Headers].[2]:Content-Type
+	InnerException.[Response].[Headers].[3]:Date
+	InnerException.[Response].[Headers].[4]:Server
+	InnerException.[Response].[SupportsHeaders]:True
+	InnerException.[Response].[ContentLength]:315
+	InnerException.[Response].[ContentEncoding]:
+	InnerException.[Response].[ContentType]:text/html; charset=us-ascii
+	InnerException.[Response].[CharacterSet]:us-ascii
+	InnerException.[Response].[Server]:Microsoft-HTTPAPI/2.0
+	InnerException.[Response].[LastModified]:2/07/2025 11:58:17
+	InnerException.[Response].[StatusCode]:NotFound
+	InnerException.[Response].[StatusDescription]:Not Found
+	InnerException.[Response].[ProtocolVersion]:System.Version
+	InnerException.[Response].[ProtocolVersion].[Major]:1
+	InnerException.[Response].[ProtocolVersion].[Minor]:1
+	InnerException.[Response].[ProtocolVersion].[Build]:-1
+	InnerException.[Response].[ProtocolVersion].[Revision]:-1
+	InnerException.[Response].[ProtocolVersion].[MajorRevision]:-1
+	InnerException.[Response].[ProtocolVersion].[MinorRevision]:-1
+	InnerException.[Response].[ResponseUri]:System.Uri
+	InnerException.[Response].[ResponseUri].[AbsolutePath]:/WS_Logging/LoggerService.svc
+	InnerException.[Response].[ResponseUri].[AbsoluteUri]:http://172.21.30.10/WS_Logging/LoggerService.svc
+	InnerException.[Response].[ResponseUri].[LocalPath]:/WS_Logging/LoggerService.svc
+	InnerException.[Response].[ResponseUri].[Authority]:172.21.30.10
+	InnerException.[Response].[ResponseUri].[HostNameType]:IPv4
+	InnerException.[Response].[ResponseUri].[IsDefaultPort]:True
+	InnerException.[Response].[ResponseUri].[IsFile]:False
+	InnerException.[Response].[ResponseUri].[IsLoopback]:False
+	InnerException.[Response].[ResponseUri].[PathAndQuery]:/WS_Logging/LoggerService.svc
+	InnerException.[Response].[ResponseUri].[Segments]:System.String[]
+	InnerException.[Response].[ResponseUri].[IsUnc]:False
+	InnerException.[Response].[ResponseUri].[Host]:172.21.30.10
+	InnerException.[Response].[ResponseUri].[Port]:80
+	InnerException.[Response].[ResponseUri].[Query]:
+	InnerException.[Response].[ResponseUri].[Fragment]:
+	InnerException.[Response].[ResponseUri].[Scheme]:http
+	InnerException.[Response].[ResponseUri].[OriginalString]:http://172.21.30.10/WS_Logging/LoggerService.svc
+	InnerException.[Response].[ResponseUri].[DnsSafeHost]:172.21.30.10
+	InnerException.[Response].[ResponseUri].[IdnHost]:172.21.30.10
+	InnerException.[Response].[ResponseUri].[IsAbsoluteUri]:True
+	InnerException.[Response].[ResponseUri].[UserEscaped]:False
+	InnerException.[Response].[ResponseUri].[UserInfo]:
+	InnerException.[Response].[Method]:POST
+	InnerException.[Response].[IsFromCache]:False
+	InnerException.[Message]:Error en el servidor remoto: (404) No se encontró.
+	InnerException.[StackTrace]:   en System.Net.HttpWebRequest.GetResponse()
+   en System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+	InnerException.[Source]:System
+	InnerException.[HResult]:-2146233079
+	StackTrace:
+Server stack trace: 
+   en System.ServiceModel.Channels.HttpChannelUtilities.ProcessGetResponseWebException(WebException webException, HttpWebRequest request, HttpAbortReason abortReason)
+   en System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+   en System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   en System.ServiceModel.Dispatcher.RequestChannelBinder.Send(Message message, TimeSpan timeout)
+   en System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   en System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   en System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   en System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   en System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   en Bend.Common.Logging.Interface.ILoggerService.SaveLogAsync(RequestLog request)
+   en Bend.Common.Logging.Interface.LoggerInstance.<>c__DisplayClass0_0.<SaveLogAsync>b__0(ILoggerService c) en C:\SVN\NewCore2\Main\Code\1_FMAF\Bend.Common.Logging.Interface\LoggerInstance.cs:línea 18
+   en Bend.Common.Utils.Framework.ServiceClientFactory.InvokeMethod[TChannel](Action`1 invocation) en C:\SVN\NewCore2\Main\Code\1_FMAF\Bend.Common.Utils\Framework\ServiceClientFactory.cs:línea 157
+   en Bend.Common.Logging.Interface.LoggerInstance.SaveLogAsync(RequestLog request) en C:\SVN\NewCore2\Main\Code\1_FMAF\Bend.Common.Logging.Interface\LoggerInstance.cs:línea 15
+	Source:mscorlib
+	HResult:-2146233087
+}
+
+{
+	Class:EndpointNotFoundException
+	ToString:System.ServiceModel.EndpointNotFoundException: No había ningún extremo escuchando en http://172.21.30.10/WS_Logging/LoggerService.svc que pudiera aceptar el mensaje. La causa suele ser una dirección o una acción SOAP incorrecta. Consulte InnerException, si está presente, para obtener más información. ---> System.Net.WebException: Error en el servidor remoto: (404) No se encontró.
+   en System.Net.HttpWebRequest.GetResponse()
+   en System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+   --- Fin del seguimiento de la pila de la excepción interna ---
+
+Server stack trace: 
+   en System.ServiceModel.Channels.HttpChannelUtilities.ProcessGetResponseWebException(WebException webException, HttpWebRequest request, HttpAbortReason abortReason)
+   en System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+   en System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   en System.ServiceModel.Dispatcher.RequestChannelBinder.Send(Message message, TimeSpan timeout)
+   en System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   en System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   en System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   en System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   en System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   en Bend.Common.Logging.Interface.ILoggerService.SaveLogAsync(RequestLog request)
+   en Bend.Common.Logging.Interface.LoggerInstance.<>c__DisplayClass0_0.<SaveLogAsync>b__0(ILoggerService c) en C:\SVN\NewCore2\Main\Code\1_FMAF\Bend.Common.Logging.Interface\LoggerInstance.cs:línea 18
+   en Bend.Common.Utils.Framework.ServiceClientFactory.InvokeMethod[TChannel](Action`1 invocation) en C:\SVN\NewCore2\Main\Code\1_FMAF\Bend.Common.Utils\Framework\ServiceClientFactory.cs:línea 157
+   en Bend.Common.Logging.Interface.LoggerInstance.SaveLogAsync(RequestLog request) en C:\SVN\NewCore2\Main\Code\1_FMAF\Bend.Common.Logging.Interface\LoggerInstance.cs:línea 15
+	Message:No había ningún extremo escuchando en http://172.21.30.10/WS_Logging/LoggerService.svc que pudiera aceptar el mensaje. La causa suele ser una dirección o una acción SOAP incorrecta. Consulte InnerException, si está presente, para obtener más información.
+	InnerException:System.Exception
+	InnerException.[Status]:ProtocolError
+	InnerException.[Response]:System.Net.WebResponse
+	InnerException.[Response].[IsMutuallyAuthenticated]:False
+	InnerException.[Response].[Headers]:Connection: close
+Content-Length: 315
+Content-Type: text/html; charset=us-ascii
+Date: Wed, 02 Jul 2025 16:58:17 GMT
+Server: Microsoft-HTTPAPI/2.0
+
+
+	InnerException.[Response].[Headers].[0]:Connection
+	InnerException.[Response].[Headers].[1]:Content-Length
+	InnerException.[Response].[Headers].[2]:Content-Type
+	InnerException.[Response].[Headers].[3]:Date
+	InnerException.[Response].[Headers].[4]:Server
+	InnerException.[Response].[SupportsHeaders]:True
+	InnerException.[Response].[ContentLength]:315
+	InnerException.[Response].[ContentEncoding]:
+	InnerException.[Response].[ContentType]:text/html; charset=us-ascii
+	InnerException.[Response].[CharacterSet]:us-ascii
+	InnerException.[Response].[Server]:Microsoft-HTTPAPI/2.0
+	InnerException.[Response].[LastModified]:2/07/2025 11:58:18
+	InnerException.[Response].[StatusCode]:NotFound
+	InnerException.[Response].[StatusDescription]:Not Found
+	InnerException.[Response].[ProtocolVersion]:System.Version
+	InnerException.[Response].[ProtocolVersion].[Major]:1
+	InnerException.[Response].[ProtocolVersion].[Minor]:1
+	InnerException.[Response].[ProtocolVersion].[Build]:-1
+	InnerException.[Response].[ProtocolVersion].[Revision]:-1
+	InnerException.[Response].[ProtocolVersion].[MajorRevision]:-1
+	InnerException.[Response].[ProtocolVersion].[MinorRevision]:-1
+	InnerException.[Response].[ResponseUri]:System.Uri
+	InnerException.[Response].[ResponseUri].[AbsolutePath]:/WS_Logging/LoggerService.svc
+	InnerException.[Response].[ResponseUri].[AbsoluteUri]:http://172.21.30.10/WS_Logging/LoggerService.svc
+	InnerException.[Response].[ResponseUri].[LocalPath]:/WS_Logging/LoggerService.svc
+	InnerException.[Response].[ResponseUri].[Authority]:172.21.30.10
+	InnerException.[Response].[ResponseUri].[HostNameType]:IPv4
+	InnerException.[Response].[ResponseUri].[IsDefaultPort]:True
+	InnerException.[Response].[ResponseUri].[IsFile]:False
+	InnerException.[Response].[ResponseUri].[IsLoopback]:False
+	InnerException.[Response].[ResponseUri].[PathAndQuery]:/WS_Logging/LoggerService.svc
+	InnerException.[Response].[ResponseUri].[Segments]:System.String[]
+	InnerException.[Response].[ResponseUri].[IsUnc]:False
+	InnerException.[Response].[ResponseUri].[Host]:172.21.30.10
+	InnerException.[Response].[ResponseUri].[Port]:80
+	InnerException.[Response].[ResponseUri].[Query]:
+	InnerException.[Response].[ResponseUri].[Fragment]:
+	InnerException.[Response].[ResponseUri].[Scheme]:http
+	InnerException.[Response].[ResponseUri].[OriginalString]:http://172.21.30.10/WS_Logging/LoggerService.svc
+	InnerException.[Response].[ResponseUri].[DnsSafeHost]:172.21.30.10
+	InnerException.[Response].[ResponseUri].[IdnHost]:172.21.30.10
+	InnerException.[Response].[ResponseUri].[IsAbsoluteUri]:True
+	InnerException.[Response].[ResponseUri].[UserEscaped]:False
+	InnerException.[Response].[ResponseUri].[UserInfo]:
+	InnerException.[Response].[Method]:POST
+	InnerException.[Response].[IsFromCache]:False
+	InnerException.[Message]:Error en el servidor remoto: (404) No se encontró.
+	InnerException.[StackTrace]:   en System.Net.HttpWebRequest.GetResponse()
+   en System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+	InnerException.[Source]:System
+	InnerException.[HResult]:-2146233079
+	StackTrace:
+Server stack trace: 
+   en System.ServiceModel.Channels.HttpChannelUtilities.ProcessGetResponseWebException(WebException webException, HttpWebRequest request, HttpAbortReason abortReason)
+   en System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+   en System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   en System.ServiceModel.Dispatcher.RequestChannelBinder.Send(Message message, TimeSpan timeout)
+   en System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   en System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   en System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   en System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   en System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   en Bend.Common.Logging.Interface.ILoggerService.SaveLogAsync(RequestLog request)
+   en Bend.Common.Logging.Interface.LoggerInstance.<>c__DisplayClass0_0.<SaveLogAsync>b__0(ILoggerService c) en C:\SVN\NewCore2\Main\Code\1_FMAF\Bend.Common.Logging.Interface\LoggerInstance.cs:línea 18
+   en Bend.Common.Utils.Framework.ServiceClientFactory.InvokeMethod[TChannel](Action`1 invocation) en C:\SVN\NewCore2\Main\Code\1_FMAF\Bend.Common.Utils\Framework\ServiceClientFactory.cs:línea 157
+   en Bend.Common.Logging.Interface.LoggerInstance.SaveLogAsync(RequestLog request) en C:\SVN\NewCore2\Main\Code\1_FMAF\Bend.Common.Logging.Interface\LoggerInstance.cs:línea 15
+	Source:mscorlib
+	HResult:-2146233087
+}
+
+{
+	Class:EndpointNotFoundException
+	ToString:System.ServiceModel.EndpointNotFoundException: No había ningún extremo escuchando en http://172.21.30.10/WS_Logging/LoggerService.svc que pudiera aceptar el mensaje. La causa suele ser una dirección o una acción SOAP incorrecta. Consulte InnerException, si está presente, para obtener más información. ---> System.Net.WebException: Error en el servidor remoto: (404) No se encontró.
+   en System.Net.HttpWebRequest.GetResponse()
+   en System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+   --- Fin del seguimiento de la pila de la excepción interna ---
+
+Server stack trace: 
+   en System.ServiceModel.Channels.HttpChannelUtilities.ProcessGetResponseWebException(WebException webException, HttpWebRequest request, HttpAbortReason abortReason)
+   en System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+   en System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   en System.ServiceModel.Dispatcher.RequestChannelBinder.Send(Message message, TimeSpan timeout)
+   en System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   en System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   en System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   en System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   en System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   en Bend.Common.Logging.Interface.ILoggerService.SaveLogAsync(RequestLog request)
+   en Bend.Common.Logging.Interface.LoggerInstance.<>c__DisplayClass0_0.<SaveLogAsync>b__0(ILoggerService c) en C:\SVN\NewCore2\Main\Code\1_FMAF\Bend.Common.Logging.Interface\LoggerInstance.cs:línea 18
+   en Bend.Common.Utils.Framework.ServiceClientFactory.InvokeMethod[TChannel](Action`1 invocation) en C:\SVN\NewCore2\Main\Code\1_FMAF\Bend.Common.Utils\Framework\ServiceClientFactory.cs:línea 157
+   en Bend.Common.Logging.Interface.LoggerInstance.SaveLogAsync(RequestLog request) en C:\SVN\NewCore2\Main\Code\1_FMAF\Bend.Common.Logging.Interface\LoggerInstance.cs:línea 15
+	Message:No había ningún extremo escuchando en http://172.21.30.10/WS_Logging/LoggerService.svc que pudiera aceptar el mensaje. La causa suele ser una dirección o una acción SOAP incorrecta. Consulte InnerException, si está presente, para obtener más información.
+	InnerException:System.Exception
+	InnerException.[Status]:ProtocolError
+	InnerException.[Response]:System.Net.WebResponse
+	InnerException.[Response].[IsMutuallyAuthenticated]:False
+	InnerException.[Response].[Headers]:Connection: close
+Content-Length: 315
+Content-Type: text/html; charset=us-ascii
+Date: Wed, 02 Jul 2025 17:00:06 GMT
+Server: Microsoft-HTTPAPI/2.0
+
+
+	InnerException.[Response].[Headers].[0]:Connection
+	InnerException.[Response].[Headers].[1]:Content-Length
+	InnerException.[Response].[Headers].[2]:Content-Type
+	InnerException.[Response].[Headers].[3]:Date
+	InnerException.[Response].[Headers].[4]:Server
+	InnerException.[Response].[SupportsHeaders]:True
+	InnerException.[Response].[ContentLength]:315
+	InnerException.[Response].[ContentEncoding]:
+	InnerException.[Response].[ContentType]:text/html; charset=us-ascii
+	InnerException.[Response].[CharacterSet]:us-ascii
+	InnerException.[Response].[Server]:Microsoft-HTTPAPI/2.0
+	InnerException.[Response].[LastModified]:2/07/2025 12:00:06
+	InnerException.[Response].[StatusCode]:NotFound
+	InnerException.[Response].[StatusDescription]:Not Found
+	InnerException.[Response].[ProtocolVersion]:System.Version
+	InnerException.[Response].[ProtocolVersion].[Major]:1
+	InnerException.[Response].[ProtocolVersion].[Minor]:1
+	InnerException.[Response].[ProtocolVersion].[Build]:-1
+	InnerException.[Response].[ProtocolVersion].[Revision]:-1
+	InnerException.[Response].[ProtocolVersion].[MajorRevision]:-1
+	InnerException.[Response].[ProtocolVersion].[MinorRevision]:-1
+	InnerException.[Response].[ResponseUri]:System.Uri
+	InnerException.[Response].[ResponseUri].[AbsolutePath]:/WS_Logging/LoggerService.svc
+	InnerException.[Response].[ResponseUri].[AbsoluteUri]:http://172.21.30.10/WS_Logging/LoggerService.svc
+	InnerException.[Response].[ResponseUri].[LocalPath]:/WS_Logging/LoggerService.svc
+	InnerException.[Response].[ResponseUri].[Authority]:172.21.30.10
+	InnerException.[Response].[ResponseUri].[HostNameType]:IPv4
+	InnerException.[Response].[ResponseUri].[IsDefaultPort]:True
+	InnerException.[Response].[ResponseUri].[IsFile]:False
+	InnerException.[Response].[ResponseUri].[IsLoopback]:False
+	InnerException.[Response].[ResponseUri].[PathAndQuery]:/WS_Logging/LoggerService.svc
+	InnerException.[Response].[ResponseUri].[Segments]:System.String[]
+	InnerException.[Response].[ResponseUri].[IsUnc]:False
+	InnerException.[Response].[ResponseUri].[Host]:172.21.30.10
+	InnerException.[Response].[ResponseUri].[Port]:80
+	InnerException.[Response].[ResponseUri].[Query]:
+	InnerException.[Response].[ResponseUri].[Fragment]:
+	InnerException.[Response].[ResponseUri].[Scheme]:http
+	InnerException.[Response].[ResponseUri].[OriginalString]:http://172.21.30.10/WS_Logging/LoggerService.svc
+	InnerException.[Response].[ResponseUri].[DnsSafeHost]:172.21.30.10
+	InnerException.[Response].[ResponseUri].[IdnHost]:172.21.30.10
+	InnerException.[Response].[ResponseUri].[IsAbsoluteUri]:True
+	InnerException.[Response].[ResponseUri].[UserEscaped]:False
+	InnerException.[Response].[ResponseUri].[UserInfo]:
+	InnerException.[Response].[Method]:POST
+	InnerException.[Response].[IsFromCache]:False
+	InnerException.[Message]:Error en el servidor remoto: (404) No se encontró.
+	InnerException.[StackTrace]:   en System.Net.HttpWebRequest.GetResponse()
+   en System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+	InnerException.[Source]:System
+	InnerException.[HResult]:-2146233079
+	StackTrace:
+Server stack trace: 
+   en System.ServiceModel.Channels.HttpChannelUtilities.ProcessGetResponseWebException(WebException webException, HttpWebRequest request, HttpAbortReason abortReason)
+   en System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+   en System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   en System.ServiceModel.Dispatcher.RequestChannelBinder.Send(Message message, TimeSpan timeout)
+   en System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   en System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   en System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   en System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   en System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   en Bend.Common.Logging.Interface.ILoggerService.SaveLogAsync(RequestLog request)
+   en Bend.Common.Logging.Interface.LoggerInstance.<>c__DisplayClass0_0.<SaveLogAsync>b__0(ILoggerService c) en C:\SVN\NewCore2\Main\Code\1_FMAF\Bend.Common.Logging.Interface\LoggerInstance.cs:línea 18
+   en Bend.Common.Utils.Framework.ServiceClientFactory.InvokeMethod[TChannel](Action`1 invocation) en C:\SVN\NewCore2\Main\Code\1_FMAF\Bend.Common.Utils\Framework\ServiceClientFactory.cs:línea 157
+   en Bend.Common.Logging.Interface.LoggerInstance.SaveLogAsync(RequestLog request) en C:\SVN\NewCore2\Main\Code\1_FMAF\Bend.Common.Logging.Interface\LoggerInstance.cs:línea 15
+	Source:mscorlib
+	HResult:-2146233087
+}
+
+{
+	Class:EndpointNotFoundException
+	ToString:System.ServiceModel.EndpointNotFoundException: No había ningún extremo escuchando en http://172.21.30.10/WS_Logging/LoggerService.svc que pudiera aceptar el mensaje. La causa suele ser una dirección o una acción SOAP incorrecta. Consulte InnerException, si está presente, para obtener más información. ---> System.Net.WebException: Error en el servidor remoto: (404) No se encontró.
+   en System.Net.HttpWebRequest.GetResponse()
+   en System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+   --- Fin del seguimiento de la pila de la excepción interna ---
+
+Server stack trace: 
+   en System.ServiceModel.Channels.HttpChannelUtilities.ProcessGetResponseWebException(WebException webException, HttpWebRequest request, HttpAbortReason abortReason)
+   en System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+   en System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   en System.ServiceModel.Dispatcher.RequestChannelBinder.Send(Message message, TimeSpan timeout)
+   en System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   en System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   en System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   en System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   en System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   en Bend.Common.Logging.Interface.ILoggerService.SaveLogAsync(RequestLog request)
+   en Bend.Common.Logging.Interface.LoggerInstance.<>c__DisplayClass0_0.<SaveLogAsync>b__0(ILoggerService c) en C:\SVN\NewCore2\Main\Code\1_FMAF\Bend.Common.Logging.Interface\LoggerInstance.cs:línea 18
+   en Bend.Common.Utils.Framework.ServiceClientFactory.InvokeMethod[TChannel](Action`1 invocation) en C:\SVN\NewCore2\Main\Code\1_FMAF\Bend.Common.Utils\Framework\ServiceClientFactory.cs:línea 157
+   en Bend.Common.Logging.Interface.LoggerInstance.SaveLogAsync(RequestLog request) en C:\SVN\NewCore2\Main\Code\1_FMAF\Bend.Common.Logging.Interface\LoggerInstance.cs:línea 15
+	Message:No había ningún extremo escuchando en http://172.21.30.10/WS_Logging/LoggerService.svc que pudiera aceptar el mensaje. La causa suele ser una dirección o una acción SOAP incorrecta. Consulte InnerException, si está presente, para obtener más información.
+	InnerException:System.Exception
+	InnerException.[Status]:ProtocolError
+	InnerException.[Response]:System.Net.WebResponse
+	InnerException.[Response].[IsMutuallyAuthenticated]:False
+	InnerException.[Response].[Headers]:Connection: close
+Content-Length: 315
+Content-Type: text/html; charset=us-ascii
+Date: Wed, 02 Jul 2025 17:00:12 GMT
+Server: Microsoft-HTTPAPI/2.0
+
+
+	InnerException.[Response].[Headers].[0]:Connection
+	InnerException.[Response].[Headers].[1]:Content-Length
+	InnerException.[Response].[Headers].[2]:Content-Type
+	InnerException.[Response].[Headers].[3]:Date
+	InnerException.[Response].[Headers].[4]:Server
+	InnerException.[Response].[SupportsHeaders]:True
+	InnerException.[Response].[ContentLength]:315
+	InnerException.[Response].[ContentEncoding]:
+	InnerException.[Response].[ContentType]:text/html; charset=us-ascii
+	InnerException.[Response].[CharacterSet]:us-ascii
+	InnerException.[Response].[Server]:Microsoft-HTTPAPI/2.0
+	InnerException.[Response].[LastModified]:2/07/2025 12:00:12
+	InnerException.[Response].[StatusCode]:NotFound
+	InnerException.[Response].[StatusDescription]:Not Found
+	InnerException.[Response].[ProtocolVersion]:System.Version
+	InnerException.[Response].[ProtocolVersion].[Major]:1
+	InnerException.[Response].[ProtocolVersion].[Minor]:1
+	InnerException.[Response].[ProtocolVersion].[Build]:-1
+	InnerException.[Response].[ProtocolVersion].[Revision]:-1
+	InnerException.[Response].[ProtocolVersion].[MajorRevision]:-1
+	InnerException.[Response].[ProtocolVersion].[MinorRevision]:-1
+	InnerException.[Response].[ResponseUri]:System.Uri
+	InnerException.[Response].[ResponseUri].[AbsolutePath]:/WS_Logging/LoggerService.svc
+	InnerException.[Response].[ResponseUri].[AbsoluteUri]:http://172.21.30.10/WS_Logging/LoggerService.svc
+	InnerException.[Response].[ResponseUri].[LocalPath]:/WS_Logging/LoggerService.svc
+	InnerException.[Response].[ResponseUri].[Authority]:172.21.30.10
+	InnerException.[Response].[ResponseUri].[HostNameType]:IPv4
+	InnerException.[Response].[ResponseUri].[IsDefaultPort]:True
+	InnerException.[Response].[ResponseUri].[IsFile]:False
+	InnerException.[Response].[ResponseUri].[IsLoopback]:False
+	InnerException.[Response].[ResponseUri].[PathAndQuery]:/WS_Logging/LoggerService.svc
+	InnerException.[Response].[ResponseUri].[Segments]:System.String[]
+	InnerException.[Response].[ResponseUri].[IsUnc]:False
+	InnerException.[Response].[ResponseUri].[Host]:172.21.30.10
+	InnerException.[Response].[ResponseUri].[Port]:80
+	InnerException.[Response].[ResponseUri].[Query]:
+	InnerException.[Response].[ResponseUri].[Fragment]:
+	InnerException.[Response].[ResponseUri].[Scheme]:http
+	InnerException.[Response].[ResponseUri].[OriginalString]:http://172.21.30.10/WS_Logging/LoggerService.svc
+	InnerException.[Response].[ResponseUri].[DnsSafeHost]:172.21.30.10
+	InnerException.[Response].[ResponseUri].[IdnHost]:172.21.30.10
+	InnerException.[Response].[ResponseUri].[IsAbsoluteUri]:True
+	InnerException.[Response].[ResponseUri].[UserEscaped]:False
+	InnerException.[Response].[ResponseUri].[UserInfo]:
+	InnerException.[Response].[Method]:POST
+	InnerException.[Response].[IsFromCache]:False
+	InnerException.[Message]:Error en el servidor remoto: (404) No se encontró.
+	InnerException.[StackTrace]:   en System.Net.HttpWebRequest.GetResponse()
+   en System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+	InnerException.[Source]:System
+	InnerException.[HResult]:-2146233079
+	StackTrace:
+Server stack trace: 
+   en System.ServiceModel.Channels.HttpChannelUtilities.ProcessGetResponseWebException(WebException webException, HttpWebRequest request, HttpAbortReason abortReason)
+   en System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+   en System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   en System.ServiceModel.Dispatcher.RequestChannelBinder.Send(Message message, TimeSpan timeout)
+   en System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   en System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   en System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   en System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   en System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   en Bend.Common.Logging.Interface.ILoggerService.SaveLogAsync(RequestLog request)
+   en Bend.Common.Logging.Interface.LoggerInstance.<>c__DisplayClass0_0.<SaveLogAsync>b__0(ILoggerService c) en C:\SVN\NewCore2\Main\Code\1_FMAF\Bend.Common.Logging.Interface\LoggerInstance.cs:línea 18
+   en Bend.Common.Utils.Framework.ServiceClientFactory.InvokeMethod[TChannel](Action`1 invocation) en C:\SVN\NewCore2\Main\Code\1_FMAF\Bend.Common.Utils\Framework\ServiceClientFactory.cs:línea 157
+   en Bend.Common.Logging.Interface.LoggerInstance.SaveLogAsync(RequestLog request) en C:\SVN\NewCore2\Main\Code\1_FMAF\Bend.Common.Logging.Interface\LoggerInstance.cs:línea 15
+	Source:mscorlib
+	HResult:-2146233087
+}
+
+{
+	Class:EndpointNotFoundException
+	ToString:System.ServiceModel.EndpointNotFoundException: No había ningún extremo escuchando en http://172.21.30.10/WS_Logging/LoggerService.svc que pudiera aceptar el mensaje. La causa suele ser una dirección o una acción SOAP incorrecta. Consulte InnerException, si está presente, para obtener más información. ---> System.Net.WebException: Error en el servidor remoto: (404) No se encontró.
+   en System.Net.HttpWebRequest.GetResponse()
+   en System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+   --- Fin del seguimiento de la pila de la excepción interna ---
+
+Server stack trace: 
+   en System.ServiceModel.Channels.HttpChannelUtilities.ProcessGetResponseWebException(WebException webException, HttpWebRequest request, HttpAbortReason abortReason)
+   en System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+   en System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   en System.ServiceModel.Dispatcher.RequestChannelBinder.Send(Message message, TimeSpan timeout)
+   en System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   en System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   en System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   en System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   en System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   en Bend.Common.Logging.Interface.ILoggerService.SaveLogAsync(RequestLog request)
+   en Bend.Common.Logging.Interface.LoggerInstance.<>c__DisplayClass0_0.<SaveLogAsync>b__0(ILoggerService c) en C:\SVN\NewCore2\Main\Code\1_FMAF\Bend.Common.Logging.Interface\LoggerInstance.cs:línea 18
+   en Bend.Common.Utils.Framework.ServiceClientFactory.InvokeMethod[TChannel](Action`1 invocation) en C:\SVN\NewCore2\Main\Code\1_FMAF\Bend.Common.Utils\Framework\ServiceClientFactory.cs:línea 157
+   en Bend.Common.Logging.Interface.LoggerInstance.SaveLogAsync(RequestLog request) en C:\SVN\NewCore2\Main\Code\1_FMAF\Bend.Common.Logging.Interface\LoggerInstance.cs:línea 15
+	Message:No había ningún extremo escuchando en http://172.21.30.10/WS_Logging/LoggerService.svc que pudiera aceptar el mensaje. La causa suele ser una dirección o una acción SOAP incorrecta. Consulte InnerException, si está presente, para obtener más información.
+	InnerException:System.Exception
+	InnerException.[Status]:ProtocolError
+	InnerException.[Response]:System.Net.WebResponse
+	InnerException.[Response].[IsMutuallyAuthenticated]:False
+	InnerException.[Response].[Headers]:Connection: close
+Content-Length: 315
+Content-Type: text/html; charset=us-ascii
+Date: Wed, 02 Jul 2025 17:00:14 GMT
+Server: Microsoft-HTTPAPI/2.0
+
+
+	InnerException.[Response].[Headers].[0]:Connection
+	InnerException.[Response].[Headers].[1]:Content-Length
+	InnerException.[Response].[Headers].[2]:Content-Type
+	InnerException.[Response].[Headers].[3]:Date
+	InnerException.[Response].[Headers].[4]:Server
+	InnerException.[Response].[SupportsHeaders]:True
+	InnerException.[Response].[ContentLength]:315
+	InnerException.[Response].[ContentEncoding]:
+	InnerException.[Response].[ContentType]:text/html; charset=us-ascii
+	InnerException.[Response].[CharacterSet]:us-ascii
+	InnerException.[Response].[Server]:Microsoft-HTTPAPI/2.0
+	InnerException.[Response].[LastModified]:2/07/2025 12:00:15
+	InnerException.[Response].[StatusCode]:NotFound
+	InnerException.[Response].[StatusDescription]:Not Found
+	InnerException.[Response].[ProtocolVersion]:System.Version
+	InnerException.[Response].[ProtocolVersion].[Major]:1
+	InnerException.[Response].[ProtocolVersion].[Minor]:1
+	InnerException.[Response].[ProtocolVersion].[Build]:-1
+	InnerException.[Response].[ProtocolVersion].[Revision]:-1
+	InnerException.[Response].[ProtocolVersion].[MajorRevision]:-1
+	InnerException.[Response].[ProtocolVersion].[MinorRevision]:-1
+	InnerException.[Response].[ResponseUri]:System.Uri
+	InnerException.[Response].[ResponseUri].[AbsolutePath]:/WS_Logging/LoggerService.svc
+	InnerException.[Response].[ResponseUri].[AbsoluteUri]:http://172.21.30.10/WS_Logging/LoggerService.svc
+	InnerException.[Response].[ResponseUri].[LocalPath]:/WS_Logging/LoggerService.svc
+	InnerException.[Response].[ResponseUri].[Authority]:172.21.30.10
+	InnerException.[Response].[ResponseUri].[HostNameType]:IPv4
+	InnerException.[Response].[ResponseUri].[IsDefaultPort]:True
+	InnerException.[Response].[ResponseUri].[IsFile]:False
+	InnerException.[Response].[ResponseUri].[IsLoopback]:False
+	InnerException.[Response].[ResponseUri].[PathAndQuery]:/WS_Logging/LoggerService.svc
+	InnerException.[Response].[ResponseUri].[Segments]:System.String[]
+	InnerException.[Response].[ResponseUri].[IsUnc]:False
+	InnerException.[Response].[ResponseUri].[Host]:172.21.30.10
+	InnerException.[Response].[ResponseUri].[Port]:80
+	InnerException.[Response].[ResponseUri].[Query]:
+	InnerException.[Response].[ResponseUri].[Fragment]:
+	InnerException.[Response].[ResponseUri].[Scheme]:http
+	InnerException.[Response].[ResponseUri].[OriginalString]:http://172.21.30.10/WS_Logging/LoggerService.svc
+	InnerException.[Response].[ResponseUri].[DnsSafeHost]:172.21.30.10
+	InnerException.[Response].[ResponseUri].[IdnHost]:172.21.30.10
+	InnerException.[Response].[ResponseUri].[IsAbsoluteUri]:True
+	InnerException.[Response].[ResponseUri].[UserEscaped]:False
+	InnerException.[Response].[ResponseUri].[UserInfo]:
+	InnerException.[Response].[Method]:POST
+	InnerException.[Response].[IsFromCache]:False
+	InnerException.[Message]:Error en el servidor remoto: (404) No se encontró.
+	InnerException.[StackTrace]:   en System.Net.HttpWebRequest.GetResponse()
+   en System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+	InnerException.[Source]:System
+	InnerException.[HResult]:-2146233079
+	StackTrace:
+Server stack trace: 
+   en System.ServiceModel.Channels.HttpChannelUtilities.ProcessGetResponseWebException(WebException webException, HttpWebRequest request, HttpAbortReason abortReason)
+   en System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+   en System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   en System.ServiceModel.Dispatcher.RequestChannelBinder.Send(Message message, TimeSpan timeout)
+   en System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   en System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   en System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   en System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   en System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   en Bend.Common.Logging.Interface.ILoggerService.SaveLogAsync(RequestLog request)
+   en Bend.Common.Logging.Interface.LoggerInstance.<>c__DisplayClass0_0.<SaveLogAsync>b__0(ILoggerService c) en C:\SVN\NewCore2\Main\Code\1_FMAF\Bend.Common.Logging.Interface\LoggerInstance.cs:línea 18
+   en Bend.Common.Utils.Framework.ServiceClientFactory.InvokeMethod[TChannel](Action`1 invocation) en C:\SVN\NewCore2\Main\Code\1_FMAF\Bend.Common.Utils\Framework\ServiceClientFactory.cs:línea 157
+   en Bend.Common.Logging.Interface.LoggerInstance.SaveLogAsync(RequestLog request) en C:\SVN\NewCore2\Main\Code\1_FMAF\Bend.Common.Logging.Interface\LoggerInstance.cs:línea 15
+	Source:mscorlib
+	HResult:-2146233087
+}
+

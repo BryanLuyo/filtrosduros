@@ -1,0 +1,1929 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:tns="http://tempuri.org/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="RegistrarDatosEntrada">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="solicitud">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Cuotaespecial">
+                    <s:complexType>
+                      <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Numero" type="tns:ArrayOfDecimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Monto" type="tns:ArrayOfDecimal" />
+                      </s:sequence>
+                    </s:complexType>
+                  </s:element>
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Vehiculo">
+                    <s:complexType>
+                      <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I836lugar" type="tns:ArrayOfDecimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I836lugardesc" type="tns:ArrayOfString" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Marca" type="tns:ArrayOfDecimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Marcadesc" type="tns:ArrayOfString" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Modelo" type="tns:ArrayOfDecimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Modelodesc" type="tns:ArrayOfString" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Agno" type="tns:ArrayOfDecimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I832uso" type="tns:ArrayOfDecimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I832usodesc" type="tns:ArrayOfString" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Financiarseguro" type="tns:ArrayOfString" />
+                      </s:sequence>
+                    </s:complexType>
+                  </s:element>
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Conceptos">
+                    <s:complexType>
+                      <s:sequence>
+                        <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Cantidadgps" type="s:decimal" />
+                        <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Montogps" type="s:decimal" />
+                        <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Cantidadcarroceria" type="s:decimal" />
+                        <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Montocarroceria" type="s:decimal" />
+                        <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Cantidadvehiculo" type="s:decimal" />
+                        <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Montovehiculo" type="s:decimal" />
+                        <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Cantidadotrosaccesorios" type="s:decimal" />
+                        <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Montootrosaccesorios" type="s:decimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Proveedorgps" type="s:string" />
+                      </s:sequence>
+                    </s:complexType>
+                  </s:element>
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="I027moneda" type="s:decimal" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I027monedadesc" type="s:string" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="I068tipoproducto" type="s:decimal" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I068tipoproductodesc" type="s:string" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Montovehiculo" type="s:decimal" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Plazo" type="s:decimal" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Indmodiftea" type="s:string" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Tea" type="s:decimal" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Tasapiso" type="s:decimal" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Porccuotainicial" type="s:decimal" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Montcuotainicial" type="s:decimal" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="I801plancredito" type="s:decimal" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I801plancreditodesc" type="s:string" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Concesionario" type="s:decimal" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Concesionariodesc" type="s:string" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Sucursal" type="s:decimal" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Sucursaldesc" type="s:string" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="I802estadovehiculo" type="s:decimal" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I802estadovehiculodesc" type="s:string" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Montofinanciamiento" type="s:decimal" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Montointeresdesfasemensual" type="s:decimal" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Montointeresdesfasediario" type="s:decimal" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Montodesfasevehicular" type="s:decimal" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Montodesfasedesgravamen" type="s:decimal" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Montosegurodesempleo" type="s:decimal" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Totalfinanciamiento" type="s:decimal" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Indmodiftasaseguro" type="s:string" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Tasasegurovehicular" type="s:decimal" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Proveedorsegurovehicular" type="s:decimal" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="I828tiposegurodesgravamen" type="s:decimal" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I828tiposegurodesgravamendesc" type="s:string" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Tasadesgravamen" type="s:decimal" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Gastosnotariales" type="s:decimal" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Gastosregistrales" type="s:decimal" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Aplicabonomontovehiculo" type="s:string" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Montobonovehiculo" type="s:decimal" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Aplicabonocuotainicial" type="s:string" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Montobonocuotainicial" type="s:decimal" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Indcuotasdobles" type="s:string" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Montocuota" type="s:decimal" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Ubigeoscore" type="s:decimal" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Puntajescoremaf" type="s:decimal" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Scoremaf" type="s:string" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Scoreexperian" type="s:decimal" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Mesgracia" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Tipocredito" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Estadosolicitud" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Indcomprapara" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Indfinanciadesgravamen" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Indfinanciagastos" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Indsegurodesempleo" type="s:string" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="I1073cobertura" type="s:decimal" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I1073coberturadesc" type="s:string" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Vfg" type="s:decimal" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Cuotafinal" type="s:decimal" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Tipocambio" type="s:decimal" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Exposicionriesgocambiariorcc" type="s:string" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Cantidadcuotasespeciales" type="s:decimal" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Requieregrupo" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Indexcepcion" type="tns:ArrayOfString" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="cliente">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Direccion">
+                    <s:complexType>
+                      <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I300tipodireccion" type="tns:ArrayOfDecimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I300tipodirecciondesc" type="tns:ArrayOfString" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I301tipovia" type="tns:ArrayOfDecimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I301tipoviadesc" type="tns:ArrayOfString" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Nombrevia" type="tns:ArrayOfString" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I302agrupacion" type="tns:ArrayOfDecimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I302agrupaciondesc" type="tns:ArrayOfString" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Nombreagrupacion" type="tns:ArrayOfString" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Ubigeo" type="tns:ArrayOfDecimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I905subtipodireccion" type="tns:ArrayOfDecimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I905subtipodirecciondesc" type="tns:ArrayOfString" />
+                      </s:sequence>
+                    </s:complexType>
+                  </s:element>
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Primeracategoria">
+                    <s:complexType>
+                      <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Ruc" type="tns:ArrayOfString" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I027monedaingresos" type="tns:ArrayOfDecimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I027monedaingresosdesc" type="tns:ArrayOfString" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Nroingresosanio" type="tns:ArrayOfDecimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Montoingresomensual" type="tns:ArrayOfDecimal" />
+                      </s:sequence>
+                    </s:complexType>
+                  </s:element>
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Terceracategoria">
+                    <s:complexType>
+                      <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Ruc" type="tns:ArrayOfString" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I1024actividadeconomica" type="tns:ArrayOfDecimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I1024actividadeconomicadesc" type="tns:ArrayOfString" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I826rangoventasanual" type="tns:ArrayOfDecimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I826rangoventasanualdesc" type="tns:ArrayOfString" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I834regimensunat" type="tns:ArrayOfDecimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I834regimensunatdesc" type="tns:ArrayOfString" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Regimengeneralmypetributario">
+                          <s:complexType>
+                            <s:sequence>
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Mespdt1" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Aniopdt1" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Pdtventa1" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Pdtcompra1" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Mespdt2" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Aniopdt2" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Pdtventa2" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Pdtcompra2" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Mespdt3" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Aniopdt3" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Pdtventa3" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Pdtcompra3" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Mespdt4" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Aniopdt4" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Pdtventa4" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Pdtcompra4" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Mespdt5" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Aniopdt5" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Pdtventa5" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Pdtcompra5" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Mespdt6" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Aniopdt6" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Pdtventa6" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Pdtcompra6" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Activocorrienteanual" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Activocorrientecorte" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Activonocorrienteanual" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Activonocorrientecorte" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Pasivocorrienteanual" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Pasivocorrientecorte" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Pasivonocorrienteanual" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Pasivonocorrientecorte" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Patrimonioanual" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Patrimoniocorte" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Ventasanual" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Ventascorte" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Costoventasanual" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Costoventascorte" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Gastoadministrativoanual" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Gastoadministrativocorte" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Ingresosfinancierosanual" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Ingresosfinancieroscorte" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Gastofinancieroanual" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Gastofinancierocorte" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Otrosingresosanual" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Otrosingresoscorte" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Otrosegresosanual" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Otrosegresoscorte" type="tns:ArrayOfDecimal" />
+                            </s:sequence>
+                          </s:complexType>
+                        </s:element>
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Regimenrusespecial">
+                          <s:complexType>
+                            <s:sequence>
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Mespdt1" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Aniopdt1" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Pdtventa1" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Pdtcompra1" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Mespdt2" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Aniopdt2" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Pdtventa2" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Pdtcompra2" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Mespdt3" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Aniopdt3" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Pdtventa3" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Pdtcompra3" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Mespdt4" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Aniopdt4" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Pdtventa4" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Pdtcompra4" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Mespdt5" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Aniopdt5" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Pdtventa5" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Pdtcompra5" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Mespdt6" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Aniopdt6" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Pdtventa6" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Pdtcompra6" type="tns:ArrayOfDecimal" />
+                            </s:sequence>
+                          </s:complexType>
+                        </s:element>
+                      </s:sequence>
+                    </s:complexType>
+                  </s:element>
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Cuartacategoria">
+                    <s:complexType>
+                      <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Rucempleador" type="tns:ArrayOfString" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I027monedaingresos" type="tns:ArrayOfDecimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I027monedaingresosdesc" type="tns:ArrayOfString" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Mesingreso1" type="tns:ArrayOfDecimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Anioingreso1" type="tns:ArrayOfDecimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Montoingresomensual1" type="tns:ArrayOfDecimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Mesingreso2" type="tns:ArrayOfDecimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Anioingreso2" type="tns:ArrayOfDecimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Montoingresomensual2" type="tns:ArrayOfDecimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Mesingreso3" type="tns:ArrayOfDecimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Anioingreso3" type="tns:ArrayOfDecimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Montoingresomensual3" type="tns:ArrayOfDecimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Mesingreso4" type="tns:ArrayOfDecimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Anioingreso4" type="tns:ArrayOfDecimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Montoingresomensual4" type="tns:ArrayOfDecimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Mesingreso5" type="tns:ArrayOfDecimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Anioingreso5" type="tns:ArrayOfDecimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Montoingresomensual5" type="tns:ArrayOfDecimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Mesingreso6" type="tns:ArrayOfDecimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Anioingreso6" type="tns:ArrayOfDecimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Montoingresomensual6" type="tns:ArrayOfDecimal" />
+                      </s:sequence>
+                    </s:complexType>
+                  </s:element>
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Quintacategoria">
+                    <s:complexType>
+                      <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Rucempleador" type="tns:ArrayOfString" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I027monedaingresos" type="tns:ArrayOfDecimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I027monedaingresosdesc" type="tns:ArrayOfString" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Ingresofijo" type="tns:ArrayOfString" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Montoboletaneto" type="tns:ArrayOfDecimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Mesingresovariable1" type="tns:ArrayOfDecimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Anioingresovariable1" type="tns:ArrayOfDecimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Montoingresomensualvariable1" type="tns:ArrayOfDecimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Mesingresovariable2" type="tns:ArrayOfDecimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Anioingresovariable2" type="tns:ArrayOfDecimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Montoingresomensualvariable2" type="tns:ArrayOfDecimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Mesingresovariable3" type="tns:ArrayOfDecimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Anioingresovariable3" type="tns:ArrayOfDecimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Montoingresomensualvariable3" type="tns:ArrayOfDecimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Mesingresovariable4" type="tns:ArrayOfDecimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Anioingresovariable4" type="tns:ArrayOfDecimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Montoingresomensualvariable4" type="tns:ArrayOfDecimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Mesingresovariable5" type="tns:ArrayOfDecimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Anioingresovariable5" type="tns:ArrayOfDecimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Montoingresomensualvariable5" type="tns:ArrayOfDecimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Mesingresovariable6" type="tns:ArrayOfDecimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Anioingresovariable6" type="tns:ArrayOfDecimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Montoingresomensualvariable6" type="tns:ArrayOfDecimal" />
+                      </s:sequence>
+                    </s:complexType>
+                  </s:element>
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Conyuge">
+                    <s:complexType>
+                      <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Direccion">
+                          <s:complexType>
+                            <s:sequence>
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I300tipodireccion" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I300tipodirecciondesc" type="tns:ArrayOfString" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I301tipovia" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I301tipoviadesc" type="tns:ArrayOfString" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Nombrevia" type="tns:ArrayOfString" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I302agrupacion" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I302agrupaciondesc" type="tns:ArrayOfString" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Nombreagrupacion" type="tns:ArrayOfString" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Ubigeo" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I905subtipodireccion" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I905subtipodirecciondesc" type="tns:ArrayOfString" />
+                            </s:sequence>
+                          </s:complexType>
+                        </s:element>
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Primeracategoria">
+                          <s:complexType>
+                            <s:sequence>
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Ruc" type="tns:ArrayOfString" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I027monedaingresos" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I027monedaingresosdesc" type="tns:ArrayOfString" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Nroingresosanio" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Montoingresomensual" type="tns:ArrayOfDecimal" />
+                            </s:sequence>
+                          </s:complexType>
+                        </s:element>
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Terceracategoria">
+                          <s:complexType>
+                            <s:sequence>
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Ruc" type="tns:ArrayOfString" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I1024actividadeconomica" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I1024actividadeconomicadesc" type="tns:ArrayOfString" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I826rangoventasanual" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I826rangoventasanualdesc" type="tns:ArrayOfString" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I834regimensunat" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I834regimensunatdesc" type="tns:ArrayOfString" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Regimengeneralmypetributario">
+                                <s:complexType>
+                                  <s:sequence>
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Mespdt1" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Aniopdt1" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Pdtventa1" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Pdtcompra1" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Mespdt2" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Aniopdt2" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Pdtventa2" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Pdtcompra2" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Mespdt3" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Aniopdt3" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Pdtventa3" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Pdtcompra3" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Mespdt4" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Aniopdt4" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Pdtventa4" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Pdtcompra4" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Mespdt5" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Aniopdt5" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Pdtventa5" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Pdtcompra5" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Mespdt6" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Aniopdt6" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Pdtventa6" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Pdtcompra6" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Activocorrienteanual" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Activocorrientecorte" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Activonocorrienteanual" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Activonocorrientecorte" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Pasivocorrienteanual" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Pasivocorrientecorte" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Pasivonocorrienteanual" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Pasivonocorrientecorte" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Patrimonioanual" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Patrimoniocorte" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Ventasanual" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Ventascorte" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Costoventasanual" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Costoventascorte" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Gastoadministrativoanual" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Gastoadministrativocorte" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Ingresosfinancierosanual" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Ingresosfinancieroscorte" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Gastofinancieroanual" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Gastofinancierocorte" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Otrosingresosanual" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Otrosingresoscorte" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Otrosegresosanual" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Otrosegresoscorte" type="tns:ArrayOfDecimal" />
+                                  </s:sequence>
+                                </s:complexType>
+                              </s:element>
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Regimenrusespecial">
+                                <s:complexType>
+                                  <s:sequence>
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Mespdt1" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Aniopdt1" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Pdtventa1" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Pdtcompra1" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Mespdt2" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Aniopdt2" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Pdtventa2" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Pdtcompra2" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Mespdt3" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Aniopdt3" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Pdtventa3" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Pdtcompra3" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Mespdt4" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Aniopdt4" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Pdtventa4" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Pdtcompra4" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Mespdt5" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Aniopdt5" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Pdtventa5" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Pdtcompra5" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Mespdt6" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Aniopdt6" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Pdtventa6" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Pdtcompra6" type="tns:ArrayOfDecimal" />
+                                  </s:sequence>
+                                </s:complexType>
+                              </s:element>
+                            </s:sequence>
+                          </s:complexType>
+                        </s:element>
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Cuartacategoria">
+                          <s:complexType>
+                            <s:sequence>
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Rucempleador" type="tns:ArrayOfString" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I027monedaingresos" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I027monedaingresosdesc" type="tns:ArrayOfString" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Mesingreso1" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Anioingreso1" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Montoingresomensual1" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Mesingreso2" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Anioingreso2" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Montoingresomensual2" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Mesingreso3" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Anioingreso3" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Montoingresomensual3" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Mesingreso4" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Anioingreso4" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Montoingresomensual4" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Mesingreso5" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Anioingreso5" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Montoingresomensual5" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Mesingreso6" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Anioingreso6" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Montoingresomensual6" type="tns:ArrayOfDecimal" />
+                            </s:sequence>
+                          </s:complexType>
+                        </s:element>
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Quintacategoria">
+                          <s:complexType>
+                            <s:sequence>
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Rucempleador" type="tns:ArrayOfString" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I027monedaingresos" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I027monedaingresosdesc" type="tns:ArrayOfString" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Ingresofijo" type="tns:ArrayOfString" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Montoboletaneto" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Mesingresovariable1" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Anioingresovariable1" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Montoingresomensualvariable1" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Mesingresovariable2" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Anioingresovariable2" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Montoingresomensualvariable2" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Mesingresovariable3" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Anioingresovariable3" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Montoingresomensualvariable3" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Mesingresovariable4" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Anioingresovariable4" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Montoingresomensualvariable4" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Mesingresovariable5" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Anioingresovariable5" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Montoingresomensualvariable5" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Mesingresovariable6" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Anioingresovariable6" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Montoingresomensualvariable6" type="tns:ArrayOfDecimal" />
+                            </s:sequence>
+                          </s:complexType>
+                        </s:element>
+                        <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="I062tipodocumento" type="s:decimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I062tipodocumentodesc" type="s:string" />
+                        <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="I309estadocivil" type="s:decimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I309estadocivildesc" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Iletrado" type="s:string" />
+                        <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Fechanacimiento" nillable="true" type="s:date" />
+                        <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="I046sexo" type="s:decimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I046sexodesc" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Trabajadormaf" type="s:string" />
+                        <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="I815categorialaboral" type="s:decimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I815categorialaboraldesc" type="s:string" />
+                        <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Nacionalidad" type="s:decimal" />
+                        <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="I321tipopersonanatural" type="s:decimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I321tipopersonanaturaldesc" type="s:string" />
+                        <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Fechainicioactividad" nillable="true" type="s:date" />
+                        <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="I826rangoventasanual" type="s:decimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I826rangoventasanualdesc" type="s:string" />
+                        <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="I834regimensunat" type="s:decimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I834regimensunatdesc" type="s:string" />
+                        <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Fechainiciolabores" nillable="true" type="s:date" />
+                        <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="I843entidadpublica" type="s:decimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I843entidadpublicadesc" type="s:string" />
+                        <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="I844cargopublico" type="s:decimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I844cargopublicodesc" type="s:string" />
+                        <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="I305profesion" type="s:decimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I305profesiondesc" type="s:string" />
+                        <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="I919tipoempresa" type="s:decimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I919tipoempresadesc" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Calificacionexterna" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Calificacionexterna3meses" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Calificacionexterna6meses" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Calificacionexterna12meses" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Calificacionexterna24meses" type="s:string" />
+                        <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Entidadesfinancieras" type="s:decimal" />
+                        <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Tarjetascredito" type="s:decimal" />
+                        <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Lineadecredito" type="s:decimal" />
+                        <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Lineadecreditoutilizada" type="s:decimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Calificacionempleador" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Indlaboraempresatop" type="s:string" />
+                        <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Saldosistemafinanciera" type="s:decimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Esbancarizado" type="s:string" />
+                        <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Diasdeatraso" type="s:decimal" />
+                      </s:sequence>
+                    </s:complexType>
+                  </s:element>
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Cumplimiento">
+                    <s:complexType>
+                      <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Nacionalidad" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Departamentoresidencia" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Profesion" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Actividadeconomica" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Indcoincidencianegativa" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Tipopersona" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Tipopersonanatural" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Tipopersonajuridica" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Tipocredito" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Tiposujetoobligado" type="s:string" />
+                        <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Edad" type="s:decimal" />
+                        <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Aniosconstitucion" type="s:decimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Sucursal" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Plancredito" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Moneda" type="s:string" />
+                        <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Puntaje" type="s:decimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Categoriapuntaje" type="s:string" />
+                      </s:sequence>
+                    </s:complexType>
+                  </s:element>
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="I067tipopersona" type="s:decimal" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I067tipopersonadesc" type="s:string" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="I062tipodocumento" type="s:decimal" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I062tipodocumentodesc" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Identificador" type="s:string" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="I309estadocivil" type="s:decimal" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I309estadocivildesc" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Iletrado" type="s:string" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Fechanacimiento" nillable="true" type="s:date" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="I046sexo" type="s:decimal" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I046sexodesc" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Trabajadormaf" type="s:string" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="I815categorialaboral" type="s:decimal" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I815categorialaboraldesc" type="s:string" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Nacionalidad" type="s:decimal" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="I321tipopersonanatural" type="s:decimal" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I321tipopersonanaturaldesc" type="s:string" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Fechainicioactividad" nillable="true" type="s:date" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="I826rangoventasanual" type="s:decimal" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I826rangoventasanualdesc" type="s:string" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="I834regimensunat" type="s:decimal" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I834regimensunatdesc" type="s:string" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Fechainiciolabores" nillable="true" type="s:date" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="I843entidadpublica" type="s:decimal" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I843entidadpublicadesc" type="s:string" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="I844cargopublico" type="s:decimal" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I844cargopublicodesc" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Indclientepep" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Descentidadotros" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Desccargootros" type="s:string" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="I305profesion" type="s:decimal" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I305profesiondesc" type="s:string" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="I919tipoempresa" type="s:decimal" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I919tipoempresadesc" type="s:string" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Totalingresomensualsoles" type="s:decimal" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Totalingresomensualconyugalsoles" type="s:decimal" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Calificacionexterna" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Calificacioninterna" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Calificacionexterna3meses" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Calificacioninterna3meses" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Calificacionexterna6meses" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Calificacioninterna6meses" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Calificacionexterna12meses" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Calificacioninterna12meses" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Calificacionexterna24meses" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Calificacioninterna24meses" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Calificacionconyugal" type="s:string" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Entidadesfinancieras" type="s:decimal" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Tarjetascredito" type="s:decimal" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Lineadecredito" type="s:decimal" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Lineadecreditoutilizada" type="s:decimal" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Rci" type="s:decimal" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Calificacionempleador" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Zonaaltoriesgo" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Calificacionrepresentantelegal" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Categoriasobreendeudamiento" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Indlaboraempresatop" type="s:string" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Cantidadcreditoscastigados" type="s:decimal" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Cantidaddecuotaspagadas" type="s:decimal" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Cantidadoperacionesactivadas" type="s:decimal" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Saldosistemafinanciera" type="s:decimal" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Esbancarizado" type="s:string" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Diasdeatraso" type="s:decimal" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Estaxista" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Indconyuge" type="s:string" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Cantidadavales" type="s:decimal" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Condicionuso" type="s:string" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Fechafinlabores" nillable="true" type="s:date" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Deudatotalmaf" type="s:decimal" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="buro">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Rcc">
+                    <s:complexType>
+                      <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Tipodoctributario" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Tipodocidentidad" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Tipopersona" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Tipoempresa" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Cantempresastotal" type="tns:ArrayOfDecimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Cantempresasdeudadirecta" type="tns:ArrayOfDecimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Deudacal0" type="tns:ArrayOfDecimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Diasatraso" type="tns:ArrayOfDecimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Detalle">
+                          <s:complexType>
+                            <s:sequence>
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Saldo" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Saldorefinanciado" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Saldovencidojudicial" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Saldocastigado" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Saldovehicular" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Clasificacion" type="tns:ArrayOfString" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Clasificacionconyuge" type="tns:ArrayOfString" />
+                            </s:sequence>
+                          </s:complexType>
+                        </s:element>
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Deudacaloconyuge" type="tns:ArrayOfDecimal" />
+                      </s:sequence>
+                    </s:complexType>
+                  </s:element>
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Exinforuc">
+                    <s:complexType>
+                      <s:sequence>
+                        <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Fechaalta" nillable="true" type="s:date" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Tipocontribuyente" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Estadocontribuyente" type="s:string" />
+                      </s:sequence>
+                    </s:complexType>
+                  </s:element>
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Exsat">
+                    <s:complexType>
+                      <s:sequence>
+                        <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Montoimpago" type="s:decimal" />
+                      </s:sequence>
+                    </s:complexType>
+                  </s:element>
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Exvaloresinforme">
+                    <s:complexType>
+                      <s:sequence>
+                        <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Valorsaldodeuda" type="s:decimal" />
+                        <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Valorsaldodeudacomerciales" type="s:decimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Morosidad">
+                          <s:complexType>
+                            <s:sequence>
+                              <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Coooperativas" type="s:decimal" />
+                              <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Comerciales" type="s:decimal" />
+                            </s:sequence>
+                          </s:complexType>
+                        </s:element>
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Nombresuscriptor" type="s:string" />
+                      </s:sequence>
+                    </s:complexType>
+                  </s:element>
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Exconsulta">
+                    <s:complexType>
+                      <s:sequence>
+                        <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Numeroconsultantes" type="s:decimal" />
+                      </s:sequence>
+                    </s:complexType>
+                  </s:element>
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Exdeudatributaria">
+                    <s:complexType>
+                      <s:sequence>
+                        <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Montodeuda" type="s:decimal" />
+                      </s:sequence>
+                    </s:complexType>
+                  </s:element>
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Excuentacorrientecerrada">
+                    <s:complexType>
+                      <s:sequence>
+                        <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="T906causa" type="s:decimal" />
+                        <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Fechainiciosancion" nillable="true" type="s:date" />
+                        <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="T904tipocuenta" type="s:decimal" />
+                      </s:sequence>
+                    </s:complexType>
+                  </s:element>
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Exinformacionccl">
+                    <s:complexType>
+                      <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Tipodocumento" type="s:string" />
+                        <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Monto" type="s:decimal" />
+                        <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Fechaprotesto" nillable="true" type="s:date" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Tiporegistro" type="s:string" />
+                      </s:sequence>
+                    </s:complexType>
+                  </s:element>
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Exalerta">
+                    <s:complexType>
+                      <s:sequence>
+                        <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="T28codigoalerta" type="s:decimal" />
+                      </s:sequence>
+                    </s:complexType>
+                  </s:element>
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="filler">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Num11" type="s:decimal" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Num21" type="s:decimal" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Num31" type="s:decimal" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Num41" type="s:decimal" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Num52" type="s:decimal" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Num62" type="s:decimal" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Num72" type="s:decimal" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Num83" type="s:decimal" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Num93" type="tns:ArrayOfDecimal" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Num103" type="tns:ArrayOfDecimal" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Num1117dec2" type="s:decimal" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Num1217dec2" type="s:decimal" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Num1317dec2" type="s:decimal" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Num1417dec2" type="s:decimal" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Num1517dec2" type="s:decimal" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Num1617dec2" type="s:decimal" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Num1717dec2" type="s:decimal" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Num1817dec2" type="s:decimal" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Num1917dec2" type="tns:ArrayOfDecimal" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Num2017dec2" type="tns:ArrayOfDecimal" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Text21100" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Text22100" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Text23100" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Text24100" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Text25100" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Text26100" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Text27100" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Text28100" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Text29100" type="tns:ArrayOfString" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Text30100" type="tns:ArrayOfString" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Date31" nillable="true" type="s:date" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Date32" nillable="true" type="s:date" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Date33" nillable="true" type="s:date" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Date34" nillable="true" type="s:date" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Date35" nillable="true" type="s:date" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Date36" nillable="true" type="s:date" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Date37" nillable="true" type="s:date" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Date38" nillable="true" type="s:date" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Date39">
+                    <s:complexType>
+                      <s:sequence>
+                        <s:element minOccurs="1" maxOccurs="1" name="date_format">
+                          <s:simpleType>
+                            <s:restriction base="s:string">
+                              <s:enumeration value="DDDyyyy" />
+                              <s:enumeration value="ddMMyyyy" />
+                              <s:enumeration value="MMddyyyy" />
+                              <s:enumeration value="yyyy-MM-dd" />
+                              <s:enumeration value="yyyyDDD" />
+                              <s:enumeration value="yyyyddMM" />
+                              <s:enumeration value="yyyyMMdd" />
+                            </s:restriction>
+                          </s:simpleType>
+                        </s:element>
+                        <s:element minOccurs="0" maxOccurs="unbounded" form="unqualified" name="item" type="s:string" />
+                      </s:sequence>
+                    </s:complexType>
+                  </s:element>
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Date40">
+                    <s:complexType>
+                      <s:sequence>
+                        <s:element minOccurs="1" maxOccurs="1" name="date_format">
+                          <s:simpleType>
+                            <s:restriction base="s:string">
+                              <s:enumeration value="DDDyyyy" />
+                              <s:enumeration value="ddMMyyyy" />
+                              <s:enumeration value="MMddyyyy" />
+                              <s:enumeration value="yyyy-MM-dd" />
+                              <s:enumeration value="yyyyDDD" />
+                              <s:enumeration value="yyyyddMM" />
+                              <s:enumeration value="yyyyMMdd" />
+                            </s:restriction>
+                          </s:simpleType>
+                        </s:element>
+                        <s:element minOccurs="0" maxOccurs="unbounded" form="unqualified" name="item" type="s:string" />
+                      </s:sequence>
+                    </s:complexType>
+                  </s:element>
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfDecimal">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" form="unqualified" name="item" type="s:decimal" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" form="unqualified" name="item" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="RegistrarDatosEntradaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="RegistrarDatosEntradaResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerDocumentosSollicitados">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idSolPwc" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerDocumentosSollicitadosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenerDocumentosSollicitadosResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidadCheckSum">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idSolicitud" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="idPwdSolicitudIni" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="idPwdSolicitudFin" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidadCheckSumResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ValidadCheckSumResult" type="tns:PwcCheckSum" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="PwcCheckSum">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="SOLUCITUD" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="CHECK_SUM" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="VAL_IND" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="VAL_RES" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SOLICITUD" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="IDPWCSOLICITUD" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="IDPWCCLIENTE" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="PWCESTADO" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IDPWCDATOSSALIDA" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="EvaluarPwc">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="solicitud">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Cuotaespecial">
+                    <s:complexType>
+                      <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Numero" type="tns:ArrayOfDecimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Monto" type="tns:ArrayOfDecimal" />
+                      </s:sequence>
+                    </s:complexType>
+                  </s:element>
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Vehiculo">
+                    <s:complexType>
+                      <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I836lugar" type="tns:ArrayOfDecimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I836lugardesc" type="tns:ArrayOfString" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Marca" type="tns:ArrayOfDecimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Marcadesc" type="tns:ArrayOfString" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Modelo" type="tns:ArrayOfDecimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Modelodesc" type="tns:ArrayOfString" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Agno" type="tns:ArrayOfDecimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I832uso" type="tns:ArrayOfDecimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I832usodesc" type="tns:ArrayOfString" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Financiarseguro" type="tns:ArrayOfString" />
+                      </s:sequence>
+                    </s:complexType>
+                  </s:element>
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Conceptos">
+                    <s:complexType>
+                      <s:sequence>
+                        <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Cantidadgps" type="s:decimal" />
+                        <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Montogps" type="s:decimal" />
+                        <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Cantidadcarroceria" type="s:decimal" />
+                        <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Montocarroceria" type="s:decimal" />
+                        <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Cantidadvehiculo" type="s:decimal" />
+                        <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Montovehiculo" type="s:decimal" />
+                        <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Cantidadotrosaccesorios" type="s:decimal" />
+                        <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Montootrosaccesorios" type="s:decimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Proveedorgps" type="s:string" />
+                      </s:sequence>
+                    </s:complexType>
+                  </s:element>
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="I027moneda" type="s:decimal" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I027monedadesc" type="s:string" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="I068tipoproducto" type="s:decimal" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I068tipoproductodesc" type="s:string" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Montovehiculo" type="s:decimal" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Plazo" type="s:decimal" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Indmodiftea" type="s:string" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Tea" type="s:decimal" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Tasapiso" type="s:decimal" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Porccuotainicial" type="s:decimal" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Montcuotainicial" type="s:decimal" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="I801plancredito" type="s:decimal" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I801plancreditodesc" type="s:string" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Concesionario" type="s:decimal" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Concesionariodesc" type="s:string" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Sucursal" type="s:decimal" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Sucursaldesc" type="s:string" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="I802estadovehiculo" type="s:decimal" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I802estadovehiculodesc" type="s:string" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Montofinanciamiento" type="s:decimal" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Montointeresdesfasemensual" type="s:decimal" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Montointeresdesfasediario" type="s:decimal" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Montodesfasevehicular" type="s:decimal" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Montodesfasedesgravamen" type="s:decimal" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Montosegurodesempleo" type="s:decimal" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Totalfinanciamiento" type="s:decimal" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Indmodiftasaseguro" type="s:string" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Tasasegurovehicular" type="s:decimal" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Proveedorsegurovehicular" type="s:decimal" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="I828tiposegurodesgravamen" type="s:decimal" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I828tiposegurodesgravamendesc" type="s:string" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Tasadesgravamen" type="s:decimal" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Gastosnotariales" type="s:decimal" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Gastosregistrales" type="s:decimal" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Aplicabonomontovehiculo" type="s:string" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Montobonovehiculo" type="s:decimal" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Aplicabonocuotainicial" type="s:string" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Montobonocuotainicial" type="s:decimal" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Indcuotasdobles" type="s:string" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Montocuota" type="s:decimal" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Ubigeoscore" type="s:decimal" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Puntajescoremaf" type="s:decimal" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Scoremaf" type="s:string" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Scoreexperian" type="s:decimal" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Mesgracia" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Tipocredito" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Estadosolicitud" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Indcomprapara" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Indfinanciadesgravamen" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Indfinanciagastos" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Indsegurodesempleo" type="s:string" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="I1073cobertura" type="s:decimal" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I1073coberturadesc" type="s:string" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Vfg" type="s:decimal" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Cuotafinal" type="s:decimal" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Tipocambio" type="s:decimal" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Exposicionriesgocambiariorcc" type="s:string" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Cantidadcuotasespeciales" type="s:decimal" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Requieregrupo" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Indexcepcion" type="tns:ArrayOfString" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="cliente">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Direccion">
+                    <s:complexType>
+                      <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I300tipodireccion" type="tns:ArrayOfDecimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I300tipodirecciondesc" type="tns:ArrayOfString" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I301tipovia" type="tns:ArrayOfDecimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I301tipoviadesc" type="tns:ArrayOfString" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Nombrevia" type="tns:ArrayOfString" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I302agrupacion" type="tns:ArrayOfDecimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I302agrupaciondesc" type="tns:ArrayOfString" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Nombreagrupacion" type="tns:ArrayOfString" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Ubigeo" type="tns:ArrayOfDecimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I905subtipodireccion" type="tns:ArrayOfDecimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I905subtipodirecciondesc" type="tns:ArrayOfString" />
+                      </s:sequence>
+                    </s:complexType>
+                  </s:element>
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Primeracategoria">
+                    <s:complexType>
+                      <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Ruc" type="tns:ArrayOfString" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I027monedaingresos" type="tns:ArrayOfDecimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I027monedaingresosdesc" type="tns:ArrayOfString" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Nroingresosanio" type="tns:ArrayOfDecimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Montoingresomensual" type="tns:ArrayOfDecimal" />
+                      </s:sequence>
+                    </s:complexType>
+                  </s:element>
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Terceracategoria">
+                    <s:complexType>
+                      <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Ruc" type="tns:ArrayOfString" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I1024actividadeconomica" type="tns:ArrayOfDecimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I1024actividadeconomicadesc" type="tns:ArrayOfString" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I826rangoventasanual" type="tns:ArrayOfDecimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I826rangoventasanualdesc" type="tns:ArrayOfString" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I834regimensunat" type="tns:ArrayOfDecimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I834regimensunatdesc" type="tns:ArrayOfString" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Regimengeneralmypetributario">
+                          <s:complexType>
+                            <s:sequence>
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Mespdt1" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Aniopdt1" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Pdtventa1" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Pdtcompra1" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Mespdt2" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Aniopdt2" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Pdtventa2" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Pdtcompra2" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Mespdt3" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Aniopdt3" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Pdtventa3" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Pdtcompra3" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Mespdt4" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Aniopdt4" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Pdtventa4" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Pdtcompra4" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Mespdt5" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Aniopdt5" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Pdtventa5" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Pdtcompra5" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Mespdt6" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Aniopdt6" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Pdtventa6" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Pdtcompra6" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Activocorrienteanual" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Activocorrientecorte" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Activonocorrienteanual" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Activonocorrientecorte" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Pasivocorrienteanual" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Pasivocorrientecorte" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Pasivonocorrienteanual" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Pasivonocorrientecorte" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Patrimonioanual" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Patrimoniocorte" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Ventasanual" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Ventascorte" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Costoventasanual" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Costoventascorte" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Gastoadministrativoanual" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Gastoadministrativocorte" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Ingresosfinancierosanual" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Ingresosfinancieroscorte" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Gastofinancieroanual" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Gastofinancierocorte" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Otrosingresosanual" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Otrosingresoscorte" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Otrosegresosanual" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Otrosegresoscorte" type="tns:ArrayOfDecimal" />
+                            </s:sequence>
+                          </s:complexType>
+                        </s:element>
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Regimenrusespecial">
+                          <s:complexType>
+                            <s:sequence>
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Mespdt1" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Aniopdt1" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Pdtventa1" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Pdtcompra1" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Mespdt2" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Aniopdt2" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Pdtventa2" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Pdtcompra2" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Mespdt3" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Aniopdt3" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Pdtventa3" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Pdtcompra3" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Mespdt4" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Aniopdt4" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Pdtventa4" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Pdtcompra4" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Mespdt5" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Aniopdt5" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Pdtventa5" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Pdtcompra5" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Mespdt6" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Aniopdt6" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Pdtventa6" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Pdtcompra6" type="tns:ArrayOfDecimal" />
+                            </s:sequence>
+                          </s:complexType>
+                        </s:element>
+                      </s:sequence>
+                    </s:complexType>
+                  </s:element>
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Cuartacategoria">
+                    <s:complexType>
+                      <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Rucempleador" type="tns:ArrayOfString" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I027monedaingresos" type="tns:ArrayOfDecimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I027monedaingresosdesc" type="tns:ArrayOfString" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Mesingreso1" type="tns:ArrayOfDecimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Anioingreso1" type="tns:ArrayOfDecimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Montoingresomensual1" type="tns:ArrayOfDecimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Mesingreso2" type="tns:ArrayOfDecimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Anioingreso2" type="tns:ArrayOfDecimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Montoingresomensual2" type="tns:ArrayOfDecimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Mesingreso3" type="tns:ArrayOfDecimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Anioingreso3" type="tns:ArrayOfDecimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Montoingresomensual3" type="tns:ArrayOfDecimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Mesingreso4" type="tns:ArrayOfDecimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Anioingreso4" type="tns:ArrayOfDecimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Montoingresomensual4" type="tns:ArrayOfDecimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Mesingreso5" type="tns:ArrayOfDecimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Anioingreso5" type="tns:ArrayOfDecimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Montoingresomensual5" type="tns:ArrayOfDecimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Mesingreso6" type="tns:ArrayOfDecimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Anioingreso6" type="tns:ArrayOfDecimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Montoingresomensual6" type="tns:ArrayOfDecimal" />
+                      </s:sequence>
+                    </s:complexType>
+                  </s:element>
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Quintacategoria">
+                    <s:complexType>
+                      <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Rucempleador" type="tns:ArrayOfString" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I027monedaingresos" type="tns:ArrayOfDecimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I027monedaingresosdesc" type="tns:ArrayOfString" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Ingresofijo" type="tns:ArrayOfString" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Montoboletaneto" type="tns:ArrayOfDecimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Mesingresovariable1" type="tns:ArrayOfDecimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Anioingresovariable1" type="tns:ArrayOfDecimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Montoingresomensualvariable1" type="tns:ArrayOfDecimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Mesingresovariable2" type="tns:ArrayOfDecimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Anioingresovariable2" type="tns:ArrayOfDecimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Montoingresomensualvariable2" type="tns:ArrayOfDecimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Mesingresovariable3" type="tns:ArrayOfDecimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Anioingresovariable3" type="tns:ArrayOfDecimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Montoingresomensualvariable3" type="tns:ArrayOfDecimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Mesingresovariable4" type="tns:ArrayOfDecimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Anioingresovariable4" type="tns:ArrayOfDecimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Montoingresomensualvariable4" type="tns:ArrayOfDecimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Mesingresovariable5" type="tns:ArrayOfDecimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Anioingresovariable5" type="tns:ArrayOfDecimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Montoingresomensualvariable5" type="tns:ArrayOfDecimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Mesingresovariable6" type="tns:ArrayOfDecimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Anioingresovariable6" type="tns:ArrayOfDecimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Montoingresomensualvariable6" type="tns:ArrayOfDecimal" />
+                      </s:sequence>
+                    </s:complexType>
+                  </s:element>
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Conyuge">
+                    <s:complexType>
+                      <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Direccion">
+                          <s:complexType>
+                            <s:sequence>
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I300tipodireccion" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I300tipodirecciondesc" type="tns:ArrayOfString" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I301tipovia" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I301tipoviadesc" type="tns:ArrayOfString" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Nombrevia" type="tns:ArrayOfString" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I302agrupacion" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I302agrupaciondesc" type="tns:ArrayOfString" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Nombreagrupacion" type="tns:ArrayOfString" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Ubigeo" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I905subtipodireccion" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I905subtipodirecciondesc" type="tns:ArrayOfString" />
+                            </s:sequence>
+                          </s:complexType>
+                        </s:element>
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Primeracategoria">
+                          <s:complexType>
+                            <s:sequence>
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Ruc" type="tns:ArrayOfString" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I027monedaingresos" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I027monedaingresosdesc" type="tns:ArrayOfString" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Nroingresosanio" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Montoingresomensual" type="tns:ArrayOfDecimal" />
+                            </s:sequence>
+                          </s:complexType>
+                        </s:element>
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Terceracategoria">
+                          <s:complexType>
+                            <s:sequence>
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Ruc" type="tns:ArrayOfString" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I1024actividadeconomica" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I1024actividadeconomicadesc" type="tns:ArrayOfString" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I826rangoventasanual" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I826rangoventasanualdesc" type="tns:ArrayOfString" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I834regimensunat" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I834regimensunatdesc" type="tns:ArrayOfString" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Regimengeneralmypetributario">
+                                <s:complexType>
+                                  <s:sequence>
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Mespdt1" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Aniopdt1" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Pdtventa1" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Pdtcompra1" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Mespdt2" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Aniopdt2" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Pdtventa2" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Pdtcompra2" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Mespdt3" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Aniopdt3" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Pdtventa3" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Pdtcompra3" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Mespdt4" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Aniopdt4" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Pdtventa4" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Pdtcompra4" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Mespdt5" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Aniopdt5" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Pdtventa5" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Pdtcompra5" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Mespdt6" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Aniopdt6" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Pdtventa6" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Pdtcompra6" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Activocorrienteanual" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Activocorrientecorte" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Activonocorrienteanual" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Activonocorrientecorte" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Pasivocorrienteanual" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Pasivocorrientecorte" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Pasivonocorrienteanual" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Pasivonocorrientecorte" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Patrimonioanual" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Patrimoniocorte" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Ventasanual" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Ventascorte" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Costoventasanual" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Costoventascorte" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Gastoadministrativoanual" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Gastoadministrativocorte" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Ingresosfinancierosanual" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Ingresosfinancieroscorte" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Gastofinancieroanual" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Gastofinancierocorte" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Otrosingresosanual" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Otrosingresoscorte" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Otrosegresosanual" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Otrosegresoscorte" type="tns:ArrayOfDecimal" />
+                                  </s:sequence>
+                                </s:complexType>
+                              </s:element>
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Regimenrusespecial">
+                                <s:complexType>
+                                  <s:sequence>
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Mespdt1" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Aniopdt1" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Pdtventa1" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Pdtcompra1" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Mespdt2" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Aniopdt2" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Pdtventa2" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Pdtcompra2" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Mespdt3" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Aniopdt3" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Pdtventa3" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Pdtcompra3" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Mespdt4" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Aniopdt4" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Pdtventa4" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Pdtcompra4" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Mespdt5" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Aniopdt5" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Pdtventa5" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Pdtcompra5" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Mespdt6" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Aniopdt6" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Pdtventa6" type="tns:ArrayOfDecimal" />
+                                    <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Pdtcompra6" type="tns:ArrayOfDecimal" />
+                                  </s:sequence>
+                                </s:complexType>
+                              </s:element>
+                            </s:sequence>
+                          </s:complexType>
+                        </s:element>
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Cuartacategoria">
+                          <s:complexType>
+                            <s:sequence>
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Rucempleador" type="tns:ArrayOfString" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I027monedaingresos" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I027monedaingresosdesc" type="tns:ArrayOfString" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Mesingreso1" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Anioingreso1" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Montoingresomensual1" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Mesingreso2" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Anioingreso2" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Montoingresomensual2" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Mesingreso3" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Anioingreso3" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Montoingresomensual3" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Mesingreso4" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Anioingreso4" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Montoingresomensual4" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Mesingreso5" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Anioingreso5" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Montoingresomensual5" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Mesingreso6" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Anioingreso6" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Montoingresomensual6" type="tns:ArrayOfDecimal" />
+                            </s:sequence>
+                          </s:complexType>
+                        </s:element>
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Quintacategoria">
+                          <s:complexType>
+                            <s:sequence>
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Rucempleador" type="tns:ArrayOfString" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I027monedaingresos" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I027monedaingresosdesc" type="tns:ArrayOfString" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Ingresofijo" type="tns:ArrayOfString" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Montoboletaneto" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Mesingresovariable1" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Anioingresovariable1" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Montoingresomensualvariable1" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Mesingresovariable2" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Anioingresovariable2" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Montoingresomensualvariable2" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Mesingresovariable3" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Anioingresovariable3" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Montoingresomensualvariable3" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Mesingresovariable4" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Anioingresovariable4" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Montoingresomensualvariable4" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Mesingresovariable5" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Anioingresovariable5" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Montoingresomensualvariable5" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Mesingresovariable6" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Anioingresovariable6" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Montoingresomensualvariable6" type="tns:ArrayOfDecimal" />
+                            </s:sequence>
+                          </s:complexType>
+                        </s:element>
+                        <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="I062tipodocumento" type="s:decimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I062tipodocumentodesc" type="s:string" />
+                        <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="I309estadocivil" type="s:decimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I309estadocivildesc" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Iletrado" type="s:string" />
+                        <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Fechanacimiento" nillable="true" type="s:date" />
+                        <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="I046sexo" type="s:decimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I046sexodesc" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Trabajadormaf" type="s:string" />
+                        <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="I815categorialaboral" type="s:decimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I815categorialaboraldesc" type="s:string" />
+                        <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Nacionalidad" type="s:decimal" />
+                        <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="I321tipopersonanatural" type="s:decimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I321tipopersonanaturaldesc" type="s:string" />
+                        <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Fechainicioactividad" nillable="true" type="s:date" />
+                        <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="I826rangoventasanual" type="s:decimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I826rangoventasanualdesc" type="s:string" />
+                        <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="I834regimensunat" type="s:decimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I834regimensunatdesc" type="s:string" />
+                        <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Fechainiciolabores" nillable="true" type="s:date" />
+                        <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="I843entidadpublica" type="s:decimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I843entidadpublicadesc" type="s:string" />
+                        <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="I844cargopublico" type="s:decimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I844cargopublicodesc" type="s:string" />
+                        <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="I305profesion" type="s:decimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I305profesiondesc" type="s:string" />
+                        <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="I919tipoempresa" type="s:decimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I919tipoempresadesc" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Calificacionexterna" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Calificacionexterna3meses" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Calificacionexterna6meses" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Calificacionexterna12meses" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Calificacionexterna24meses" type="s:string" />
+                        <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Entidadesfinancieras" type="s:decimal" />
+                        <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Tarjetascredito" type="s:decimal" />
+                        <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Lineadecredito" type="s:decimal" />
+                        <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Lineadecreditoutilizada" type="s:decimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Calificacionempleador" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Indlaboraempresatop" type="s:string" />
+                        <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Saldosistemafinanciera" type="s:decimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Esbancarizado" type="s:string" />
+                        <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Diasdeatraso" type="s:decimal" />
+                      </s:sequence>
+                    </s:complexType>
+                  </s:element>
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Cumplimiento">
+                    <s:complexType>
+                      <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Nacionalidad" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Departamentoresidencia" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Profesion" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Actividadeconomica" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Indcoincidencianegativa" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Tipopersona" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Tipopersonanatural" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Tipopersonajuridica" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Tipocredito" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Tiposujetoobligado" type="s:string" />
+                        <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Edad" type="s:decimal" />
+                        <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Aniosconstitucion" type="s:decimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Sucursal" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Plancredito" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Moneda" type="s:string" />
+                        <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Puntaje" type="s:decimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Categoriapuntaje" type="s:string" />
+                      </s:sequence>
+                    </s:complexType>
+                  </s:element>
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="I067tipopersona" type="s:decimal" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I067tipopersonadesc" type="s:string" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="I062tipodocumento" type="s:decimal" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I062tipodocumentodesc" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Identificador" type="s:string" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="I309estadocivil" type="s:decimal" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I309estadocivildesc" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Iletrado" type="s:string" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Fechanacimiento" nillable="true" type="s:date" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="I046sexo" type="s:decimal" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I046sexodesc" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Trabajadormaf" type="s:string" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="I815categorialaboral" type="s:decimal" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I815categorialaboraldesc" type="s:string" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Nacionalidad" type="s:decimal" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="I321tipopersonanatural" type="s:decimal" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I321tipopersonanaturaldesc" type="s:string" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Fechainicioactividad" nillable="true" type="s:date" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="I826rangoventasanual" type="s:decimal" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I826rangoventasanualdesc" type="s:string" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="I834regimensunat" type="s:decimal" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I834regimensunatdesc" type="s:string" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Fechainiciolabores" nillable="true" type="s:date" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="I843entidadpublica" type="s:decimal" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I843entidadpublicadesc" type="s:string" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="I844cargopublico" type="s:decimal" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I844cargopublicodesc" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Indclientepep" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Descentidadotros" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Desccargootros" type="s:string" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="I305profesion" type="s:decimal" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I305profesiondesc" type="s:string" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="I919tipoempresa" type="s:decimal" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="I919tipoempresadesc" type="s:string" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Totalingresomensualsoles" type="s:decimal" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Totalingresomensualconyugalsoles" type="s:decimal" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Calificacionexterna" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Calificacioninterna" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Calificacionexterna3meses" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Calificacioninterna3meses" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Calificacionexterna6meses" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Calificacioninterna6meses" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Calificacionexterna12meses" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Calificacioninterna12meses" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Calificacionexterna24meses" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Calificacioninterna24meses" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Calificacionconyugal" type="s:string" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Entidadesfinancieras" type="s:decimal" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Tarjetascredito" type="s:decimal" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Lineadecredito" type="s:decimal" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Lineadecreditoutilizada" type="s:decimal" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Rci" type="s:decimal" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Calificacionempleador" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Zonaaltoriesgo" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Calificacionrepresentantelegal" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Categoriasobreendeudamiento" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Indlaboraempresatop" type="s:string" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Cantidadcreditoscastigados" type="s:decimal" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Cantidaddecuotaspagadas" type="s:decimal" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Cantidadoperacionesactivadas" type="s:decimal" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Saldosistemafinanciera" type="s:decimal" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Esbancarizado" type="s:string" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Diasdeatraso" type="s:decimal" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Estaxista" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Indconyuge" type="s:string" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Cantidadavales" type="s:decimal" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Condicionuso" type="s:string" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Fechafinlabores" nillable="true" type="s:date" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Deudatotalmaf" type="s:decimal" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="buro">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Rcc">
+                    <s:complexType>
+                      <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Tipodoctributario" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Tipodocidentidad" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Tipopersona" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Tipoempresa" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Cantempresastotal" type="tns:ArrayOfDecimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Cantempresasdeudadirecta" type="tns:ArrayOfDecimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Deudacal0" type="tns:ArrayOfDecimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Diasatraso" type="tns:ArrayOfDecimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Detalle">
+                          <s:complexType>
+                            <s:sequence>
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Saldo" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Saldorefinanciado" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Saldovencidojudicial" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Saldocastigado" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Saldovehicular" type="tns:ArrayOfDecimal" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Clasificacion" type="tns:ArrayOfString" />
+                              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Clasificacionconyuge" type="tns:ArrayOfString" />
+                            </s:sequence>
+                          </s:complexType>
+                        </s:element>
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Deudacaloconyuge" type="tns:ArrayOfDecimal" />
+                      </s:sequence>
+                    </s:complexType>
+                  </s:element>
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Exinforuc">
+                    <s:complexType>
+                      <s:sequence>
+                        <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Fechaalta" nillable="true" type="s:date" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Tipocontribuyente" type="s:string" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Estadocontribuyente" type="s:string" />
+                      </s:sequence>
+                    </s:complexType>
+                  </s:element>
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Exsat">
+                    <s:complexType>
+                      <s:sequence>
+                        <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Montoimpago" type="s:decimal" />
+                      </s:sequence>
+                    </s:complexType>
+                  </s:element>
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Exvaloresinforme">
+                    <s:complexType>
+                      <s:sequence>
+                        <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Valorsaldodeuda" type="s:decimal" />
+                        <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Valorsaldodeudacomerciales" type="s:decimal" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Morosidad">
+                          <s:complexType>
+                            <s:sequence>
+                              <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Coooperativas" type="s:decimal" />
+                              <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Comerciales" type="s:decimal" />
+                            </s:sequence>
+                          </s:complexType>
+                        </s:element>
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Nombresuscriptor" type="s:string" />
+                      </s:sequence>
+                    </s:complexType>
+                  </s:element>
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Exconsulta">
+                    <s:complexType>
+                      <s:sequence>
+                        <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Numeroconsultantes" type="s:decimal" />
+                      </s:sequence>
+                    </s:complexType>
+                  </s:element>
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Exdeudatributaria">
+                    <s:complexType>
+                      <s:sequence>
+                        <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Montodeuda" type="s:decimal" />
+                      </s:sequence>
+                    </s:complexType>
+                  </s:element>
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Excuentacorrientecerrada">
+                    <s:complexType>
+                      <s:sequence>
+                        <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="T906causa" type="s:decimal" />
+                        <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Fechainiciosancion" nillable="true" type="s:date" />
+                        <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="T904tipocuenta" type="s:decimal" />
+                      </s:sequence>
+                    </s:complexType>
+                  </s:element>
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Exinformacionccl">
+                    <s:complexType>
+                      <s:sequence>
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Tipodocumento" type="s:string" />
+                        <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Monto" type="s:decimal" />
+                        <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Fechaprotesto" nillable="true" type="s:date" />
+                        <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Tiporegistro" type="s:string" />
+                      </s:sequence>
+                    </s:complexType>
+                  </s:element>
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Exalerta">
+                    <s:complexType>
+                      <s:sequence>
+                        <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="T28codigoalerta" type="s:decimal" />
+                      </s:sequence>
+                    </s:complexType>
+                  </s:element>
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="filler">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Num11" type="s:decimal" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Num21" type="s:decimal" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Num31" type="s:decimal" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Num41" type="s:decimal" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Num52" type="s:decimal" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Num62" type="s:decimal" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Num72" type="s:decimal" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Num83" type="s:decimal" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Num93" type="tns:ArrayOfDecimal" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Num103" type="tns:ArrayOfDecimal" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Num1117dec2" type="s:decimal" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Num1217dec2" type="s:decimal" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Num1317dec2" type="s:decimal" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Num1417dec2" type="s:decimal" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Num1517dec2" type="s:decimal" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Num1617dec2" type="s:decimal" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Num1717dec2" type="s:decimal" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Num1817dec2" type="s:decimal" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Num1917dec2" type="tns:ArrayOfDecimal" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Num2017dec2" type="tns:ArrayOfDecimal" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Text21100" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Text22100" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Text23100" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Text24100" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Text25100" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Text26100" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Text27100" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Text28100" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Text29100" type="tns:ArrayOfString" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Text30100" type="tns:ArrayOfString" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Date31" nillable="true" type="s:date" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Date32" nillable="true" type="s:date" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Date33" nillable="true" type="s:date" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Date34" nillable="true" type="s:date" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Date35" nillable="true" type="s:date" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Date36" nillable="true" type="s:date" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Date37" nillable="true" type="s:date" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Date38" nillable="true" type="s:date" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Date39">
+                    <s:complexType>
+                      <s:sequence>
+                        <s:element minOccurs="1" maxOccurs="1" name="date_format">
+                          <s:simpleType>
+                            <s:restriction base="s:string">
+                              <s:enumeration value="DDDyyyy" />
+                              <s:enumeration value="ddMMyyyy" />
+                              <s:enumeration value="MMddyyyy" />
+                              <s:enumeration value="yyyy-MM-dd" />
+                              <s:enumeration value="yyyyDDD" />
+                              <s:enumeration value="yyyyddMM" />
+                              <s:enumeration value="yyyyMMdd" />
+                            </s:restriction>
+                          </s:simpleType>
+                        </s:element>
+                        <s:element minOccurs="0" maxOccurs="unbounded" form="unqualified" name="item" type="s:string" />
+                      </s:sequence>
+                    </s:complexType>
+                  </s:element>
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Date40">
+                    <s:complexType>
+                      <s:sequence>
+                        <s:element minOccurs="1" maxOccurs="1" name="date_format">
+                          <s:simpleType>
+                            <s:restriction base="s:string">
+                              <s:enumeration value="DDDyyyy" />
+                              <s:enumeration value="ddMMyyyy" />
+                              <s:enumeration value="MMddyyyy" />
+                              <s:enumeration value="yyyy-MM-dd" />
+                              <s:enumeration value="yyyyDDD" />
+                              <s:enumeration value="yyyyddMM" />
+                              <s:enumeration value="yyyyMMdd" />
+                            </s:restriction>
+                          </s:simpleType>
+                        </s:element>
+                        <s:element minOccurs="0" maxOccurs="unbounded" form="unqualified" name="item" type="s:string" />
+                      </s:sequence>
+                    </s:complexType>
+                  </s:element>
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="1" maxOccurs="1" name="idOpcion" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="idSolPwc" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="mensaje" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="IdSolicitudCredito" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EvaluarPwcResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EvaluarPwcResult" type="tns:InterfazSalidaResponse" />
+            <s:element minOccurs="1" maxOccurs="1" name="idSolPwc" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="mensaje" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="InterfazSalidaResponse">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Respuesta" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IdSolPwc" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Mensaje" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Salida" type="tns:ArrayOfSalidaResponse" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfSalidaResponse">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="SalidaResponse" nillable="true" type="tns:SalidaResponse" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SalidaResponse">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Codigo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Descripcion" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="EvaluarPwcPrecalificacion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cotizacion">
+              <s:complexType>
+                <s:sequence>
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="i067tipopersonadesc" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="i815categorialaboraldesc" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="identificador" type="s:string" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="i067tipopersona" type="s:decimal" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="i815categorialaboral" type="s:decimal" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="i062tipodocumento" type="s:decimal" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="Porccuotainicial" type="s:decimal" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="i062tipodocumentodesc" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="saldorefinanciado" type="tns:ArrayOfDecimal" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="saldocastigado" type="tns:ArrayOfDecimal" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="saldovencidojudicial" type="tns:ArrayOfDecimal" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="fechanacimiento" nillable="true" type="s:date" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="fechainiciolabores" nillable="true" type="s:date" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="fechafinlabores" nillable="true" type="s:date" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="totalingresomensualsoles" type="s:decimal" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="totalingresomensualconyugalsoles" type="s:decimal" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="plazo" type="s:decimal" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="montocuota" type="s:decimal" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="nacionalidad" type="s:decimal" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="rci" type="s:decimal" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="montcuotainicial" type="s:decimal" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="i309estadocivil" type="s:decimal" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="i309estadocivildesc" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="clasificacion" type="tns:ArrayOfString" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="clasificacionconyugue" type="tns:ArrayOfString" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="indclientepep" type="s:string" />
+                  <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="scoreexperian" type="s:decimal" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="requieregrupo" type="s:string" />
+                  <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="indexcepcion" type="tns:ArrayOfString" />
+                  <s:element minOccurs="0" maxOccurs="unbounded" form="unqualified" name="saldovencido" type="s:decimal" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="1" maxOccurs="1" name="idOpcion" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="idSolPwc" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="mensaje" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EvaluarPwcPrecalificacionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EvaluarPwcPrecalificacionResult" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="idSolPwc" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="mensaje" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="RegistrarDatosEntradaSoapIn">
+    <wsdl:part name="parameters" element="tns:RegistrarDatosEntrada" />
+  </wsdl:message>
+  <wsdl:message name="RegistrarDatosEntradaSoapOut">
+    <wsdl:part name="parameters" element="tns:RegistrarDatosEntradaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerDocumentosSollicitadosSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerDocumentosSollicitados" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerDocumentosSollicitadosSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerDocumentosSollicitadosResponse" />
+  </wsdl:message>
+  <wsdl:message name="ValidadCheckSumSoapIn">
+    <wsdl:part name="parameters" element="tns:ValidadCheckSum" />
+  </wsdl:message>
+  <wsdl:message name="ValidadCheckSumSoapOut">
+    <wsdl:part name="parameters" element="tns:ValidadCheckSumResponse" />
+  </wsdl:message>
+  <wsdl:message name="EvaluarPwcSoapIn">
+    <wsdl:part name="parameters" element="tns:EvaluarPwc" />
+  </wsdl:message>
+  <wsdl:message name="EvaluarPwcSoapOut">
+    <wsdl:part name="parameters" element="tns:EvaluarPwcResponse" />
+  </wsdl:message>
+  <wsdl:message name="EvaluarPwcPrecalificacionSoapIn">
+    <wsdl:part name="parameters" element="tns:EvaluarPwcPrecalificacion" />
+  </wsdl:message>
+  <wsdl:message name="EvaluarPwcPrecalificacionSoapOut">
+    <wsdl:part name="parameters" element="tns:EvaluarPwcPrecalificacionResponse" />
+  </wsdl:message>
+  <wsdl:portType name="Service1Soap">
+    <wsdl:operation name="RegistrarDatosEntrada">
+      <wsdl:input message="tns:RegistrarDatosEntradaSoapIn" />
+      <wsdl:output message="tns:RegistrarDatosEntradaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerDocumentosSollicitados">
+      <wsdl:input message="tns:ObtenerDocumentosSollicitadosSoapIn" />
+      <wsdl:output message="tns:ObtenerDocumentosSollicitadosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidadCheckSum">
+      <wsdl:input message="tns:ValidadCheckSumSoapIn" />
+      <wsdl:output message="tns:ValidadCheckSumSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EvaluarPwc">
+      <wsdl:input message="tns:EvaluarPwcSoapIn" />
+      <wsdl:output message="tns:EvaluarPwcSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EvaluarPwcPrecalificacion">
+      <wsdl:input message="tns:EvaluarPwcPrecalificacionSoapIn" />
+      <wsdl:output message="tns:EvaluarPwcPrecalificacionSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="Service1Soap" type="tns:Service1Soap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="RegistrarDatosEntrada">
+      <soap:operation soapAction="http://tempuri.org/RegistrarDatosEntrada" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerDocumentosSollicitados">
+      <soap:operation soapAction="http://tempuri.org/ObtenerDocumentosSollicitados" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidadCheckSum">
+      <soap:operation soapAction="http://tempuri.org/ValidadCheckSum" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EvaluarPwc">
+      <soap:operation soapAction="http://tempuri.org/EvaluarPwc" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EvaluarPwcPrecalificacion">
+      <soap:operation soapAction="http://tempuri.org/EvaluarPwcPrecalificacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="Service1Soap12" type="tns:Service1Soap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="RegistrarDatosEntrada">
+      <soap12:operation soapAction="http://tempuri.org/RegistrarDatosEntrada" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerDocumentosSollicitados">
+      <soap12:operation soapAction="http://tempuri.org/ObtenerDocumentosSollicitados" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidadCheckSum">
+      <soap12:operation soapAction="http://tempuri.org/ValidadCheckSum" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EvaluarPwc">
+      <soap12:operation soapAction="http://tempuri.org/EvaluarPwc" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EvaluarPwcPrecalificacion">
+      <soap12:operation soapAction="http://tempuri.org/EvaluarPwcPrecalificacion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="Service1Soap" binding="tns:Service1Soap">
+      <soap:address location="http://localhost:10038/Service.asmx" />
+    </wsdl:port>
+    <wsdl:port name="Service1Soap12" binding="tns:Service1Soap12">
+      <soap12:address location="http://localhost:10038/Service.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

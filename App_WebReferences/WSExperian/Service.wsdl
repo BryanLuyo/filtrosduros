@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:tns="http://tempuri.org/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="RegistrarServicioExperianParam">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="pSolicitudId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="TipoDocumento" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="nroDocumento" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="apellidoPaterno" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="idUsuario" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="parametromaf" type="tns:parametro" />
+            <s:element minOccurs="0" maxOccurs="1" name="xmlrespuesta" type="tns:xmlexperian" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="parametro">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Porcentaje_Cuota_Inicial" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="Seguro" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="Categoria_Laboral" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Monto_Vehiculo" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="Bono" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="Cuota_Inicial" type="s:decimal" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="xmlexperian">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="rutaArchivoXmlDatos" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="rutaArchivoXmlLocalizacion" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="RegistrarServicioExperianParamResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RegistrarServicioExperianParamResult" type="tns:RegistroExperian" />
+            <s:element minOccurs="0" maxOccurs="1" name="xmlrespuesta" type="tns:xmlexperian" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="RegistroExperian">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="IdInformeExperian" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="PuntajeExperian" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="CodigoCIUU" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="FechaAlta" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TipoContribuyente" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EstadoContribuyente" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="MontoImpago" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="Cooperativas" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="NumeroConsultantes" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Monto" type="s:decimal" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="RegistrarServicioExperianParamDesacoplado">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="trazaOperacion" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="TipoDocumento" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="nroDocumento" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="apellidoPaterno" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="idUsuario" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="parametromaf" type="tns:parametro" />
+            <s:element minOccurs="0" maxOccurs="1" name="xmlrespuesta" type="tns:xmlexperian" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegistrarServicioExperianParamDesacopladoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="RegistrarServicioExperianParamDesacopladoResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="xmlrespuesta" type="tns:xmlexperian" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerPuntajeScoreExperian">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idClienteScore" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerPuntajeScoreExperianResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ObtenerPuntajeScoreExperianResult" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidarPreviaEvaluacionExperian">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="listaParametro" type="tns:ArrayOfParametrosEntrada" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfParametrosEntrada">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ParametrosEntrada" nillable="true" type="tns:ParametrosEntrada" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ParametrosEntrada">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ValorCampo" />
+          <s:element minOccurs="0" maxOccurs="1" name="NombreCampo" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ValidarPreviaEvaluacionExperianResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ValidarPreviaEvaluacionExperianResult" type="tns:ArrayOfParametrosEntrada" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="RegistrarServicioExperianParamSoapIn">
+    <wsdl:part name="parameters" element="tns:RegistrarServicioExperianParam" />
+  </wsdl:message>
+  <wsdl:message name="RegistrarServicioExperianParamSoapOut">
+    <wsdl:part name="parameters" element="tns:RegistrarServicioExperianParamResponse" />
+  </wsdl:message>
+  <wsdl:message name="RegistrarServicioExperianParamDesacopladoSoapIn">
+    <wsdl:part name="parameters" element="tns:RegistrarServicioExperianParamDesacoplado" />
+  </wsdl:message>
+  <wsdl:message name="RegistrarServicioExperianParamDesacopladoSoapOut">
+    <wsdl:part name="parameters" element="tns:RegistrarServicioExperianParamDesacopladoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerPuntajeScoreExperianSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerPuntajeScoreExperian" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerPuntajeScoreExperianSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerPuntajeScoreExperianResponse" />
+  </wsdl:message>
+  <wsdl:message name="ValidarPreviaEvaluacionExperianSoapIn">
+    <wsdl:part name="parameters" element="tns:ValidarPreviaEvaluacionExperian" />
+  </wsdl:message>
+  <wsdl:message name="ValidarPreviaEvaluacionExperianSoapOut">
+    <wsdl:part name="parameters" element="tns:ValidarPreviaEvaluacionExperianResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ServiceSoap">
+    <wsdl:operation name="RegistrarServicioExperianParam">
+      <wsdl:input message="tns:RegistrarServicioExperianParamSoapIn" />
+      <wsdl:output message="tns:RegistrarServicioExperianParamSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarServicioExperianParamDesacoplado">
+      <wsdl:input message="tns:RegistrarServicioExperianParamDesacopladoSoapIn" />
+      <wsdl:output message="tns:RegistrarServicioExperianParamDesacopladoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerPuntajeScoreExperian">
+      <wsdl:input message="tns:ObtenerPuntajeScoreExperianSoapIn" />
+      <wsdl:output message="tns:ObtenerPuntajeScoreExperianSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidarPreviaEvaluacionExperian">
+      <wsdl:input message="tns:ValidarPreviaEvaluacionExperianSoapIn" />
+      <wsdl:output message="tns:ValidarPreviaEvaluacionExperianSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServiceSoap" type="tns:ServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="RegistrarServicioExperianParam">
+      <soap:operation soapAction="http://tempuri.org/RegistrarServicioExperianParam" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarServicioExperianParamDesacoplado">
+      <soap:operation soapAction="http://tempuri.org/RegistrarServicioExperianParamDesacoplado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerPuntajeScoreExperian">
+      <soap:operation soapAction="http://tempuri.org/ObtenerPuntajeScoreExperian" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidarPreviaEvaluacionExperian">
+      <soap:operation soapAction="http://tempuri.org/ValidarPreviaEvaluacionExperian" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServiceSoap12" type="tns:ServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="RegistrarServicioExperianParam">
+      <soap12:operation soapAction="http://tempuri.org/RegistrarServicioExperianParam" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarServicioExperianParamDesacoplado">
+      <soap12:operation soapAction="http://tempuri.org/RegistrarServicioExperianParamDesacoplado" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerPuntajeScoreExperian">
+      <soap12:operation soapAction="http://tempuri.org/ObtenerPuntajeScoreExperian" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidarPreviaEvaluacionExperian">
+      <soap12:operation soapAction="http://tempuri.org/ValidarPreviaEvaluacionExperian" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service">
+    <wsdl:port name="ServiceSoap" binding="tns:ServiceSoap">
+      <soap:address location="http://152.17.0.125/ws_experian_core/Service.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServiceSoap12" binding="tns:ServiceSoap12">
+      <soap12:address location="http://152.17.0.125/ws_experian_core/Service.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

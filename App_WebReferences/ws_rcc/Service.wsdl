@@ -1,0 +1,2433 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:tns="http://tempuri.org/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="ObtenerListaCuotaFinancieraClienteRCC">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idTipoPersona" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="nroDocumentoTitular" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nroDocumentoConyuge" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ingresoMensualTitular" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="ingresoMensualConyuge" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerListaCuotaFinancieraClienteRCCResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenerListaCuotaFinancieraClienteRCCResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CalcularYRegistrarCuotaFinancieraCliente">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idMatrizCuota" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="idTipoPersona" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="nroDocumentoTitular" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nroDocumentoConyuge" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ingresoMensualTitular" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="ingresoMensualConyuge" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="idUsuario" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="indMotorShow" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="indAdmision" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="i815categorialaboral" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CalcularYRegistrarCuotaFinancieraClienteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CalcularYRegistrarCuotaFinancieraClienteResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerListaDetalleCuotaFinanciera">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idMatrizCuota" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerListaDetalleCuotaFinancieraResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenerListaDetalleCuotaFinancieraResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerTotalCuotaFinancieraTitularConyuge">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idMatrizCuota" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerTotalCuotaFinancieraTitularConyugeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenerTotalCuotaFinancieraTitularConyugeResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerResultadoMatrizFlujoAnalisis">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idMatrizCuota" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerResultadoMatrizFlujoAnalisisResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenerResultadoMatrizFlujoAnalisisResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActualizarCuotasFinancieras">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idMatrizCuota" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="idPersona" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="idCuotaDetalle" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="montoCuotaTitular" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="montoCuotaConyuge" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="idUsuario" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActualizarCuotasFinancierasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ActualizarCuotasFinancierasResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CalcularRiesgoCambiario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idSolicitud" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="idMatrizCuota" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="idPersona" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="idCategoriaLaboral" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="tipoCambio" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="idIngresoLaboral" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="idUsuario" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="montoRCIngresoMN" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="montoRCGastoMN" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="montoRCCajaInicialMN" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="montoRCCCuotaMafMN" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="plazo" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="montoCuotaMafDolar" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CalcularRiesgoCambiarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CalcularRiesgoCambiarioResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListarSaldosFinancieros">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idTipoPersona" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="nroDocumentoTitular" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nroDocumentoConyuge" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListarSaldosFinancierosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListarSaldosFinancierosResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegistrarMatrizHistorico">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idMatriz" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="ingresos" type="tns:ArrayOfMatrizIngresoHis" />
+            <s:element minOccurs="0" maxOccurs="1" name="ingresosDet" type="tns:ArrayOfMatrizIngresoDetalleHis" />
+            <s:element minOccurs="0" maxOccurs="1" name="ingresosJuridica" type="tns:ArrayOfMatrizIngresoEFHis" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfMatrizIngresoHis">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="MatrizIngresoHis" nillable="true" type="tns:MatrizIngresoHis" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="MatrizIngresoHis">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="IDMATRIZ" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="SOLICITUD" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="IDCLIENTE" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="I027MONEDA" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="I067TIPOPERSONA" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="I815CATEGORIALABORAL" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="NROSUELDOSANUAL" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="MONTOOTROINGRESO" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="TIPOCAMBIO" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="MONTOINGRESOMENSUAL" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="NROPDTS" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="MONTOOTRODESCUENTO" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="NRORECIBOS" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="MONTORENTAS" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="INGRESOFIJO" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="MONTOBOLETANETO" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="NROBOLETAS" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="CAJAINICIAL" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="FECHADJANUAL" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="FECHADJCORTE" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="INGRESOPROMVENTASOLES" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="INGRESOPROMCOMPRASOLES" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="INGRESOPROMVENTADOLAR" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="INGRESOPROMCOMPRADOLAR" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="MARGENUTILIDADDOLAR" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="MARGENUTILPORCENTAJE" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="MARGENUTILPORCENTAJEMATRIZ" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="IND_FECHAANUAL" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="IND_FECHACORTE" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfMatrizIngresoDetalleHis">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="MatrizIngresoDetalleHis" nillable="true" type="tns:MatrizIngresoDetalleHis" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="MatrizIngresoDetalleHis">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="IDMATRIZ" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="SOLICITUD" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="IDCLIENTE" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ANIO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MES" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="I027MONEDA" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="MONTOINGRESOMENSUAL" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="MONTOINGRESOMENSUAL2" type="s:double" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfMatrizIngresoEFHis">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="MatrizIngresoEFHis" nillable="true" type="tns:MatrizIngresoEFHis" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="MatrizIngresoEFHis">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="IDMATRIZ" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="SOLICITUD" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="IDCLIENTE" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ACTIVOCORRIENTEANUAL" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="ACTIVOCORRIENTECORTE" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="ACTIVONOCORRIENTEANUAL" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="ACTIVONOCORRIENTECORTE" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="PASIVOCORRIENTEANUAL" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="PASIVOCORRIENTECORTE" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="PASIVONOCORRIENTEANUAL" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="PASIVONOCORRIENTECORTE" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="PATRIMONIOANUAL" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="PATRIMONIOCORTE" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="VENTASANUAL" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="VENTASCORTE" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="COSTOVENTASANUAL" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="COSTOVENTASCORTE" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="GASTOOPERACIONESANUAL" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="GASTOOPERACIONESCORTE" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="GASTOADMINISTRATIVOANUAL" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="GASTOADMINISTRATIVOCORTE" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="INGRESOSFINANCIEROSANUAL" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="INGRESOSFINANCIEROSCORTE" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="GASTOFINANCIEROANUAL" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="GASTOFINANCIEROCORTE" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="OTROSINGRESOSANUAL" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="OTROSINGRESOSCORTE" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="OTROSEGRESOSANUAL" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="OTROSEGRESOSCORTE" type="s:double" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="RegistrarMatrizHistoricoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="RegistrarMatrizHistoricoResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegistrarCuotaFinanciera">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idMatriz" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="cuota" type="tns:MatrizCuota" />
+            <s:element minOccurs="0" maxOccurs="1" name="cuotaDet" type="tns:ArrayOfMatrizCuotaDetalle" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="MatrizCuota">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="I067TIPOPERSONA" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="IDENTTITULAR" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="IDENTCONYUGE" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="VALORINGRESOTITULAR" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="CALIFICACIONTITULAR" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="NROENTIDADESTITULAR" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="VALORINGRESOCONYUGE" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="CALIFICACIONCONYUGE" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="NROENTIDADESCONYUGE" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="NROENTIDADES" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="OBSNROENTIDADES" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CALIFICACIONSBS" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OBSCALIFICACIONSBS" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CUOTATITULARTOTALSOLES" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="CUOTACONYUGETOTALSOLES" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="SALDOTITULARSBSSOLES" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="SALDOCONYUGESBSSOLES" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="ADTUSUARIOREG" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ADTUSUARIOMODIF" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="CATEGORIADEUDOR" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DESCALIFICACIONSBS" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DESCALIFICACIONTITULAR" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DESCALIFICACIONCONYUGE" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SALDOSBS" type="s:double" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfMatrizCuotaDetalle">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="MatrizCuotaDetalle" nillable="true" type="tns:MatrizCuotaDetalle" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="MatrizCuotaDetalle">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="IDMATRIZCUOTA" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="IDEMPRESA" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="DESCEMPRESA" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IDTIPOCREDITO" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="I852TIPOMODALIDAD" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="I027MONEDA" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="CUOTATITULAR" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="CUOTACONYUGE" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="I864FUENTE" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ADTUSUARIOREG" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ADTUSUARIOMODIF" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="RegistrarCuotaFinancieraResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="RegistrarCuotaFinancieraResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegistrarMatrizFlujo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="parametros" type="tns:MatrizParametros" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="MatrizParametros">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="IDCLIENTE" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="IDCONYUGE" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="IDMATRIZ" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="I067TIPOPERSONA" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="TIPOCAMBIO" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="CARGAFAMILIAR" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="I309ESTADOCIVIL" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="INGRESOPROMEDIODOLAR" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="ACTUALIZACION" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="MONTOCUOTAMAFDOLAR" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="CAJAINICIAL" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="INGRESOPROMEDIOVENTADOLAR" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="PORCENTAJEMARGENUTILIDAD" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="COSTOMENSUALDOLAR" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="OTROSINGRESOSSOLES" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="NROSUELDOSANUALTITULAR" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="INGRESOPROMEDIOVENTASOLES" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="VENTAANUALDOLAR" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="NROSUELDOANUALCONYUGE" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="UTILCARGAFAMILIARCASADO" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="USUARIO" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="OBSNROENTIDADES" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="I388RIESGOCAMBIARIO" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="MONTOPASIVOTOTAL" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="MONTOPATRIMONIO" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="I834REGIMENSUNAT" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="I815CATEGORIALABORAL" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="IDCLIENTESIGO" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="PARAMCUOTADOLARLUGARUSO" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="CUOTAMAXDOLARLUGARUSO" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="OBSCUOTAMAXDOLARLUGARUSO" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="I801PLANCREDITO" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="I836LUGAR" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="MONTOFINANCIAMIENTODOLAR" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="OTROSINGRESOSSOLESJURID" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="PORCENTAJECUOTAINICIAL" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="MONTOINGRESOCARGAFAMILIARDOLAR" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="MONTONIVELENDEUDAMIENTODOLAR" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="INDMOTORSHOW" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="SOLICITUD" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="RCCVALOR" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="RCCIDEAL" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="ECPM" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="IDRCC" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="LEERHISTORICO" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="PLAZO" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="RC_INGRESO_MN" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="RC_GASTO_MN" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="RC_CUOTAMAF_MN" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="MONTOCARGAFAMILIARDOLAR" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="CATEGORIADEUDOR" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="I832USO" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="PORCENTLOANTOVALUE" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="I027MONEDA" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="NRODOCUMENTOTITULAR" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NRODOCUMENTOCONYUGE" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="MONTOCUOTAMAFSOLES" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="MONTOSALDOOPERACIONESVIGENTESDOLAR" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="INDAPROBACIONSCORE" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="INDAPROBACIONAUTOMATICO" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="INDEXCEP_RCE" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="INDEXCEP_CATEGORIADEUDOR" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="INDEXCEP_NROENTIDADES" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="INDEXCEP_CALIFICACION" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="INDEXCEP_CIFLUJOCAJANEGATIVO" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="INDEXCEP_CUOTAINICIAL" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="MONTOINGRESOTITULARSOLES" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="MONTOINGRESOCONYUGESOLES" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="RESPUESTAANALISTA" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NIVELAPROBACIONSCORE" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CumpleCIMayor50RCEMenorIgual140" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="CALIFICACIONSBS" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="NROENTIDADES" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="TIPODOCTITULAR" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TIPODOCCONYUGE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NRODOCUMENTOREPRESENTANTELEGAL" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TIPODOCREPRESENTANTELEGAL" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TIPOPERSONAREPRESENTANTELEGAL" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="UTILIDADANUALSOLESTITULAR" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="UTILIDADANUALSOLESCONYUGE" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="NETSOLESMAF" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="NETDOLARMAF" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="SALDOCAPITALSOLES" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="SALDOCAPITALDOLARES" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="CUOTASPENDIENTES" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="CUOTASPACTADAS" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="VALORGARANTIA" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="INDCALCULORCI" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="INDEXCEP_RCI" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="INGRESOSOLES" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="INGRESODOLAR" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="INDTAXISTA" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="MONTOTOTALFINANCIAMIENTODOLAR" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="MONEDAFINANCIAMIENTO" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="UTILIDADOPERATIVA" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="RC_GASTO_MN_3ERA" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="I1163TIPOSCOREEXPERIAN" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="NIVELAPROBACIONEXPERIAN" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="PUNTAJEEXPERIAN" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="INDREPROGRAMACIONRCI" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="CUOTAREPROGRAMADADOLAR" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="RCIREPROGRAMADO" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="INDVALIDACUOTABALON" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="INDADMISION" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="INDIncluirRCSE" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="RegistrarMatrizFlujoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="RegistrarMatrizFlujoResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActualizarMatrizRiesgoCambiario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="parametros" type="tns:MatrizParametros" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActualizarMatrizRiesgoCambiarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ActualizarMatrizRiesgoCambiarioResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerDatosPrecalificacion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="parametros" type="tns:MatrizParametros" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerDatosPrecalificacionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenerDatosPrecalificacionResult" type="tns:MatrizParametros" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerDatosSaldoSbs">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="parametros" type="tns:MatrizSaldoSbs" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="MatrizSaldoSbs">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="TIPOPERSONA" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="NUMERODOCTITULAR" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NUMERODOCCONYUGUE" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SALDOSBS" type="s:double" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ObtenerDatosSaldoSbsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenerDatosSaldoSbsResult" type="tns:MatrizSaldoSbs" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerUltimoIdMatrizHistorial">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idSolicitud" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerUltimoIdMatrizHistorialResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ObtenerUltimoIdMatrizHistorialResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerDatosFlujoAnalisisCotizacion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="parametros" type="tns:MatrizParametros" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerDatosFlujoAnalisisCotizacionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenerDatosFlujoAnalisisCotizacionResult" type="tns:MatrizDatosFlujoAnalisis" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="MatrizDatosFlujoAnalisis">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="MONTOECPMDOLAR" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="MONTOCARGAFAMILIARDOLAR" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="MONTOCUOTAMAXASOLICITARDOLAR" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="PORCENTSALDOEXCEDENTE" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="PORCENTCARGAFAMILIAR" type="s:double" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ValidarMatrizCliente">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idMatriz" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="nroDocumentoTitular" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidarMatrizClienteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ValidarMatrizClienteResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerUltimaCalificacionSBS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idSolicitud" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerUltimaCalificacionSBSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenerUltimaCalificacionSBSResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CalcularYRegistrarCuotaFinancieraCliente_Sigo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idMatrizCuota" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="idTipoPersona" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="nroDocumentoTitular" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nroDocumentoConyuge" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ingresoMensualTitular" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="ingresoMensualConyuge" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="idUsuario" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="indMotorShow" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CalcularYRegistrarCuotaFinancieraCliente_SigoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CalcularYRegistrarCuotaFinancieraCliente_SigoResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegistrarMatrizFlujo_Sigo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="parametros" type="tns:MatrizParametros" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegistrarMatrizFlujo_SigoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="RegistrarMatrizFlujo_SigoResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerCalificacionMatriz">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="i067TipoPersona" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="nroDocTitular" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nroDocConyuge" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="indMotorShow" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="indAdmision" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="i815CategoriaLaboral" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerCalificacionMatrizResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenerCalificacionMatrizResult" type="tns:MatrizCuota" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActualizarMatrizEstadoFinal">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="parametros" type="tns:MatrizParametros" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActualizarMatrizEstadoFinalResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ActualizarMatrizEstadoFinalResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegistrarEvolucionCalificacion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="parametros" type="tns:MatrizParametros" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegistrarEvolucionCalificacionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="RegistrarEvolucionCalificacionResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidarRceCuota">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="tipoPersona" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="PorcenCINueva" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="MaxPorcenCI" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="cuotaMafMaxima" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="ingreso" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="cargaFamiliar" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="nuevaCuotaMaf" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="Net" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="gastoOperativo" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="PlanCredito" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="categoriaLaboral" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="indAdmision" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="indTaxi" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidarRceCuotaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ValidarRceCuotaResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidarReingresoSolicitud">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idsolicitud" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="i067TipoPersona" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="nroDocTitular" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nroDocConyuge" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="tipoDocTitular" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="porcentajeRCE" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="idcliente" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="idconyuge" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="PlanCredito" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="porcCuotaInicial" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="categoriaLaboral" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="indTaxi" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidarReingresoSolicitudResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ValidarReingresoSolicitudResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerNivelEndeudamientoDolar">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="parametros" type="tns:MatrizParametros" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerNivelEndeudamientoDolarResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ObtenerNivelEndeudamientoDolarResult" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarListaCuotaFinancieraClienteRCC">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idTipoPersona" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="nroDocumentoTitular" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nroDocumentoConyuge" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ingresoMensualTitular" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="ingresoMensualConyuge" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarListaCuotaFinancieraClienteRCCResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultarListaCuotaFinancieraClienteRCCResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CalcularRiesgoCambiario_v2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="parametros" type="tns:MatrizParametros" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CalcularRiesgoCambiario_v2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CalcularRiesgoCambiario_v2Result" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerNetSolesDolarRCC">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="parametros" type="tns:MatrizParametros" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerNetSolesDolarRCCResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenerNetSolesDolarRCCResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CalcularRCI">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="parametros" type="tns:MatrizParametros" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CalcularRCIResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CalcularRCIResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="parametros" type="tns:MatrizParametros" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CalcularRCIVinculados">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="parametros" type="tns:MatrizParametros" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CalcularRCIVinculadosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CalcularRCIVinculadosResult" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerEvolucionCalificacionHistorica">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="i067TipoPersona" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="tipoDocTitular" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="nroDocTitular" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="meses" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerEvolucionCalificacionHistoricaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenerEvolucionCalificacionHistoricaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscarClienteRCC">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="tipoDocumento" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="nroDocumento" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscarClienteRCCResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BuscarClienteRCCResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerCalificacion100NormalCpp">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idTipoPersona" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="idTipoDocumento" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="nroDocumentoCliente" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="meses" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="primerosPeriodos" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerCalificacion100NormalCppResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenerCalificacion100NormalCppResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerSaldoPorAlgunosEstadosSistemaFinanciero">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idTipoPersona" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="idTipoDocumento" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="nroDocumentoCliente" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="meses" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerSaldoPorAlgunosEstadosSistemaFinancieroResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenerSaldoPorAlgunosEstadosSistemaFinancieroResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListarClienteBancarizado">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idTipoPersona" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="idTipoDocumento" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="nroDocumentoCliente" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="meses" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListarClienteBancarizadoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListarClienteBancarizadoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerSaldoJudicialesCastigosRefinanciadosSistemaFinanciero">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idTipoPersona" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="idTipoDocumento" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="nroDocumentoCliente" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="meses" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerSaldoJudicialesCastigosRefinanciadosSistemaFinancieroResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenerSaldoJudicialesCastigosRefinanciadosSistemaFinancieroResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerMaximaCalificacionHistoricaMAF">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nroDocumentoCliente" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="meses" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerMaximaCalificacionHistoricaMAFResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenerMaximaCalificacionHistoricaMAFResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarSaldoSistemaFinanciero">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idTipoPersona" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="idTipoDocumento" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="nroDocumentoCliente" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="meses" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarSaldoSistemaFinancieroResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultarSaldoSistemaFinancieroResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarSaldoSistemaFinancieroDetalle">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idTipoPersona" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="idTipoDocumento" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="nroDocumentoCliente" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="meses" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarSaldoSistemaFinancieroDetalleResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultarSaldoSistemaFinancieroDetalleResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListarClasificacionSBSHistorica">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idTipoPersona" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="idTipoDocumento" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="nroDocumentoCliente" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="meses" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListarClasificacionSBSHistoricaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListarClasificacionSBSHistoricaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerTipoDeCredito">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="parametros" type="tns:MatrizSaldoSbs" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerTipoDeCreditoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenerTipoDeCreditoResult" type="tns:MatrizSaldoSbs" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CalcularScoreRatingRiesgosJuridica">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nroRuc" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="porcenCI" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="antLaboral" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="tipoMoneda" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CalcularScoreRatingRiesgosJuridicaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CalcularScoreRatingRiesgosJuridicaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CalcularVariablesScoreRiesgos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nroDocumento" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CalcularVariablesScoreRiesgosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CalcularVariablesScoreRiesgosResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerVariablesSBSGailabo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nroDocumento" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerVariablesSBSGailaboResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenerVariablesSBSGailaboResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="ObtenerListaCuotaFinancieraClienteRCCSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerListaCuotaFinancieraClienteRCC" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerListaCuotaFinancieraClienteRCCSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerListaCuotaFinancieraClienteRCCResponse" />
+  </wsdl:message>
+  <wsdl:message name="CalcularYRegistrarCuotaFinancieraClienteSoapIn">
+    <wsdl:part name="parameters" element="tns:CalcularYRegistrarCuotaFinancieraCliente" />
+  </wsdl:message>
+  <wsdl:message name="CalcularYRegistrarCuotaFinancieraClienteSoapOut">
+    <wsdl:part name="parameters" element="tns:CalcularYRegistrarCuotaFinancieraClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerListaDetalleCuotaFinancieraSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerListaDetalleCuotaFinanciera" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerListaDetalleCuotaFinancieraSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerListaDetalleCuotaFinancieraResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerTotalCuotaFinancieraTitularConyugeSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerTotalCuotaFinancieraTitularConyuge" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerTotalCuotaFinancieraTitularConyugeSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerTotalCuotaFinancieraTitularConyugeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerResultadoMatrizFlujoAnalisisSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerResultadoMatrizFlujoAnalisis" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerResultadoMatrizFlujoAnalisisSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerResultadoMatrizFlujoAnalisisResponse" />
+  </wsdl:message>
+  <wsdl:message name="ActualizarCuotasFinancierasSoapIn">
+    <wsdl:part name="parameters" element="tns:ActualizarCuotasFinancieras" />
+  </wsdl:message>
+  <wsdl:message name="ActualizarCuotasFinancierasSoapOut">
+    <wsdl:part name="parameters" element="tns:ActualizarCuotasFinancierasResponse" />
+  </wsdl:message>
+  <wsdl:message name="CalcularRiesgoCambiarioSoapIn">
+    <wsdl:part name="parameters" element="tns:CalcularRiesgoCambiario" />
+  </wsdl:message>
+  <wsdl:message name="CalcularRiesgoCambiarioSoapOut">
+    <wsdl:part name="parameters" element="tns:CalcularRiesgoCambiarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="ListarSaldosFinancierosSoapIn">
+    <wsdl:part name="parameters" element="tns:ListarSaldosFinancieros" />
+  </wsdl:message>
+  <wsdl:message name="ListarSaldosFinancierosSoapOut">
+    <wsdl:part name="parameters" element="tns:ListarSaldosFinancierosResponse" />
+  </wsdl:message>
+  <wsdl:message name="RegistrarMatrizHistoricoSoapIn">
+    <wsdl:part name="parameters" element="tns:RegistrarMatrizHistorico" />
+  </wsdl:message>
+  <wsdl:message name="RegistrarMatrizHistoricoSoapOut">
+    <wsdl:part name="parameters" element="tns:RegistrarMatrizHistoricoResponse" />
+  </wsdl:message>
+  <wsdl:message name="RegistrarCuotaFinancieraSoapIn">
+    <wsdl:part name="parameters" element="tns:RegistrarCuotaFinanciera" />
+  </wsdl:message>
+  <wsdl:message name="RegistrarCuotaFinancieraSoapOut">
+    <wsdl:part name="parameters" element="tns:RegistrarCuotaFinancieraResponse" />
+  </wsdl:message>
+  <wsdl:message name="RegistrarMatrizFlujoSoapIn">
+    <wsdl:part name="parameters" element="tns:RegistrarMatrizFlujo" />
+  </wsdl:message>
+  <wsdl:message name="RegistrarMatrizFlujoSoapOut">
+    <wsdl:part name="parameters" element="tns:RegistrarMatrizFlujoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ActualizarMatrizRiesgoCambiarioSoapIn">
+    <wsdl:part name="parameters" element="tns:ActualizarMatrizRiesgoCambiario" />
+  </wsdl:message>
+  <wsdl:message name="ActualizarMatrizRiesgoCambiarioSoapOut">
+    <wsdl:part name="parameters" element="tns:ActualizarMatrizRiesgoCambiarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerDatosPrecalificacionSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerDatosPrecalificacion" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerDatosPrecalificacionSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerDatosPrecalificacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerDatosSaldoSbsSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerDatosSaldoSbs" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerDatosSaldoSbsSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerDatosSaldoSbsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerUltimoIdMatrizHistorialSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerUltimoIdMatrizHistorial" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerUltimoIdMatrizHistorialSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerUltimoIdMatrizHistorialResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerDatosFlujoAnalisisCotizacionSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerDatosFlujoAnalisisCotizacion" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerDatosFlujoAnalisisCotizacionSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerDatosFlujoAnalisisCotizacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ValidarMatrizClienteSoapIn">
+    <wsdl:part name="parameters" element="tns:ValidarMatrizCliente" />
+  </wsdl:message>
+  <wsdl:message name="ValidarMatrizClienteSoapOut">
+    <wsdl:part name="parameters" element="tns:ValidarMatrizClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerUltimaCalificacionSBSSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerUltimaCalificacionSBS" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerUltimaCalificacionSBSSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerUltimaCalificacionSBSResponse" />
+  </wsdl:message>
+  <wsdl:message name="CalcularYRegistrarCuotaFinancieraCliente_SigoSoapIn">
+    <wsdl:part name="parameters" element="tns:CalcularYRegistrarCuotaFinancieraCliente_Sigo" />
+  </wsdl:message>
+  <wsdl:message name="CalcularYRegistrarCuotaFinancieraCliente_SigoSoapOut">
+    <wsdl:part name="parameters" element="tns:CalcularYRegistrarCuotaFinancieraCliente_SigoResponse" />
+  </wsdl:message>
+  <wsdl:message name="RegistrarMatrizFlujo_SigoSoapIn">
+    <wsdl:part name="parameters" element="tns:RegistrarMatrizFlujo_Sigo" />
+  </wsdl:message>
+  <wsdl:message name="RegistrarMatrizFlujo_SigoSoapOut">
+    <wsdl:part name="parameters" element="tns:RegistrarMatrizFlujo_SigoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerCalificacionMatrizSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerCalificacionMatriz" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerCalificacionMatrizSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerCalificacionMatrizResponse" />
+  </wsdl:message>
+  <wsdl:message name="ActualizarMatrizEstadoFinalSoapIn">
+    <wsdl:part name="parameters" element="tns:ActualizarMatrizEstadoFinal" />
+  </wsdl:message>
+  <wsdl:message name="ActualizarMatrizEstadoFinalSoapOut">
+    <wsdl:part name="parameters" element="tns:ActualizarMatrizEstadoFinalResponse" />
+  </wsdl:message>
+  <wsdl:message name="RegistrarEvolucionCalificacionSoapIn">
+    <wsdl:part name="parameters" element="tns:RegistrarEvolucionCalificacion" />
+  </wsdl:message>
+  <wsdl:message name="RegistrarEvolucionCalificacionSoapOut">
+    <wsdl:part name="parameters" element="tns:RegistrarEvolucionCalificacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ValidarRceCuotaSoapIn">
+    <wsdl:part name="parameters" element="tns:ValidarRceCuota" />
+  </wsdl:message>
+  <wsdl:message name="ValidarRceCuotaSoapOut">
+    <wsdl:part name="parameters" element="tns:ValidarRceCuotaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ValidarReingresoSolicitudSoapIn">
+    <wsdl:part name="parameters" element="tns:ValidarReingresoSolicitud" />
+  </wsdl:message>
+  <wsdl:message name="ValidarReingresoSolicitudSoapOut">
+    <wsdl:part name="parameters" element="tns:ValidarReingresoSolicitudResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerNivelEndeudamientoDolarSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerNivelEndeudamientoDolar" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerNivelEndeudamientoDolarSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerNivelEndeudamientoDolarResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarListaCuotaFinancieraClienteRCCSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultarListaCuotaFinancieraClienteRCC" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarListaCuotaFinancieraClienteRCCSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultarListaCuotaFinancieraClienteRCCResponse" />
+  </wsdl:message>
+  <wsdl:message name="CalcularRiesgoCambiario_v2SoapIn">
+    <wsdl:part name="parameters" element="tns:CalcularRiesgoCambiario_v2" />
+  </wsdl:message>
+  <wsdl:message name="CalcularRiesgoCambiario_v2SoapOut">
+    <wsdl:part name="parameters" element="tns:CalcularRiesgoCambiario_v2Response" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerNetSolesDolarRCCSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerNetSolesDolarRCC" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerNetSolesDolarRCCSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerNetSolesDolarRCCResponse" />
+  </wsdl:message>
+  <wsdl:message name="CalcularRCISoapIn">
+    <wsdl:part name="parameters" element="tns:CalcularRCI" />
+  </wsdl:message>
+  <wsdl:message name="CalcularRCISoapOut">
+    <wsdl:part name="parameters" element="tns:CalcularRCIResponse" />
+  </wsdl:message>
+  <wsdl:message name="CalcularRCIVinculadosSoapIn">
+    <wsdl:part name="parameters" element="tns:CalcularRCIVinculados" />
+  </wsdl:message>
+  <wsdl:message name="CalcularRCIVinculadosSoapOut">
+    <wsdl:part name="parameters" element="tns:CalcularRCIVinculadosResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerEvolucionCalificacionHistoricaSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerEvolucionCalificacionHistorica" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerEvolucionCalificacionHistoricaSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerEvolucionCalificacionHistoricaResponse" />
+  </wsdl:message>
+  <wsdl:message name="BuscarClienteRCCSoapIn">
+    <wsdl:part name="parameters" element="tns:BuscarClienteRCC" />
+  </wsdl:message>
+  <wsdl:message name="BuscarClienteRCCSoapOut">
+    <wsdl:part name="parameters" element="tns:BuscarClienteRCCResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerCalificacion100NormalCppSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerCalificacion100NormalCpp" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerCalificacion100NormalCppSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerCalificacion100NormalCppResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerSaldoPorAlgunosEstadosSistemaFinancieroSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerSaldoPorAlgunosEstadosSistemaFinanciero" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerSaldoPorAlgunosEstadosSistemaFinancieroSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerSaldoPorAlgunosEstadosSistemaFinancieroResponse" />
+  </wsdl:message>
+  <wsdl:message name="ListarClienteBancarizadoSoapIn">
+    <wsdl:part name="parameters" element="tns:ListarClienteBancarizado" />
+  </wsdl:message>
+  <wsdl:message name="ListarClienteBancarizadoSoapOut">
+    <wsdl:part name="parameters" element="tns:ListarClienteBancarizadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerSaldoJudicialesCastigosRefinanciadosSistemaFinancieroSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerSaldoJudicialesCastigosRefinanciadosSistemaFinanciero" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerSaldoJudicialesCastigosRefinanciadosSistemaFinancieroSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerSaldoJudicialesCastigosRefinanciadosSistemaFinancieroResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerMaximaCalificacionHistoricaMAFSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerMaximaCalificacionHistoricaMAF" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerMaximaCalificacionHistoricaMAFSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerMaximaCalificacionHistoricaMAFResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarSaldoSistemaFinancieroSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultarSaldoSistemaFinanciero" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarSaldoSistemaFinancieroSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultarSaldoSistemaFinancieroResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarSaldoSistemaFinancieroDetalleSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultarSaldoSistemaFinancieroDetalle" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarSaldoSistemaFinancieroDetalleSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultarSaldoSistemaFinancieroDetalleResponse" />
+  </wsdl:message>
+  <wsdl:message name="ListarClasificacionSBSHistoricaSoapIn">
+    <wsdl:part name="parameters" element="tns:ListarClasificacionSBSHistorica" />
+  </wsdl:message>
+  <wsdl:message name="ListarClasificacionSBSHistoricaSoapOut">
+    <wsdl:part name="parameters" element="tns:ListarClasificacionSBSHistoricaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerTipoDeCreditoSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerTipoDeCredito" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerTipoDeCreditoSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerTipoDeCreditoResponse" />
+  </wsdl:message>
+  <wsdl:message name="CalcularScoreRatingRiesgosJuridicaSoapIn">
+    <wsdl:part name="parameters" element="tns:CalcularScoreRatingRiesgosJuridica" />
+  </wsdl:message>
+  <wsdl:message name="CalcularScoreRatingRiesgosJuridicaSoapOut">
+    <wsdl:part name="parameters" element="tns:CalcularScoreRatingRiesgosJuridicaResponse" />
+  </wsdl:message>
+  <wsdl:message name="CalcularVariablesScoreRiesgosSoapIn">
+    <wsdl:part name="parameters" element="tns:CalcularVariablesScoreRiesgos" />
+  </wsdl:message>
+  <wsdl:message name="CalcularVariablesScoreRiesgosSoapOut">
+    <wsdl:part name="parameters" element="tns:CalcularVariablesScoreRiesgosResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerVariablesSBSGailaboSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerVariablesSBSGailabo" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerVariablesSBSGailaboSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerVariablesSBSGailaboResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ServiceSoap">
+    <wsdl:operation name="ObtenerListaCuotaFinancieraClienteRCC">
+      <wsdl:input message="tns:ObtenerListaCuotaFinancieraClienteRCCSoapIn" />
+      <wsdl:output message="tns:ObtenerListaCuotaFinancieraClienteRCCSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CalcularYRegistrarCuotaFinancieraCliente">
+      <wsdl:input message="tns:CalcularYRegistrarCuotaFinancieraClienteSoapIn" />
+      <wsdl:output message="tns:CalcularYRegistrarCuotaFinancieraClienteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerListaDetalleCuotaFinanciera">
+      <wsdl:input message="tns:ObtenerListaDetalleCuotaFinancieraSoapIn" />
+      <wsdl:output message="tns:ObtenerListaDetalleCuotaFinancieraSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerTotalCuotaFinancieraTitularConyuge">
+      <wsdl:input message="tns:ObtenerTotalCuotaFinancieraTitularConyugeSoapIn" />
+      <wsdl:output message="tns:ObtenerTotalCuotaFinancieraTitularConyugeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerResultadoMatrizFlujoAnalisis">
+      <wsdl:input message="tns:ObtenerResultadoMatrizFlujoAnalisisSoapIn" />
+      <wsdl:output message="tns:ObtenerResultadoMatrizFlujoAnalisisSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarCuotasFinancieras">
+      <wsdl:input message="tns:ActualizarCuotasFinancierasSoapIn" />
+      <wsdl:output message="tns:ActualizarCuotasFinancierasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CalcularRiesgoCambiario">
+      <wsdl:input message="tns:CalcularRiesgoCambiarioSoapIn" />
+      <wsdl:output message="tns:CalcularRiesgoCambiarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarSaldosFinancieros">
+      <wsdl:input message="tns:ListarSaldosFinancierosSoapIn" />
+      <wsdl:output message="tns:ListarSaldosFinancierosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarMatrizHistorico">
+      <wsdl:input message="tns:RegistrarMatrizHistoricoSoapIn" />
+      <wsdl:output message="tns:RegistrarMatrizHistoricoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarCuotaFinanciera">
+      <wsdl:input message="tns:RegistrarCuotaFinancieraSoapIn" />
+      <wsdl:output message="tns:RegistrarCuotaFinancieraSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarMatrizFlujo">
+      <wsdl:input message="tns:RegistrarMatrizFlujoSoapIn" />
+      <wsdl:output message="tns:RegistrarMatrizFlujoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarMatrizRiesgoCambiario">
+      <wsdl:input message="tns:ActualizarMatrizRiesgoCambiarioSoapIn" />
+      <wsdl:output message="tns:ActualizarMatrizRiesgoCambiarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerDatosPrecalificacion">
+      <wsdl:input message="tns:ObtenerDatosPrecalificacionSoapIn" />
+      <wsdl:output message="tns:ObtenerDatosPrecalificacionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerDatosSaldoSbs">
+      <wsdl:input message="tns:ObtenerDatosSaldoSbsSoapIn" />
+      <wsdl:output message="tns:ObtenerDatosSaldoSbsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerUltimoIdMatrizHistorial">
+      <wsdl:input message="tns:ObtenerUltimoIdMatrizHistorialSoapIn" />
+      <wsdl:output message="tns:ObtenerUltimoIdMatrizHistorialSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerDatosFlujoAnalisisCotizacion">
+      <wsdl:input message="tns:ObtenerDatosFlujoAnalisisCotizacionSoapIn" />
+      <wsdl:output message="tns:ObtenerDatosFlujoAnalisisCotizacionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidarMatrizCliente">
+      <wsdl:input message="tns:ValidarMatrizClienteSoapIn" />
+      <wsdl:output message="tns:ValidarMatrizClienteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerUltimaCalificacionSBS">
+      <wsdl:input message="tns:ObtenerUltimaCalificacionSBSSoapIn" />
+      <wsdl:output message="tns:ObtenerUltimaCalificacionSBSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CalcularYRegistrarCuotaFinancieraCliente_Sigo">
+      <wsdl:input message="tns:CalcularYRegistrarCuotaFinancieraCliente_SigoSoapIn" />
+      <wsdl:output message="tns:CalcularYRegistrarCuotaFinancieraCliente_SigoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarMatrizFlujo_Sigo">
+      <wsdl:input message="tns:RegistrarMatrizFlujo_SigoSoapIn" />
+      <wsdl:output message="tns:RegistrarMatrizFlujo_SigoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerCalificacionMatriz">
+      <wsdl:input message="tns:ObtenerCalificacionMatrizSoapIn" />
+      <wsdl:output message="tns:ObtenerCalificacionMatrizSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarMatrizEstadoFinal">
+      <wsdl:input message="tns:ActualizarMatrizEstadoFinalSoapIn" />
+      <wsdl:output message="tns:ActualizarMatrizEstadoFinalSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarEvolucionCalificacion">
+      <wsdl:input message="tns:RegistrarEvolucionCalificacionSoapIn" />
+      <wsdl:output message="tns:RegistrarEvolucionCalificacionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidarRceCuota">
+      <wsdl:input message="tns:ValidarRceCuotaSoapIn" />
+      <wsdl:output message="tns:ValidarRceCuotaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidarReingresoSolicitud">
+      <wsdl:input message="tns:ValidarReingresoSolicitudSoapIn" />
+      <wsdl:output message="tns:ValidarReingresoSolicitudSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerNivelEndeudamientoDolar">
+      <wsdl:input message="tns:ObtenerNivelEndeudamientoDolarSoapIn" />
+      <wsdl:output message="tns:ObtenerNivelEndeudamientoDolarSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarListaCuotaFinancieraClienteRCC">
+      <wsdl:input message="tns:ConsultarListaCuotaFinancieraClienteRCCSoapIn" />
+      <wsdl:output message="tns:ConsultarListaCuotaFinancieraClienteRCCSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CalcularRiesgoCambiario_v2">
+      <wsdl:input message="tns:CalcularRiesgoCambiario_v2SoapIn" />
+      <wsdl:output message="tns:CalcularRiesgoCambiario_v2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerNetSolesDolarRCC">
+      <wsdl:input message="tns:ObtenerNetSolesDolarRCCSoapIn" />
+      <wsdl:output message="tns:ObtenerNetSolesDolarRCCSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CalcularRCI">
+      <wsdl:input message="tns:CalcularRCISoapIn" />
+      <wsdl:output message="tns:CalcularRCISoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CalcularRCIVinculados">
+      <wsdl:input message="tns:CalcularRCIVinculadosSoapIn" />
+      <wsdl:output message="tns:CalcularRCIVinculadosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerEvolucionCalificacionHistorica">
+      <wsdl:input message="tns:ObtenerEvolucionCalificacionHistoricaSoapIn" />
+      <wsdl:output message="tns:ObtenerEvolucionCalificacionHistoricaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscarClienteRCC">
+      <wsdl:input message="tns:BuscarClienteRCCSoapIn" />
+      <wsdl:output message="tns:BuscarClienteRCCSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerCalificacion100NormalCpp">
+      <wsdl:input message="tns:ObtenerCalificacion100NormalCppSoapIn" />
+      <wsdl:output message="tns:ObtenerCalificacion100NormalCppSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerSaldoPorAlgunosEstadosSistemaFinanciero">
+      <wsdl:input message="tns:ObtenerSaldoPorAlgunosEstadosSistemaFinancieroSoapIn" />
+      <wsdl:output message="tns:ObtenerSaldoPorAlgunosEstadosSistemaFinancieroSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarClienteBancarizado">
+      <wsdl:input message="tns:ListarClienteBancarizadoSoapIn" />
+      <wsdl:output message="tns:ListarClienteBancarizadoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerSaldoJudicialesCastigosRefinanciadosSistemaFinanciero">
+      <wsdl:input message="tns:ObtenerSaldoJudicialesCastigosRefinanciadosSistemaFinancieroSoapIn" />
+      <wsdl:output message="tns:ObtenerSaldoJudicialesCastigosRefinanciadosSistemaFinancieroSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerMaximaCalificacionHistoricaMAF">
+      <wsdl:input message="tns:ObtenerMaximaCalificacionHistoricaMAFSoapIn" />
+      <wsdl:output message="tns:ObtenerMaximaCalificacionHistoricaMAFSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarSaldoSistemaFinanciero">
+      <wsdl:input message="tns:ConsultarSaldoSistemaFinancieroSoapIn" />
+      <wsdl:output message="tns:ConsultarSaldoSistemaFinancieroSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarSaldoSistemaFinancieroDetalle">
+      <wsdl:input message="tns:ConsultarSaldoSistemaFinancieroDetalleSoapIn" />
+      <wsdl:output message="tns:ConsultarSaldoSistemaFinancieroDetalleSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarClasificacionSBSHistorica">
+      <wsdl:input message="tns:ListarClasificacionSBSHistoricaSoapIn" />
+      <wsdl:output message="tns:ListarClasificacionSBSHistoricaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerTipoDeCredito">
+      <wsdl:input message="tns:ObtenerTipoDeCreditoSoapIn" />
+      <wsdl:output message="tns:ObtenerTipoDeCreditoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CalcularScoreRatingRiesgosJuridica">
+      <wsdl:input message="tns:CalcularScoreRatingRiesgosJuridicaSoapIn" />
+      <wsdl:output message="tns:CalcularScoreRatingRiesgosJuridicaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CalcularVariablesScoreRiesgos">
+      <wsdl:input message="tns:CalcularVariablesScoreRiesgosSoapIn" />
+      <wsdl:output message="tns:CalcularVariablesScoreRiesgosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerVariablesSBSGailabo">
+      <wsdl:input message="tns:ObtenerVariablesSBSGailaboSoapIn" />
+      <wsdl:output message="tns:ObtenerVariablesSBSGailaboSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServiceSoap" type="tns:ServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ObtenerListaCuotaFinancieraClienteRCC">
+      <soap:operation soapAction="http://tempuri.org/ObtenerListaCuotaFinancieraClienteRCC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CalcularYRegistrarCuotaFinancieraCliente">
+      <soap:operation soapAction="http://tempuri.org/CalcularYRegistrarCuotaFinancieraCliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerListaDetalleCuotaFinanciera">
+      <soap:operation soapAction="http://tempuri.org/ObtenerListaDetalleCuotaFinanciera" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerTotalCuotaFinancieraTitularConyuge">
+      <soap:operation soapAction="http://tempuri.org/ObtenerTotalCuotaFinancieraTitularConyuge" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerResultadoMatrizFlujoAnalisis">
+      <soap:operation soapAction="http://tempuri.org/ObtenerResultadoMatrizFlujoAnalisis" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarCuotasFinancieras">
+      <soap:operation soapAction="http://tempuri.org/ActualizarCuotasFinancieras" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CalcularRiesgoCambiario">
+      <soap:operation soapAction="http://tempuri.org/CalcularRiesgoCambiario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarSaldosFinancieros">
+      <soap:operation soapAction="http://tempuri.org/ListarSaldosFinancieros" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarMatrizHistorico">
+      <soap:operation soapAction="http://tempuri.org/RegistrarMatrizHistorico" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarCuotaFinanciera">
+      <soap:operation soapAction="http://tempuri.org/RegistrarCuotaFinanciera" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarMatrizFlujo">
+      <soap:operation soapAction="http://tempuri.org/RegistrarMatrizFlujo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarMatrizRiesgoCambiario">
+      <soap:operation soapAction="http://tempuri.org/ActualizarMatrizRiesgoCambiario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerDatosPrecalificacion">
+      <soap:operation soapAction="http://tempuri.org/ObtenerDatosPrecalificacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerDatosSaldoSbs">
+      <soap:operation soapAction="http://tempuri.org/ObtenerDatosSaldoSbs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerUltimoIdMatrizHistorial">
+      <soap:operation soapAction="http://tempuri.org/ObtenerUltimoIdMatrizHistorial" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerDatosFlujoAnalisisCotizacion">
+      <soap:operation soapAction="http://tempuri.org/ObtenerDatosFlujoAnalisisCotizacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidarMatrizCliente">
+      <soap:operation soapAction="http://tempuri.org/ValidarMatrizCliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerUltimaCalificacionSBS">
+      <soap:operation soapAction="http://tempuri.org/ObtenerUltimaCalificacionSBS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CalcularYRegistrarCuotaFinancieraCliente_Sigo">
+      <soap:operation soapAction="http://tempuri.org/CalcularYRegistrarCuotaFinancieraCliente_Sigo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarMatrizFlujo_Sigo">
+      <soap:operation soapAction="http://tempuri.org/RegistrarMatrizFlujo_Sigo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerCalificacionMatriz">
+      <soap:operation soapAction="http://tempuri.org/ObtenerCalificacionMatriz" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarMatrizEstadoFinal">
+      <soap:operation soapAction="http://tempuri.org/ActualizarMatrizEstadoFinal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarEvolucionCalificacion">
+      <soap:operation soapAction="http://tempuri.org/RegistrarEvolucionCalificacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidarRceCuota">
+      <soap:operation soapAction="http://tempuri.org/ValidarRceCuota" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidarReingresoSolicitud">
+      <soap:operation soapAction="http://tempuri.org/ValidarReingresoSolicitud" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerNivelEndeudamientoDolar">
+      <soap:operation soapAction="http://tempuri.org/ObtenerNivelEndeudamientoDolar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarListaCuotaFinancieraClienteRCC">
+      <soap:operation soapAction="http://tempuri.org/ConsultarListaCuotaFinancieraClienteRCC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CalcularRiesgoCambiario_v2">
+      <soap:operation soapAction="http://tempuri.org/CalcularRiesgoCambiario_v2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerNetSolesDolarRCC">
+      <soap:operation soapAction="http://tempuri.org/ObtenerNetSolesDolarRCC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CalcularRCI">
+      <soap:operation soapAction="http://tempuri.org/CalcularRCI" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CalcularRCIVinculados">
+      <soap:operation soapAction="http://tempuri.org/CalcularRCIVinculados" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerEvolucionCalificacionHistorica">
+      <soap:operation soapAction="http://tempuri.org/ObtenerEvolucionCalificacionHistorica" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarClienteRCC">
+      <soap:operation soapAction="http://tempuri.org/BuscarClienteRCC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerCalificacion100NormalCpp">
+      <soap:operation soapAction="http://tempuri.org/ObtenerCalificacion100NormalCpp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerSaldoPorAlgunosEstadosSistemaFinanciero">
+      <soap:operation soapAction="http://tempuri.org/ObtenerSaldoPorAlgunosEstadosSistemaFinanciero" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarClienteBancarizado">
+      <soap:operation soapAction="http://tempuri.org/ListarClienteBancarizado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerSaldoJudicialesCastigosRefinanciadosSistemaFinanciero">
+      <soap:operation soapAction="http://tempuri.org/ObtenerSaldoJudicialesCastigosRefinanciadosSistemaFinanciero" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerMaximaCalificacionHistoricaMAF">
+      <soap:operation soapAction="http://tempuri.org/ObtenerMaximaCalificacionHistoricaMAF" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarSaldoSistemaFinanciero">
+      <soap:operation soapAction="http://tempuri.org/ConsultarSaldoSistemaFinanciero" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarSaldoSistemaFinancieroDetalle">
+      <soap:operation soapAction="http://tempuri.org/ConsultarSaldoSistemaFinancieroDetalle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarClasificacionSBSHistorica">
+      <soap:operation soapAction="http://tempuri.org/ListarClasificacionSBSHistorica" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerTipoDeCredito">
+      <soap:operation soapAction="http://tempuri.org/ObtenerTipoDeCredito" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CalcularScoreRatingRiesgosJuridica">
+      <soap:operation soapAction="http://tempuri.org/CalcularScoreRatingRiesgosJuridica" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CalcularVariablesScoreRiesgos">
+      <soap:operation soapAction="http://tempuri.org/CalcularVariablesScoreRiesgos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerVariablesSBSGailabo">
+      <soap:operation soapAction="http://tempuri.org/ObtenerVariablesSBSGailabo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServiceSoap12" type="tns:ServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ObtenerListaCuotaFinancieraClienteRCC">
+      <soap12:operation soapAction="http://tempuri.org/ObtenerListaCuotaFinancieraClienteRCC" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CalcularYRegistrarCuotaFinancieraCliente">
+      <soap12:operation soapAction="http://tempuri.org/CalcularYRegistrarCuotaFinancieraCliente" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerListaDetalleCuotaFinanciera">
+      <soap12:operation soapAction="http://tempuri.org/ObtenerListaDetalleCuotaFinanciera" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerTotalCuotaFinancieraTitularConyuge">
+      <soap12:operation soapAction="http://tempuri.org/ObtenerTotalCuotaFinancieraTitularConyuge" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerResultadoMatrizFlujoAnalisis">
+      <soap12:operation soapAction="http://tempuri.org/ObtenerResultadoMatrizFlujoAnalisis" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarCuotasFinancieras">
+      <soap12:operation soapAction="http://tempuri.org/ActualizarCuotasFinancieras" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CalcularRiesgoCambiario">
+      <soap12:operation soapAction="http://tempuri.org/CalcularRiesgoCambiario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarSaldosFinancieros">
+      <soap12:operation soapAction="http://tempuri.org/ListarSaldosFinancieros" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarMatrizHistorico">
+      <soap12:operation soapAction="http://tempuri.org/RegistrarMatrizHistorico" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarCuotaFinanciera">
+      <soap12:operation soapAction="http://tempuri.org/RegistrarCuotaFinanciera" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarMatrizFlujo">
+      <soap12:operation soapAction="http://tempuri.org/RegistrarMatrizFlujo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarMatrizRiesgoCambiario">
+      <soap12:operation soapAction="http://tempuri.org/ActualizarMatrizRiesgoCambiario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerDatosPrecalificacion">
+      <soap12:operation soapAction="http://tempuri.org/ObtenerDatosPrecalificacion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerDatosSaldoSbs">
+      <soap12:operation soapAction="http://tempuri.org/ObtenerDatosSaldoSbs" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerUltimoIdMatrizHistorial">
+      <soap12:operation soapAction="http://tempuri.org/ObtenerUltimoIdMatrizHistorial" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerDatosFlujoAnalisisCotizacion">
+      <soap12:operation soapAction="http://tempuri.org/ObtenerDatosFlujoAnalisisCotizacion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidarMatrizCliente">
+      <soap12:operation soapAction="http://tempuri.org/ValidarMatrizCliente" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerUltimaCalificacionSBS">
+      <soap12:operation soapAction="http://tempuri.org/ObtenerUltimaCalificacionSBS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CalcularYRegistrarCuotaFinancieraCliente_Sigo">
+      <soap12:operation soapAction="http://tempuri.org/CalcularYRegistrarCuotaFinancieraCliente_Sigo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarMatrizFlujo_Sigo">
+      <soap12:operation soapAction="http://tempuri.org/RegistrarMatrizFlujo_Sigo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerCalificacionMatriz">
+      <soap12:operation soapAction="http://tempuri.org/ObtenerCalificacionMatriz" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarMatrizEstadoFinal">
+      <soap12:operation soapAction="http://tempuri.org/ActualizarMatrizEstadoFinal" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarEvolucionCalificacion">
+      <soap12:operation soapAction="http://tempuri.org/RegistrarEvolucionCalificacion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidarRceCuota">
+      <soap12:operation soapAction="http://tempuri.org/ValidarRceCuota" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidarReingresoSolicitud">
+      <soap12:operation soapAction="http://tempuri.org/ValidarReingresoSolicitud" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerNivelEndeudamientoDolar">
+      <soap12:operation soapAction="http://tempuri.org/ObtenerNivelEndeudamientoDolar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarListaCuotaFinancieraClienteRCC">
+      <soap12:operation soapAction="http://tempuri.org/ConsultarListaCuotaFinancieraClienteRCC" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CalcularRiesgoCambiario_v2">
+      <soap12:operation soapAction="http://tempuri.org/CalcularRiesgoCambiario_v2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerNetSolesDolarRCC">
+      <soap12:operation soapAction="http://tempuri.org/ObtenerNetSolesDolarRCC" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CalcularRCI">
+      <soap12:operation soapAction="http://tempuri.org/CalcularRCI" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CalcularRCIVinculados">
+      <soap12:operation soapAction="http://tempuri.org/CalcularRCIVinculados" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerEvolucionCalificacionHistorica">
+      <soap12:operation soapAction="http://tempuri.org/ObtenerEvolucionCalificacionHistorica" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarClienteRCC">
+      <soap12:operation soapAction="http://tempuri.org/BuscarClienteRCC" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerCalificacion100NormalCpp">
+      <soap12:operation soapAction="http://tempuri.org/ObtenerCalificacion100NormalCpp" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerSaldoPorAlgunosEstadosSistemaFinanciero">
+      <soap12:operation soapAction="http://tempuri.org/ObtenerSaldoPorAlgunosEstadosSistemaFinanciero" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarClienteBancarizado">
+      <soap12:operation soapAction="http://tempuri.org/ListarClienteBancarizado" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerSaldoJudicialesCastigosRefinanciadosSistemaFinanciero">
+      <soap12:operation soapAction="http://tempuri.org/ObtenerSaldoJudicialesCastigosRefinanciadosSistemaFinanciero" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerMaximaCalificacionHistoricaMAF">
+      <soap12:operation soapAction="http://tempuri.org/ObtenerMaximaCalificacionHistoricaMAF" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarSaldoSistemaFinanciero">
+      <soap12:operation soapAction="http://tempuri.org/ConsultarSaldoSistemaFinanciero" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarSaldoSistemaFinancieroDetalle">
+      <soap12:operation soapAction="http://tempuri.org/ConsultarSaldoSistemaFinancieroDetalle" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarClasificacionSBSHistorica">
+      <soap12:operation soapAction="http://tempuri.org/ListarClasificacionSBSHistorica" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerTipoDeCredito">
+      <soap12:operation soapAction="http://tempuri.org/ObtenerTipoDeCredito" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CalcularScoreRatingRiesgosJuridica">
+      <soap12:operation soapAction="http://tempuri.org/CalcularScoreRatingRiesgosJuridica" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CalcularVariablesScoreRiesgos">
+      <soap12:operation soapAction="http://tempuri.org/CalcularVariablesScoreRiesgos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerVariablesSBSGailabo">
+      <soap12:operation soapAction="http://tempuri.org/ObtenerVariablesSBSGailabo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service">
+    <wsdl:port name="ServiceSoap" binding="tns:ServiceSoap">
+      <soap:address location="http://152.17.0.125/ws_rcc/Service.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServiceSoap12" binding="tns:ServiceSoap12">
+      <soap12:address location="http://152.17.0.125/ws_rcc/Service.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
