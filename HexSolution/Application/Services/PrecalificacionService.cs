@@ -31,7 +31,11 @@ public class PrecalificacionService : IPrecalificacionService
     //DataSet dsSaldoFinDet = new DataSet(); //MOD HDR(RMC) 20220329 - REQ22205 Se comento linea de codigo
     DataSet dsClasi = new DataSet();
     #endregion
-    public Service()
+    // Constructor que inicializa el servicio y carga las variables
+    // de entorno definidas en el archivo `.env` ubicado en la carpeta
+    // `HexSolution`. Al utilizar `DotNetEnv`, la configuración queda
+    // disponible mediante `Environment.GetEnvironmentVariable`.
+    public PrecalificacionService()
     {
         loggerService = LoggerService.Instance;
         // Cargar variables de entorno desde el archivo .env para
